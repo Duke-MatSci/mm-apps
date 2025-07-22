@@ -1,0 +1,7 @@
+// Import all Vue Material styles
+@import '../components/MdAnimation/variables';
+@import '../components/MdLayout/mixins';
+
+// Import migrated CSS files
+@import '../css/vue-material.min.css';
+@import '../css/default.css';
