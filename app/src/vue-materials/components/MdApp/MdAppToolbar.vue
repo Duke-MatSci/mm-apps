@@ -4,75 +4,57 @@
   </md-toolbar>
 </template>
 
-<script lang="ts">
-import { defineComponent, inject, computed, onMounted } from 'vue';
+<script setup lang="ts">
+import { computed, inject, onMounted } from 'vue';
 
-interface MdAppToolbar {
-  element: HTMLElement | null;
-  titleElement: HTMLElement | null;
-  height: string;
-  initialHeight: number;
-  top: number;
-  titleSize: number;
-  hasElevation: boolean;
-  revealActive: boolean;
-  fixedLastActive: boolean;
-  fixedLastHeight: number;
-  overlapOff: boolean;
-}
+// Inject MdApp context
+const MdApp = inject('MdApp') as any;
 
-interface MdApp {
-  toolbar: MdAppToolbar;
-}
+// Computed properties
+const toolbarClasses = computed(() => {
+  return {
+    'md-no-elevation': !MdApp?.value?.toolbar?.hasElevation,
+    'md-reveal-active': MdApp?.value?.toolbar?.revealActive,
+    'md-fixed-last-active': MdApp?.value?.toolbar?.fixedLastActive,
+    'md-overlap-off': MdApp?.value?.toolbar?.overlapOff,
+  };
+});
 
-export default defineComponent({
-  name: 'MdAppToolbar',
-  inject: {
-    MdApp: {
-      default: null,
-    },
-  },
-  computed: {
-    toolbarClasses() {
-      const mdApp = this.MdApp as MdApp;
-      return {
-        'md-no-elevation': !mdApp?.toolbar.hasElevation,
-        'md-reveal-active': mdApp?.toolbar.revealActive,
-        'md-fixed-last-active': mdApp?.toolbar.fixedLastActive,
-        'md-overlap-off': mdApp?.toolbar.overlapOff,
-      };
-    },
-    toolbarStyles() {
-      const mdApp = this.MdApp as MdApp;
-      let styles: any = {
-        top: `${mdApp?.toolbar.top || 0}px`,
-      };
+const toolbarStyles = computed(() => {
+  let styles: Record<string, string> = {
+    top: `${MdApp?.value?.toolbar?.top || 0}px`,
+  };
 
-      if (mdApp?.toolbar.fixedLastActive) {
-        styles['transform'] = `translate3D(0, ${mdApp.toolbar.fixedLastHeight}px, 0)`;
-      }
+  if (MdApp?.value?.toolbar?.fixedLastActive) {
+    styles['transform'] = `translate3D(0, ${MdApp.value.toolbar.fixedLastHeight}px, 0)`;
+  }
 
-      return styles;
-    },
-  },
-  mounted() {
-    const mdApp = this.MdApp as MdApp;
-    const title = this.$el.querySelector('.md-title, .md-display-1, .md-display-2');
+  return styles;
+});
 
-    if (mdApp) {
-      mdApp.toolbar.element = this.$el;
-      mdApp.toolbar.titleElement = title;
+// Lifecycle hooks
+onMounted(() => {
+  const element = document.querySelector('.md-app-toolbar') as HTMLElement;
+  const title = element?.querySelector('.md-title, .md-display-1, .md-display-2') as HTMLElement;
 
-      if (title) {
-        mdApp.toolbar.titleSize = parseInt(window.getComputedStyle(title).fontSize, 10);
-      }
+  if (MdApp?.value?.toolbar) {
+    MdApp.value.toolbar.element = element;
+    MdApp.value.toolbar.titleElement = title;
+
+    if (title) {
+      MdApp.value.toolbar.titleSize = parseInt(window.getComputedStyle(title).fontSize, 10);
     }
-  },
+  }
+});
+
+// Define component name
+defineOptions({
+  name: 'MdAppToolbar',
 });
 </script>
 
 <style lang="scss">
-@import '../MdAnimation/variables';
+@import '../MdAnimation/variables.scss';
 
 .md-no-elevation {
   box-shadow: none !important;

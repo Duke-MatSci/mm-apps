@@ -1,25 +1,68 @@
-import { ref, computed, watch, onMounted, provide } from 'vue';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import raf from 'raf';
+import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue';
 import MdPropValidator from '../../core/utils/MdPropValidator';
 
 const mdAppModes = ['fixed', 'fixed-last', 'reveal', 'overlap', 'flexible'];
 
-export default function useMdAppMixin(props: any) {
-  const revealTimer = ref(null as any);
+export interface MdAppOptions {
+  mode: string | null;
+  waterfall: boolean;
+  flexible: boolean;
+}
+
+export interface MdAppToolbar {
+  element: HTMLElement | null;
+  titleElement: HTMLElement | null;
+  height: string;
+  initialHeight: number;
+  top: number;
+  titleSize: number;
+  hasElevation: boolean;
+  revealActive: boolean;
+  fixedLastActive: boolean;
+  fixedLastHeight: number;
+  overlapOff: boolean;
+}
+
+export interface MdAppDrawer {
+  initialWidth: number;
+  active: boolean;
+  mode: string;
+  submode: string | null;
+  width: number;
+  right: boolean;
+}
+
+export interface MdAppContext {
+  options: MdAppOptions;
+  toolbar: MdAppToolbar;
+  drawer: MdAppDrawer;
+}
+
+export function useMdAppMixin(props: {
+  mdMode?: string;
+  mdWaterfall?: boolean;
+  mdScrollbar?: boolean;
+}) {
+  // Validate mdMode prop using MdPropValidator
+  if (props.mdMode && !mdAppModes.includes(props.mdMode)) {
+    const validator = MdPropValidator('md-mode', mdAppModes);
+    validator.validator(props.mdMode);
+  }
+
+  // Reactive data
+  const revealTimer = ref<number | null>(null);
   const revealLastPos = ref(0);
   const manualTick = ref(false);
 
-  const MdApp = ref({
+  const MdApp = ref<MdAppContext>({
     options: {
-      mode: null as string | null,
-      waterfall: false,
+      mode: props.mdMode || null,
+      waterfall: props.mdWaterfall || false,
       flexible: false,
     },
     toolbar: {
-      element: null as HTMLElement | null,
-      titleElement: null as HTMLElement | null,
+      element: null,
+      titleElement: null,
       height: '0px',
       initialHeight: 0,
       top: 0,
@@ -34,14 +77,13 @@ export default function useMdAppMixin(props: any) {
       initialWidth: 0,
       active: false,
       mode: 'temporary',
-      submode: null as string | null,
+      submode: null,
       width: 0,
       right: false,
     },
   });
 
-  provide('MdApp', MdApp);
-
+  // Computed properties
   const isFixed = computed(() => {
     return props.mdMode && props.mdMode !== 'fixed';
   });
@@ -53,12 +95,8 @@ export default function useMdAppMixin(props: any) {
   const contentPadding = computed(() => {
     const drawer = MdApp.value.drawer;
 
-    if (
-      MdApp.value.drawer.active &&
-      MdApp.value.drawer.mode === 'persistent' &&
-      MdApp.value.drawer.submode === 'full'
-    ) {
-      return MdApp.value.drawer.width;
+    if (drawer.active && drawer.mode === 'persistent' && drawer.submode === 'full') {
+      return drawer.width;
     }
 
     return 0;
@@ -71,7 +109,7 @@ export default function useMdAppMixin(props: any) {
   });
 
   const containerStyles = computed(() => {
-    const styles: any = {};
+    const styles: Record<string, string> = {};
 
     if (isFixed.value) {
       styles['margin-top'] = MdApp.value.toolbar.initialHeight + 'px';
@@ -80,14 +118,14 @@ export default function useMdAppMixin(props: any) {
     if (isDrawerMini.value) {
       styles[`padding-${MdApp.value.drawer.right ? 'right' : 'left'}`] = !MdApp.value.drawer.active
         ? MdApp.value.drawer.initialWidth + 'px'
-        : 0;
+        : '0px';
     }
 
     return styles;
   });
 
   const scrollerClasses = computed(() => {
-    if (props.mdScrollbar) {
+    if (props.mdScrollbar !== false) {
       return 'md-scrollbar';
     }
     return '';
@@ -105,28 +143,32 @@ export default function useMdAppMixin(props: any) {
     };
   });
 
+  // Methods
   const setToolbarElevation = () => {
     MdApp.value.toolbar.hasElevation = !props.mdWaterfall;
   };
 
   const setToolbarTimer = (scrollTop: number) => {
-    window.clearTimeout(revealTimer.value);
+    if (revealTimer.value) {
+      window.clearTimeout(revealTimer.value);
+    }
 
     revealTimer.value = window.setTimeout(() => {
       revealLastPos.value = scrollTop;
     }, 100);
   };
 
-  const setToolbarMarginAndHeight = (margin: number, height: number | string) => {
+  const setToolbarMarginAndHeight = (margin: number, height: number) => {
     MdApp.value.toolbar.top = margin;
-    MdApp.value.toolbar.height = typeof height === 'number' ? height + 'px' : height;
+    MdApp.value.toolbar.height = height + 'px';
   };
 
-  const getToolbarConstrants = ($event: any) => {
-    const toolbarHeight = MdApp.value.toolbar.element!.offsetHeight;
+  const getToolbarConstrants = ($event: Event) => {
+    const target = $event.target as HTMLElement;
+    const toolbarHeight = MdApp.value.toolbar.element?.offsetHeight || 0;
     const safeAmount = 10;
     const threshold = toolbarHeight + safeAmount;
-    const scrollTop = $event.target.scrollTop;
+    const scrollTop = target.scrollTop;
 
     if (!MdApp.value.toolbar.initialHeight) {
       MdApp.value.toolbar.initialHeight = toolbarHeight;
@@ -141,7 +183,7 @@ export default function useMdAppMixin(props: any) {
     };
   };
 
-  const handleWaterfallScroll = ($event: any) => {
+  const handleWaterfallScroll = ($event: Event) => {
     const { threshold, scrollTop } = getToolbarConstrants($event);
     let elevationMark = 4;
 
@@ -152,11 +194,13 @@ export default function useMdAppMixin(props: any) {
     MdApp.value.toolbar.hasElevation = scrollTop >= elevationMark;
   };
 
-  const handleFlexibleMode = ($event: any) => {
+  const handleFlexibleMode = ($event: Event) => {
     const { scrollTop, initialHeight } = getToolbarConstrants($event);
-    const toolbar = MdApp.value.toolbar.element!;
+    const toolbar = MdApp.value.toolbar.element;
+    if (!toolbar) return;
+
     const firstRow = toolbar.querySelector('.md-toolbar-row:first-child') as HTMLElement;
-    const firstRowHeight = firstRow.offsetHeight;
+    const firstRowHeight = firstRow?.offsetHeight || 0;
     const scrollAmount = initialHeight - scrollTop;
     const shouldKeepFlexible = scrollTop < initialHeight - firstRowHeight;
 
@@ -178,7 +222,6 @@ export default function useMdAppMixin(props: any) {
           Math.max(0, 1 - (scrollTop - initialSize) / (scrollAmount + initialSize + 0.000001)) *
             (initialSize - targetSize) +
           targetSize;
-
         titleElement.style.fontSize = newSize + 'px';
       } else {
         titleElement.style.fontSize = '20px';
@@ -186,11 +229,10 @@ export default function useMdAppMixin(props: any) {
     }
 
     const { threshold, toolbarHeight } = getToolbarConstrants($event);
-
     setToolbarMarginAndHeight(scrollTop - threshold, toolbarHeight);
   };
 
-  const handleRevealMode = ($event: any) => {
+  const handleRevealMode = ($event: Event) => {
     const { toolbarHeight, safeAmount, threshold, scrollTop } = getToolbarConstrants($event);
 
     setToolbarTimer(scrollTop);
@@ -203,11 +245,13 @@ export default function useMdAppMixin(props: any) {
     }
   };
 
-  const handleFixedLastMode = ($event: any) => {
+  const handleFixedLastMode = ($event: Event) => {
     const { scrollTop, toolbarHeight, safeAmount } = getToolbarConstrants($event);
-    const toolbar = MdApp.value.toolbar.element!;
+    const toolbar = MdApp.value.toolbar.element;
+    if (!toolbar) return;
+
     const firstRow = toolbar.querySelector('.md-toolbar-row:first-child') as HTMLElement;
-    const firstRowHeight = firstRow.offsetHeight;
+    const firstRowHeight = firstRow?.offsetHeight || 0;
 
     setToolbarTimer(scrollTop);
     setToolbarMarginAndHeight(scrollTop - firstRowHeight, toolbarHeight);
@@ -220,11 +264,13 @@ export default function useMdAppMixin(props: any) {
     }
   };
 
-  const handleOverlapMode = ($event: any) => {
+  const handleOverlapMode = ($event: Event) => {
     const { toolbarHeight, scrollTop, initialHeight } = getToolbarConstrants($event);
-    const toolbar = MdApp.value.toolbar.element!;
+    const toolbar = MdApp.value.toolbar.element;
+    if (!toolbar) return;
+
     const firstRow = toolbar.querySelector('.md-toolbar-row:first-child') as HTMLElement;
-    const firstRowHeight = firstRow.offsetHeight;
+    const firstRowHeight = firstRow?.offsetHeight || 0;
     const newHeight =
       initialHeight -
       scrollTop -
@@ -243,7 +289,7 @@ export default function useMdAppMixin(props: any) {
     setToolbarMarginAndHeight(scrollTop, toolbarHeight);
   };
 
-  const handleModeScroll = ($event: any) => {
+  const handleModeScroll = ($event: Event) => {
     if (props.mdMode === 'reveal') {
       handleRevealMode($event);
     } else if (props.mdMode === 'fixed-last') {
@@ -255,9 +301,9 @@ export default function useMdAppMixin(props: any) {
     }
   };
 
-  const handleScroll = ($event: any) => {
+  const handleScroll = ($event: Event) => {
     if (MdApp.value.toolbar.element) {
-      raf(() => {
+      requestAnimationFrame(() => {
         if (props.mdWaterfall) {
           handleWaterfallScroll($event);
         }
@@ -272,30 +318,35 @@ export default function useMdAppMixin(props: any) {
   // Watchers
   watch(
     () => props.mdMode,
-    (mode: string) => {
-      MdApp.value.options.mode = mode;
+    (mode) => {
+      // Validate mode when it changes
+      if (mode && !mdAppModes.includes(mode)) {
+        const validator = MdPropValidator('md-mode', mdAppModes);
+        validator.validator(mode);
+      }
+      MdApp.value.options.mode = mode || null;
     }
   );
 
   watch(
     () => props.mdWaterfall,
-    (waterfall: boolean) => {
-      MdApp.value.options.waterfall = waterfall;
+    (waterfall) => {
+      MdApp.value.options.waterfall = waterfall || false;
       setToolbarElevation();
     }
   );
 
-  // Lifecycle
+  // Lifecycle hooks
   onMounted(() => {
-    MdApp.value.options.mode = props.mdMode;
-    MdApp.value.options.waterfall = props.mdWaterfall;
+    MdApp.value.options.mode = props.mdMode || null;
+    MdApp.value.options.waterfall = props.mdWaterfall || false;
     setToolbarElevation();
 
     const fakeEvent = {
       target: {
         scrollTop: 0,
       },
-    };
+    } as unknown as Event;
 
     if (props.mdMode === 'reveal') {
       MdApp.value.toolbar.revealActive = true;
@@ -317,6 +368,12 @@ export default function useMdAppMixin(props: any) {
     }
   });
 
+  onBeforeUnmount(() => {
+    if (revealTimer.value) {
+      window.clearTimeout(revealTimer.value);
+    }
+  });
+
   return {
     MdApp,
     isFixed,
@@ -327,15 +384,5 @@ export default function useMdAppMixin(props: any) {
     scrollerClasses,
     appClasses,
     handleScroll,
-    setToolbarElevation,
-    setToolbarTimer,
-    setToolbarMarginAndHeight,
-    getToolbarConstrants,
-    handleWaterfallScroll,
-    handleFlexibleMode,
-    handleRevealMode,
-    handleFixedLastMode,
-    handleOverlapMode,
-    handleModeScroll,
   };
 }

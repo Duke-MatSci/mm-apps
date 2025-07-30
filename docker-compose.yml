@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  fuseki:
+    image: stain/jena-fuseki
+    container_name: fuseki-server
+    ports:
+      - "3030:3030"
+    environment:
+      - FUSEKI_HOME=/fuseki
+      - ADMIN_PASSWORD=${FUSEKI_PASSWORD} # Admin password from .env file
+    volumes:
+      - ./ontology/@mm.ttl:/fuseki/@mm.ttl
+      - ./fuseki/data:/fuseki/databases # Persist data
+      - ./fuseki/shiro.ini:/fuseki/shiro.ini
+      - ./fuseki/config:/fuseki/config # Mount configuration files
+    entrypoint:
+      - java
+      - -jar
+      - fuseki-server.jar
+      - --config=/fuseki/config/assembler.ttl # Point to custom assembler
+    restart: unless-stopped

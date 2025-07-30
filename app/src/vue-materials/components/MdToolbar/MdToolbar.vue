@@ -1,126 +1,175 @@
 <template>
-  <header class="md-toolbar" :class="[toolbarClasses, $mdActiveTheme]">
-    <div class="md-toolbar-row">
-      <div class="md-toolbar-section md-toolbar-section-start">
-        <slot name="md-toolbar-section-start"></slot>
-      </div>
-      <div class="md-toolbar-section md-toolbar-section-center">
-        <slot name="md-toolbar-section-center">
-          <h3 v-if="title" class="md-toolbar-title">{{ title }}</h3>
-        </slot>
-      </div>
-      <div class="md-toolbar-section md-toolbar-section-end">
-        <slot name="md-toolbar-section-end"></slot>
-      </div>
-    </div>
-  </header>
+  <div class="md-toolbar" :class="[mdActiveTheme, `md-elevation-${mdElevation}`]">
+    <slot />
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { computed, inject } from 'vue';
 
-export default defineComponent({
+interface Props {
+  mdElevation?: number | string;
+  mdTheme?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  mdElevation: 4,
+  mdTheme: 'default',
+});
+
+// Inject theme from parent component
+const mdActiveTheme = inject(
+  'mdActiveTheme',
+  computed(() => `md-theme-${props.mdTheme}`)
+);
+
+defineOptions({
   name: 'MdToolbar',
-  props: {
-    mdTheme: {
-      type: String,
-      default: 'default',
-    },
-    title: {
-      type: String,
-      default: null,
-    },
-    mdElevation: {
-      type: [String, Number],
-      default: 4,
-    },
-    mdProminent: {
-      type: Boolean,
-      default: false,
-    },
-    mdDense: {
-      type: Boolean,
-      default: false,
-    },
-    mdExtended: {
-      type: Boolean,
-      default: false,
-    },
-    mdFixed: {
-      type: Boolean,
-      default: false,
-    },
-    mdAbsolute: {
-      type: Boolean,
-      default: false,
-    },
-    mdStatic: {
-      type: Boolean,
-      default: false,
-    },
-    mdResponsive: {
-      type: Boolean,
-      default: false,
-    },
-    mdWithNavIcon: {
-      type: Boolean,
-      default: false,
-    },
-    mdWithActions: {
-      type: Boolean,
-      default: false,
-    },
-    mdAnimate: {
-      type: String,
-      default: null,
-      validator: (value: string | null) =>
-        !value || ['slide-down', 'fade-in', 'scale-in'].includes(value),
-    },
-    mdHover: {
-      type: String,
-      default: null,
-      validator: (value: string | null) => !value || ['elevate', 'glow'].includes(value),
-    },
-    mdFocusRing: {
-      type: Boolean,
-      default: false,
-    },
-    mdLoading: {
-      type: Boolean,
-      default: false,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  computed: {
-    $mdActiveTheme() {
-      return this.mdTheme || 'default';
-    },
-    toolbarClasses() {
-      return {
-        [`md-elevation-${this.mdElevation}`]: this.mdElevation !== 0,
-        'md-prominent': this.mdProminent,
-        'md-dense': this.mdDense,
-        'md-extended': this.mdExtended,
-        'md-fixed': this.mdFixed,
-        'md-absolute': this.mdAbsolute,
-        'md-static': this.mdStatic,
-        'md-responsive': this.mdResponsive,
-        'md-with-nav-icon': this.mdWithNavIcon,
-        'md-with-actions': this.mdWithActions,
-        [`md-animate-${this.mdAnimate}`]: this.mdAnimate,
-        [`md-hover-${this.mdHover}`]: this.mdHover,
-        'md-focus-ring': this.mdFocusRing,
-        'md-loading': this.mdLoading,
-        'md-disabled': this.disabled,
-      };
-    },
-  },
 });
 </script>
 
 <style lang="scss">
+@import '../MdAnimation/variables.scss';
+@import '../MdLayout/mixins.scss';
+@import '../MdElevation/mixins.scss';
 @import './theme.scss';
+
+$md-toolbar-height: 64px;
+$md-toolbar-height-portrait: 56px;
+$md-toolbar-height-landscape: 48px;
+$md-toolbar-height-dense: 48px;
+
+.md-toolbar,
+.md-toolbar-row {
+  width: 100%;
+  min-height: $md-toolbar-height;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  transition: 0.3s $md-transition-default-timing;
+  transition-property: opacity, background-color, box-shadow, transform, color, min-height;
+  will-change: opacity, background-color, box-shadow, transform, color, min-height;
+
+  @include md-layout-small {
+    min-height: $md-toolbar-height-landscape;
+  }
+
+  @include md-layout-xsmall {
+    min-height: $md-toolbar-height-portrait;
+  }
+}
+
+.md-toolbar {
+  padding: 0 16px;
+  flex-flow: row wrap;
+  position: relative;
+  z-index: 2;
+
+  @include md-layout-small {
+    padding: 0 8px;
+  }
+
+  &.md-dense {
+    min-height: $md-toolbar-height-dense;
+  }
+
+  &.md-medium,
+  &.md-large {
+    .md-toolbar-row {
+      min-height: $md-toolbar-height;
+    }
+  }
+
+  &.md-medium {
+    min-height: 88px;
+  }
+
+  &.md-large {
+    min-height: 128px;
+    align-content: inherit;
+
+    &.md-dense {
+      min-height: 96px;
+
+      .md-toolbar-row + .md-toolbar-row {
+        min-height: 32px;
+      }
+    }
+  }
+
+  .md-toolbar-offset {
+    margin-left: 56px;
+
+    @include md-layout-small {
+      margin-left: 48px;
+    }
+  }
+
+  .md-button,
+  .md-icon {
+    z-index: 1;
+
+    ~ .md-title {
+      margin-left: 24px;
+
+      @include md-layout-small {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .md-button {
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .md-display-2,
+  .md-display-1,
+  .md-title {
+    margin: 0;
+    margin-left: 8px;
+    overflow: hidden;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+
+  .md-display-1 {
+    padding: 12px 0;
+  }
+
+  .md-field {
+    margin-top: 2px;
+    margin-bottom: 14px;
+    padding-top: 16px;
+  }
+}
+
+.md-toolbar-row {
+  align-self: flex-start;
+}
+
+.md-toolbar-section-start,
+.md-toolbar-section-end {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.md-toolbar-section-start {
+  justify-content: flex-start;
+  order: 0;
+}
+
+.md-toolbar-section-end {
+  justify-content: flex-end;
+  order: 10;
+}
 </style>

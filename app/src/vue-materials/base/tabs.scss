@@ -1,0 +1,343 @@
+// Tabs base styles
+.md-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.md-tabs.md-no-transition * {
+  transition: none !important;
+}
+
+.md-tabs.md-dynamic-height .md-tabs-content {
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: height;
+}
+
+// Tabs navigation
+.md-tabs-navigation {
+  display: flex;
+  position: relative;
+}
+
+.md-tabs-navigation .md-button {
+  max-width: 264px;
+  min-width: 72px;
+  height: 48px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: none;
+  border: none;
+  outline: none;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color;
+  will-change: color, background-color;
+}
+
+.md-tabs-navigation .md-button-content {
+  position: static;
+}
+
+.md-tabs-navigation .md-icon-label {
+  height: 72px;
+}
+
+.md-tabs-navigation .md-icon-label .md-button-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.md-tabs-navigation .md-icon-label .md-tab-icon + .md-tab-label {
+  margin-top: 10px;
+}
+
+.md-tabs-navigation .md-ripple {
+  padding: 0 24px;
+}
+
+.md-tabs-navigation .md-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.md-tabs-navigation .md-button.md-active {
+  background-color: transparent;
+}
+
+// Tabs indicator
+.md-tabs-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: left, right, width;
+  will-change: left, right, width;
+}
+
+// Tabs container
+.md-tabs-container {
+  position: relative;
+  overflow: hidden;
+}
+
+// Tabs content
+.md-tabs-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.md-tabs-content .md-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity, transform;
+  will-change: opacity, transform;
+}
+
+.md-tabs-content .md-tab.md-active {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+// Tab button specific styles
+.md-tab-nav-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  max-width: 264px;
+  height: 48px;
+  padding: 0 12px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: none;
+  border: none;
+  outline: none;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color;
+  will-change: color, background-color;
+}
+
+.md-tab-nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.md-tab-nav-button.md-active {
+  background-color: transparent;
+}
+
+// Icon and label combination
+.md-tab-nav-button.md-icon-label {
+  flex-direction: column;
+  height: 64px;
+  line-height: 1;
+  padding: 8px 12px;
+}
+
+.md-tab-nav-button.md-icon-label .md-icon {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.md-tab-nav-button.md-icon-label .md-tab-label {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+// Toolbar context
+.md-toolbar .md-tabs {
+  padding-left: 48px;
+}
+
+// Responsive design
+@media (max-width: 600px) {
+  .md-tabs-navigation .md-button {
+    min-width: 72px;
+  }
+
+  .md-toolbar .md-tabs {
+    margin: 0 -8px;
+    padding-left: 0;
+  }
+
+  .md-tabs-navigation .md-ripple {
+    padding: 0 12px;
+  }
+
+  .md-tab {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 960px) {
+  .md-tabs.md-alignment-fixed .md-tabs-navigation .md-button {
+    min-width: 72px;
+  }
+}
+
+// Dialog context
+.md-dialog-container .md-tabs {
+  flex: 1;
+  max-width: 100%;
+}
+
+.md-dialog-container .md-tabs-navigation {
+  padding: 0 12px;
+}
+
+// Tabs alignment
+.md-tabs.md-alignment-left .md-tabs-navigation {
+  justify-content: flex-start;
+}
+
+.md-tabs.md-alignment-right .md-tabs-navigation {
+  justify-content: flex-end;
+}
+
+.md-tabs.md-alignment-centered .md-tabs-navigation,
+.md-tabs.md-alignment-center .md-tabs-navigation {
+  justify-content: center;
+}
+
+.md-tabs.md-alignment-fixed .md-tabs-navigation {
+  justify-content: center;
+}
+
+.md-tabs.md-alignment-fixed .md-tabs-navigation .md-button {
+  max-width: 264px;
+  min-width: 160px;
+  flex: 1;
+}
+
+.md-tabs.md-alignment-justified .md-tabs-navigation {
+  justify-content: space-between;
+}
+
+.md-tabs.md-alignment-justified .md-tabs-navigation .md-button {
+  flex: 1;
+  min-width: 160px;
+}
+
+// Tabs with icons
+.md-tabs.md-with-icon .md-tabs-navigation .md-button {
+  height: 64px;
+  min-width: 82px;
+  min-width: 56px;
+  margin-top: 5px;
+}
+
+// Tabs content transitions
+.md-tabs-content .md-tab.md-transition-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.md-tabs-content .md-tab.md-transition-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.md-tabs-content .md-tab.md-transition-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.md-tabs-content .md-tab.md-transition-leave-active {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+// Tabs with fixed height
+.md-tabs.md-fixed-height .md-tabs-content {
+  height: 100%;
+}
+
+.md-tabs.md-fixed-height .md-tabs-content .md-tab {
+  height: 100%;
+  overflow-y: auto;
+}
+
+// Tabs with scrollable navigation
+.md-tabs.md-scrollable .md-tabs-navigation {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.md-tabs.md-scrollable .md-tabs-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+// Tabs with custom indicator
+.md-tabs-indicator.md-custom {
+  background: linear-gradient(
+    45deg,
+    var(--md-theme-default-primary, #448aff),
+    var(--md-theme-default-accent, #ff5252)
+  );
+}
+
+// Tabs with elevation
+.md-tabs.md-elevation-1 {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.md-tabs.md-elevation-2 {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.md-tabs.md-elevation-3 {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16);
+}
+
+// Tabs with border
+.md-tabs.md-bordered {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.md-tabs.md-bordered .md-tabs-navigation {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+// Tabs with background
+.md-tabs.md-background {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+// Tabs with rounded corners
+.md-tabs.md-rounded .md-tabs-navigation .md-button {
+  border-radius: 4px 4px 0 0;
+}
+
+.md-tabs.md-rounded .md-tabs-indicator {
+  border-radius: 2px 2px 0 0;
+}

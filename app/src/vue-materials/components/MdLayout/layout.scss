@@ -1,5 +1,6 @@
-@import './variables.scss';
-@import './mixins.scss';
+@import "./variables.scss";
+@import "./mixins.scss";
+
 
 /**
  * Layout Base
@@ -15,6 +16,7 @@
     margin: 0 auto;
   }
 }
+
 
 /**
  * Gutter sizes
@@ -40,6 +42,7 @@
   }
 }
 
+
 /**
  * Alignments
  */
@@ -47,6 +50,8 @@
 .md-layout {
   @include md-layout-alignment;
 }
+
+
 
 /**
  * Layout item
@@ -81,6 +86,7 @@
     @include md-layout-item(xsmall);
   }
 }
+
 
 /**
  * Hide Element

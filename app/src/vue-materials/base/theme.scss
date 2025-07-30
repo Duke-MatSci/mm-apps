@@ -1,4 +1,4 @@
-@mixin md-base-theme() {
+@mixin md-base-theme () {
   :not(input):not(textarea)::selection {
     @include md-theme-component-relative() {
       @include md-theme-property(background-color, accent, background);
@@ -11,14 +11,14 @@
       @include md-theme-property(color, primary, background);
 
       &:hover {
-        @include md-theme-property(color, primary, background, 0.8);
+        @include md-theme-property(color, primary, background, .8);
       }
 
       &.md-accent {
         @include md-theme-property(color, accent, background);
 
         &:hover {
-          @include md-theme-property(color, accent, background, 0.8);
+          @include md-theme-property(color, accent, background, .8);
         }
       }
     }

@@ -1,7 +1,3 @@
-<template>
-  <component :is="defaultSlot" v-if="defaultSlot" />
-</template>
-
 <script lang="ts">
 import {
   defineComponent,
@@ -16,8 +12,12 @@ import {
 
 export default defineComponent({
   name: 'MdPortal',
+  abstract: true,
   props: {
-    mdAttachToParent: { type: Boolean, default: false },
+    mdAttachToParent: {
+      type: Boolean,
+      default: false,
+    },
     mdTarget: {
       type: null,
       validator(value: any) {
@@ -35,23 +35,23 @@ export default defineComponent({
     const originalParentEl = ref<HTMLElement | null>(null);
     const currentEl = ref<HTMLElement | null>(null);
 
-    const defaultSlot = computed(() => {
-      return slots.default && slots.default()[0];
-    });
-
     const transitionName = computed(() => {
-      const childrenComponent = defaultSlot.value;
+      const childrenComponent = slots.default && slots.default()[0];
+
       if (childrenComponent) {
-        const transition = childrenComponent.props?.transition;
+        const transition = (childrenComponent as any).props?.transition;
+
         if (transition) {
           return transition.name;
         } else {
-          const transition = childrenComponent.props?.name;
+          const transition = (childrenComponent as any).props?.name;
+
           if (transition) {
             return transition;
           }
         }
       }
+
       return 'v';
     });
 
@@ -168,7 +168,6 @@ export default defineComponent({
     });
 
     return {
-      defaultSlot,
       leaveTimeout,
       originalParentEl,
       currentEl,
@@ -178,6 +177,7 @@ export default defineComponent({
   },
   render() {
     const defaultSlot = this.$slots.default;
+
     if (defaultSlot && defaultSlot()[0]) {
       return defaultSlot()[0];
     }

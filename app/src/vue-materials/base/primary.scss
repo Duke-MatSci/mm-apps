@@ -1,0 +1,84 @@
+// Primary color utility styles
+.md-primary {
+  // Global primary color utility class
+  color: var(--md-theme-default-primary, #448aff) !important;
+}
+
+// Primary background utility
+.md-primary-bg {
+  background-color: var(--md-theme-default-primary, #448aff) !important;
+  color: var(--md-theme-default-text-primary-on-primary, #fff) !important;
+}
+
+// Primary border utility
+.md-primary-border {
+  border-color: var(--md-theme-default-primary, #448aff) !important;
+}
+
+// Primary text utility
+.md-primary-text {
+  color: var(--md-theme-default-primary, #448aff) !important;
+}
+
+// Primary fill utility for SVGs
+.md-primary-fill {
+  fill: var(--md-theme-default-primary, #448aff) !important;
+}
+
+// Primary stroke utility for SVGs
+.md-primary-stroke {
+  stroke: var(--md-theme-default-primary, #448aff) !important;
+}
+
+// Primary hover states
+.md-primary-hover:hover {
+  background-color: var(--md-theme-default-primary, #448aff) !important;
+  color: var(--md-theme-default-text-primary-on-primary, #fff) !important;
+}
+
+// Primary focus states
+.md-primary-focus:focus {
+  border-color: var(--md-theme-default-primary, #448aff) !important;
+  box-shadow: 0 0 0 2px rgba(68, 138, 255, 0.2) !important;
+}
+
+// Primary active states
+.md-primary-active:active {
+  background-color: var(--md-theme-default-primary, #448aff) !important;
+  color: var(--md-theme-default-text-primary-on-primary, #fff) !important;
+}
+
+// Primary disabled states
+.md-primary-disabled:disabled {
+  background-color: rgba(68, 138, 255, 0.12) !important;
+  color: rgba(68, 138, 255, 0.38) !important;
+}
+
+// Primary ripple effect
+.md-primary-ripple .md-ripple-wave {
+  background-color: var(--md-theme-default-primary, #448aff) !important;
+}
+
+// Primary selection
+.md-primary-selection ::selection {
+  background-color: var(--md-theme-default-primary, #448aff) !important;
+  color: var(--md-theme-default-text-primary-on-primary, #fff) !important;
+}
+
+// Primary placeholder
+.md-primary-placeholder ::placeholder {
+  color: rgba(68, 138, 255, 0.54) !important;
+}
+
+// Primary outline
+.md-primary-outline {
+  border: 1px solid var(--md-theme-default-primary, #448aff) !important;
+  background-color: transparent !important;
+  color: var(--md-theme-default-primary, #448aff) !important;
+}
+
+// Primary gradient
+.md-primary-gradient {
+  background: linear-gradient(45deg, var(--md-theme-default-primary, #448aff), #116aff) !important;
+  color: var(--md-theme-default-text-primary-on-primary, #fff) !important;
+}

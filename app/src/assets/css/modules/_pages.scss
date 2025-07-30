@@ -134,11 +134,13 @@
         width: 30rem !important;
       }
 
-      &_icon {
+      &_icon,
+      & > &_icon#nav-icon {
         margin-top: 9rem;
         font-size: 12rem !important;
         color: $primary !important;
       }
+
       &_text {
         color: $primary;
         // font-size: 3rem;
@@ -204,8 +206,7 @@
 .metamine {
   &_intro {
     &-banner {
-      background: url('~@/assets/img/random_network.png') no-repeat bottom
-        center !important;
+      background: url('~@/assets/img/random_network.png') no-repeat bottom center !important;
       background-size: cover !important;
       margin-top: -2rem;
       padding: 1.5rem;

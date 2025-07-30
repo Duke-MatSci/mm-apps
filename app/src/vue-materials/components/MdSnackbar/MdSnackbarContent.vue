@@ -8,16 +8,16 @@
   </transition>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+interface Props {
+  mdClasses?: any[];
+}
 
-export default defineComponent({
+const props = withDefaults(defineProps<Props>(), {
+  mdClasses: () => [],
+});
+
+defineOptions({
   name: 'MdSnackbarContent',
-  props: {
-    mdClasses: {
-      type: Array,
-      default: () => [],
-    },
-  },
 });
 </script>

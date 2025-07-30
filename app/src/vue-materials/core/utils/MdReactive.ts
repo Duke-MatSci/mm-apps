@@ -1,5 +1,5 @@
-import { reactive } from 'vue';
+import { reactive, Reactive } from 'vue';
 
-export default function (data: any) {
+export default function MdReactive<T extends object>(data: T): Reactive<T> {
   return reactive(data);
 }

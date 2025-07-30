@@ -1,5 +1,3 @@
-@import '../../theme/mixins';
-
 .md-icon {
   @include md-theme-component() {
     &.md-icon-image {

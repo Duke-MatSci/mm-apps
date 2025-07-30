@@ -1,158 +1,66 @@
-@import '../../theme/mixins';
+@import '../../theme/mixins.scss';
 
 .md-steppers {
   @include md-theme-component() {
-    @include md-theme-property(background-color, background, background);
-  }
+    @include md-theme-property(background-color, background);
+    @include md-theme-property(color, text-primary, background);
 
-  &.md-linear {
-    .md-stepper-header {
-      cursor: pointer;
-    }
-  }
-
-  &.md-vertical {
+    .md-stepper-icon,
+    .md-stepper-number,
     .md-stepper {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .md-stepper-header {
-      flex-shrink: 0;
-      width: 120px;
-    }
-
-    .md-stepper-content {
-      flex: 1;
-      margin-left: 16px;
-    }
-  }
-
-  &.md-alternative {
-    .md-stepper-header {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-}
-
-.md-stepper {
-  @include md-theme-component() {
-    @include md-theme-property(background-color, background, background);
-  }
-
-  &.md-active {
-    .md-stepper-header {
-      @include md-theme-component() {
-        @include md-theme-property(color, primary, primary);
+      &:after,
+      &:before {
+        @include md-theme-property(background-color, divider, background);
       }
     }
-  }
 
-  &.md-completed {
-    .md-stepper-header {
-      @include md-theme-component() {
-        @include md-theme-property(color, primary, primary);
+    .md-stepper-number {
+      @include md-theme-property(background-color, text-hint, background);
+      @include md-theme-property(color, text-primary, text-hint);
+
+      svg {
+        @include md-theme-property(color, text-primary, text-hint);
+        @include md-theme-property(fill, text-primary, text-hint);
       }
     }
-  }
 
-  &.md-disabled {
     .md-stepper-header {
-      @include md-theme-component() {
-        @include md-theme-property(color, text-disabled, text-disabled);
+      .md-button-content {
+        @include md-theme-property(color, text-hint, background);
+
+        &:after,
+        &:before {
+          @include md-theme-property(background-color, divider, background);
+        }
       }
-      cursor: not-allowed;
+
+      &.md-active,
+      &.md-done {
+        .md-button-content {
+          @include md-theme-property(color, text-primary, background);
+        }
+
+        .md-stepper-number {
+          @include md-theme-property(background-color, primary, background);
+          @include md-theme-property(color, text-primary, primary);
+
+          svg {
+            @include md-theme-property(color, text-primary, primary);
+            @include md-theme-property(fill, text-primary, primary);
+          }
+        }
+      }
+
+      &.md-error {
+        .md-button-content {
+          @include md-theme-property-by-hue(color, red, A400, stepper, error);
+        }
+
+        .md-icon svg {
+          @include md-theme-property-by-hue(color, red, A400, stepper, error);
+          @include md-theme-property-by-hue(fill, red, A400, stepper, error);
+        }
+      }
     }
-  }
-}
-
-.md-stepper-header {
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  cursor: default;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  @include md-theme-component() {
-    @include md-theme-property(color, text-primary, text-primary);
-  }
-
-  &:hover {
-    @include md-theme-component() {
-      @include md-theme-property(background-color, hover, hover);
-    }
-  }
-}
-
-.md-stepper-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  margin-right: 16px;
-  font-weight: 500;
-  font-size: 14px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  @include md-theme-component() {
-    @include md-theme-property(background-color, surface, surface);
-    @include md-theme-property(color, text-primary, text-primary);
-    @include md-theme-property(border, 2px solid, border-color, border-color);
-  }
-
-  &.md-active {
-    @include md-theme-component() {
-      @include md-theme-property(background-color, primary, primary);
-      @include md-theme-property(color, text-primary-on-primary, text-primary-on-primary);
-      @include md-theme-property(border-color, primary, primary);
-    }
-  }
-
-  &.md-completed {
-    @include md-theme-component() {
-      @include md-theme-property(background-color, primary, primary);
-      @include md-theme-property(color, text-primary-on-primary, text-primary-on-primary);
-      @include md-theme-property(border-color, primary, primary);
-    }
-  }
-}
-
-.md-stepper-title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.md-stepper-subtitle {
-  font-size: 14px;
-  line-height: 1.4;
-  margin-top: 4px;
-
-  @include md-theme-component() {
-    @include md-theme-property(color, text-secondary, text-secondary);
-  }
-}
-
-.md-stepper-content {
-  padding: 16px;
-  margin-left: 48px;
-
-  @include md-theme-component() {
-    @include md-theme-property(background-color, surface, surface);
-  }
-}
-
-.md-steppers-navigation {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  padding: 16px;
-  margin-top: 16px;
-
-  @include md-theme-component() {
-    @include md-theme-property(background-color, surface, surface);
   }
 }

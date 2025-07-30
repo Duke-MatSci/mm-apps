@@ -2,44 +2,50 @@
   <md-svg-loader
     class="md-icon md-icon-image"
     :md-src="mdSrc"
-    :class="[$mdActiveTheme]"
+    :class="[mdActiveTheme]"
     v-if="mdSrc"
     @md-loaded="$emit('md-loaded')"
   />
-  <i class="md-icon md-icon-font" :class="[$mdActiveTheme]" v-else>
+  <i class="md-icon md-icon-font" :class="[mdActiveTheme]" v-else>
     <slot />
   </i>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed } from 'vue';
+<script setup lang="ts">
+import { computed, inject } from 'vue';
 import MdSvgLoader from '../MdSvgLoader/MdSvgLoader.vue';
 
-export default defineComponent({
+interface Props {
+  mdSrc?: string;
+  mdTheme?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  mdSrc: undefined,
+  mdTheme: 'default',
+});
+
+const emit = defineEmits<{
+  'md-loaded': [];
+}>();
+
+// Inject theme from parent component or use prop
+const mdActiveTheme = inject(
+  'mdActiveTheme',
+  computed(() => `md-theme-${props.mdTheme}`)
+);
+
+defineOptions({
   name: 'MdIcon',
   components: {
     MdSvgLoader,
-  },
-  props: {
-    mdSrc: String,
-    mdTheme: { type: String, default: 'default' },
-  },
-  emits: ['md-loaded'],
-  setup(props) {
-    const $mdActiveTheme = computed(() => {
-      return props.mdTheme || 'default';
-    });
-
-    return {
-      $mdActiveTheme,
-    };
   },
 });
 </script>
 
 <style lang="scss">
-@import '../MdAnimation/variables';
-@import './mixins';
+@import '../MdAnimation/variables.scss';
+@import './mixins.scss';
 
 $icon-size: 24px;
 

@@ -1,17 +1,17 @@
 <template>
-  <div class="md-app md-app-internal-drawer md-layout-column" :class="[appClasses, $mdActiveTheme]">
+  <div class="md-app md-app-internal-drawer md-layout-column" :class="[appClasses, mdActiveTheme]">
     <slot name="md-app-toolbar"></slot>
 
     <main
       class="md-app-container md-flex md-layout-row"
       :style="[containerStyles, contentStyles]"
-      :class="[$mdActiveTheme, scrollerClasses]"
+      :class="[mdActiveTheme, scrollerClasses]"
     >
       <slot name="md-app-drawer-left"></slot>
       <slot name="md-app-drawer-right-previous"></slot>
       <div
         class="md-app-scroller md-layout-column md-flex"
-        :class="[$mdActiveTheme, scrollerClasses]"
+        :class="[mdActiveTheme, scrollerClasses]"
       >
         <slot name="md-app-content"></slot>
       </div>
@@ -20,43 +20,52 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed } from 'vue';
-import useMdAppMixin from './MdAppMixin';
+<script setup lang="ts">
+import { provide } from 'vue';
+import { useMdComponent } from '../../core/MdComponent';
+import { useMdTheme } from '../../core/MdTheme';
+import { useMdAppMixin } from './MdAppMixin';
 
-export default defineComponent({
+// Props
+interface Props {
+  mdMode?: string;
+  mdWaterfall?: boolean;
+  mdScrollbar?: boolean;
+  mdTheme?: string | boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  mdScrollbar: true,
+});
+
+// Use MdComponent and MdTheme
+const { mdActiveTheme } = useMdComponent();
+const { getThemeName, getAncestorTheme } = useMdTheme();
+
+// Use MdAppMixin
+const {
+  MdApp,
+  isFixed,
+  isDrawerMini,
+  contentPadding,
+  contentStyles,
+  containerStyles,
+  scrollerClasses,
+  appClasses,
+  handleScroll,
+} = useMdAppMixin(props);
+
+// Provide MdApp context to children
+provide('MdApp', MdApp);
+
+// Define component name
+defineOptions({
   name: 'MdAppInternalDrawer',
-  props: {
-    mdMode: String,
-    mdWaterfall: Boolean,
-    mdScrollbar: {
-      type: Boolean,
-      default: true,
-    },
-  },
-  setup(props) {
-    const { MdApp, appClasses, scrollerClasses, contentStyles, containerStyles, handleScroll } =
-      useMdAppMixin(props);
-
-    const $mdActiveTheme = computed(() => {
-      return null; // This will be handled by theme system
-    });
-
-    return {
-      MdApp,
-      appClasses,
-      scrollerClasses,
-      contentStyles,
-      containerStyles,
-      handleScroll,
-      $mdActiveTheme,
-    };
-  },
 });
 </script>
 
 <style lang="scss">
-@import '../MdAnimation/variables';
+@import '../MdAnimation/variables.scss';
 
 .md-app-internal-drawer {
   flex-direction: column;

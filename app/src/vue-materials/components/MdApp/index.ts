@@ -6,11 +6,5 @@ import MdAppSideDrawer from './MdAppSideDrawer.vue';
 import MdAppInternalDrawer from './MdAppInternalDrawer.vue';
 
 export { MdApp, MdAppToolbar, MdAppContent, MdAppDrawer, MdAppSideDrawer, MdAppInternalDrawer };
-export default {
-  MdApp,
-  MdAppToolbar,
-  MdAppContent,
-  MdAppDrawer,
-  MdAppSideDrawer,
-  MdAppInternalDrawer,
-};
+
+export default MdApp;

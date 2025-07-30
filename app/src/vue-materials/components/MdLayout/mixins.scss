@@ -1,4 +1,5 @@
-@import './variables.scss';
+@import "./variables.scss";
+
 
 /**
  * Breakpoint
@@ -58,11 +59,12 @@
   }
 }
 
+
 /**
  * Base
  */
 
-@mixin md-layout-base() {
+@mixin md-layout-base () {
   display: flex;
 
   .md-layout {
@@ -88,7 +90,7 @@
   }
 }
 
-@mixin md-layout-alignment() {
+@mixin md-layout-alignment () {
   &.md-alignment-top-left {
     justify-content: flex-start;
     align-items: flex-start;
@@ -216,13 +218,14 @@
   }
 }
 
+
 /**
  * Layout Item
  */
 
-@mixin md-layout-item($size: '') {
-  @if $size != '' {
-    $size: '-#{$size}';
+@mixin md-layout-item ($size: "") {
+  @if $size != "" {
+    $size : "-#{$size}";
   }
 
   &.md#{$size}-size {
@@ -233,9 +236,9 @@
     $counter: $i * 5;
 
     &.md#{$size}-size-#{$counter} {
-      min-width: #{$counter + '%'};
-      max-width: #{$counter + '%'};
-      flex: 0 1 #{$counter + '%'};
+      min-width: #{$counter + "%"};
+      max-width: #{$counter + "%"};
+      flex: 0 1 #{$counter + "%"};
     }
   }
 
@@ -259,13 +262,14 @@
   }
 }
 
+
 /**
  * Hide Element
  */
 
-@mixin md-hide($size: '') {
-  @if $size != '' {
-    $size: '-#{$size}';
+@mixin md-hide($size: "") {
+  @if $size != "" {
+    $size : "-#{$size}";
   }
 
   .md#{$size}-hide {

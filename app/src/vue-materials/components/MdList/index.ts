@@ -1,6 +1,5 @@
 import MdList from './MdList.vue';
-import MdListItem from './MdListItem.vue';
-import MdListExpansion from './MdListExpansion.vue';
+import MdListItem from './MdListItem/MdListItem.vue';
 
-export { MdList, MdListItem, MdListExpansion };
-export default MdList;
+export { MdList, MdListItem };
+export default { MdList, MdListItem };

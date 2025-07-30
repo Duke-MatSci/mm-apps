@@ -1,6 +1,6 @@
 import MdSteppers from './MdSteppers.vue';
-import MdStepper from './MdStepper.vue';
-import MdSteppersNavigation from './MdSteppersNavigation.vue';
+import MdStep from './MdStep.vue';
+import MdStepHeader from './MdStepHeader.vue';
 
-export { MdSteppers, MdStepper, MdSteppersNavigation };
-export default { MdSteppers, MdStepper, MdSteppersNavigation };
+export default MdSteppers;
+export { MdSteppers, MdStep, MdStepHeader };

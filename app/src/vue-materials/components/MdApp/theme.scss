@@ -1,7 +1,8 @@
-@import '../../theme/mixins';
-
-.md-app:not(.md-overlap) {
+@import '../MdAnimation/variables.scss';
+@import '../../theme/mixins.scss';
+.md-app {
   @include md-theme-component() {
+    @include md-theme-property(color, text-primary);
     @include md-theme-property(background-color, background);
   }
 }

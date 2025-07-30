@@ -1,7 +1,6 @@
+@import './variables.scss';
+@import './functions.scss';
 @import '../base/theme.scss';
-@import './functions';
-@import './palette';
-@import './variables';
 
 /**
  * Override extending the default palette giving new values. It will extend

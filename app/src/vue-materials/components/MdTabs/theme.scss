@@ -1,5 +1,4 @@
-@import '../../theme/mixins';
-
+@import '../../theme/mixins.scss';
 @mixin md-tabs-spec($primary, $indicator, $text) {
   .md-tabs-navigation {
     @include md-theme-property(background-color, $primary, background);

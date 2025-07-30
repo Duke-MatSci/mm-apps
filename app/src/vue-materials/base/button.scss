@@ -1,0 +1,439 @@
+// Button base styles
+.md-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  height: 36px;
+  margin: 0;
+  padding: 0 16px;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 36px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow, transform;
+  will-change: color, background-color, box-shadow, transform;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// Button variants
+.md-button.md-raised {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.md-button.md-raised:hover {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.md-button.md-raised:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.md-button.md-fab {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.md-button.md-fab:hover {
+  box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.14),
+    0 2px 24px 1px rgba(0, 0, 0, 0.12);
+}
+
+.md-button.md-fab:active {
+  box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.14),
+    0 4px 28px 2px rgba(0, 0, 0, 0.12);
+}
+
+.md-button.md-fab.md-mini {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+}
+
+.md-button.md-fab.md-dense {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+}
+
+// Icon button styles
+.md-icon-button {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  margin: 0 6px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.md-icon-button.md-dense {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+}
+
+.md-icon-button .md-ripple-enter-active {
+  transition-duration: 1.2s;
+}
+
+// Button sizes
+.md-button.md-small {
+  min-width: 64px;
+  height: 32px;
+  padding: 0 8px;
+  font-size: 13px;
+  line-height: 32px;
+}
+
+.md-button.md-large {
+  min-width: 112px;
+  height: 48px;
+  padding: 0 24px;
+  font-size: 15px;
+  line-height: 48px;
+}
+
+// Button states
+.md-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.md-button:active {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.md-button:focus {
+  outline: none;
+}
+
+.md-button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+// Button content
+.md-button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+// Button with icon
+.md-button .md-icon {
+  margin: 0;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md-button .md-icon:first-child {
+  margin-right: 8px;
+}
+
+.md-button .md-icon:last-child {
+  margin-left: 8px;
+}
+
+.md-button .md-icon:only-child {
+  margin: 0;
+}
+
+// Button with text and icon
+.md-button.md-icon-text {
+  padding: 0 12px;
+}
+
+.md-button.md-icon-text .md-icon {
+  margin-right: 8px;
+}
+
+// Button in different contexts
+.md-toolbar .md-button {
+  z-index: 1;
+}
+
+.md-toolbar .md-button:last-child {
+  margin-right: 0;
+}
+
+.md-toolbar .md-button:first-child {
+  margin-left: 0;
+}
+
+.md-toolbar .md-button ~ .md-title {
+  margin-left: 24px;
+}
+
+.md-card .md-button {
+  margin: 0;
+}
+
+.md-card .md-card-actions .md-button {
+  margin: 0 8px 0 0;
+}
+
+.md-card .md-card-actions .md-button:last-child {
+  margin-right: 0;
+}
+
+.md-dialog .md-button {
+  margin: 0 8px 0 0;
+}
+
+.md-dialog .md-button:last-child {
+  margin-right: 0;
+}
+
+.md-snackbar .md-button {
+  margin: 0 0 0 8px;
+}
+
+.md-snackbar .md-button:first-child {
+  margin-left: 0;
+}
+
+// Button theme integration
+.md-button.md-theme-default {
+  color: rgba(0, 0, 0, 0.87);
+  color: var(--md-theme-default-text-primary-on-background, rgba(0, 0, 0, 0.87));
+}
+
+.md-button.md-theme-default:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.md-button.md-theme-default:active {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.md-button.md-theme-default.md-raised:not([disabled]) {
+  color: #fff;
+  color: var(--md-theme-default-text-primary-on-primary, #fff);
+  background-color: var(--md-theme-default-primary, #448aff);
+}
+
+.md-button.md-theme-default.md-raised:not([disabled]):hover {
+  background-color: var(--md-theme-default-primary-hover, #2979ff);
+}
+
+.md-button.md-theme-default.md-raised:not([disabled]):active {
+  background-color: var(--md-theme-default-primary-active, #2962ff);
+}
+
+.md-button.md-theme-default.md-raised:not([disabled]).md-accent {
+  color: #fff;
+  color: var(--md-theme-default-text-primary-on-accent, #fff);
+  background-color: var(--md-theme-default-accent, #ff5252);
+}
+
+.md-button.md-theme-default.md-raised:not([disabled]).md-accent:hover {
+  background-color: var(--md-theme-default-accent-hover, #ff1744);
+}
+
+.md-button.md-theme-default.md-raised:not([disabled]).md-accent:active {
+  background-color: var(--md-theme-default-accent-active, #d50000);
+}
+
+.md-button.md-theme-default.md-fab:not([disabled]) {
+  color: #fff;
+  color: var(--md-theme-default-text-primary-on-primary, #fff);
+  background-color: var(--md-theme-default-primary, #448aff);
+}
+
+.md-button.md-theme-default.md-fab:not([disabled]):hover {
+  background-color: var(--md-theme-default-primary-hover, #2979ff);
+}
+
+.md-button.md-theme-default.md-fab:not([disabled]):active {
+  background-color: var(--md-theme-default-primary-active, #2962ff);
+}
+
+.md-button.md-theme-default.md-fab:not([disabled]).md-accent {
+  color: #fff;
+  color: var(--md-theme-default-text-primary-on-accent, #fff);
+  background-color: var(--md-theme-default-accent, #ff5252);
+}
+
+.md-button.md-theme-default.md-fab:not([disabled]).md-accent:hover {
+  background-color: var(--md-theme-default-accent-hover, #ff1744);
+}
+
+.md-button.md-theme-default.md-fab:not([disabled]).md-accent:active {
+  background-color: var(--md-theme-default-accent-active, #d50000);
+}
+
+// Icon button theme integration
+.md-button.md-theme-default:not(.md-primary):not(.md-accent).md-icon-button .md-icon {
+  color: rgba(0, 0, 0, 0.54);
+  color: var(--md-theme-default-text-primary-on-background, rgba(0, 0, 0, 0.54));
+  fill: rgba(0, 0, 0, 0.54);
+  fill: var(--md-theme-default-text-primary-on-background, rgba(0, 0, 0, 0.54));
+}
+
+.md-button.md-theme-default.md-primary:not(.md-accent).md-icon-button .md-icon {
+  color: rgba(255, 255, 255, 0.54);
+  color: var(--md-theme-default-text-primary-on-primary, rgba(255, 255, 255, 0.54));
+  fill: rgba(255, 255, 255, 0.54);
+  fill: var(--md-theme-default-text-primary-on-primary, rgba(255, 255, 255, 0.54));
+}
+
+.md-button.md-theme-default.md-accent.md-icon-button .md-icon {
+  color: rgba(255, 255, 255, 0.54);
+  color: var(--md-theme-default-text-primary-on-accent, rgba(255, 255, 255, 0.54));
+  fill: rgba(255, 255, 255, 0.54);
+  fill: var(--md-theme-default-text-primary-on-accent, rgba(255, 255, 255, 0.54));
+}
+
+// Button ripple effects
+.md-button .md-ripple {
+  border-radius: inherit;
+}
+
+.md-button .md-ripple-wave {
+  border-radius: inherit;
+}
+
+.md-fab .md-ripple,
+.md-fab:before,
+.md-icon-button .md-ripple,
+.md-icon-button:before {
+  border-radius: 50%;
+}
+
+.md-fab.md-dense .md-ripple-wave,
+.md-fab.md-mini .md-ripple-wave,
+.md-icon-button .md-ripple-wave {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+// Button in card context
+.md-card.md-theme-default
+  .md-card-actions
+  .md-button:not(.md-primary):not(.md-accent).md-icon-button
+  .md-icon {
+  color: rgba(0, 0, 0, 0.54);
+  color: var(--md-theme-default-text-primary-on-background, rgba(0, 0, 0, 0.54));
+  fill: rgba(0, 0, 0, 0.54);
+  fill: var(--md-theme-default-text-primary-on-background, rgba(0, 0, 0, 0.54));
+}
+
+.md-card.md-theme-default.md-primary
+  .md-card-actions
+  .md-button:not(.md-primary):not(.md-accent).md-icon-button
+  .md-icon {
+  color: rgba(255, 255, 255, 0.54);
+  color: var(--md-theme-default-text-primary-on-primary, rgba(255, 255, 255, 0.54));
+  fill: rgba(255, 255, 255, 0.54);
+  fill: var(--md-theme-default-text-primary-on-primary, rgba(255, 255, 255, 0.54));
+}
+
+.md-card.md-theme-default.md-accent
+  .md-card-actions
+  .md-button:not(.md-primary):not(.md-accent).md-icon-button
+  .md-icon {
+  color: rgba(255, 255, 255, 0.54);
+  color: var(--md-theme-default-text-primary-on-accent, rgba(255, 255, 255, 0.54));
+  fill: rgba(255, 255, 255, 0.54);
+  fill: var(--md-theme-default-text-primary-on-accent, rgba(255, 255, 255, 0.54));
+}
+
+// Button in card media cover context
+.md-card-media-cover .md-card-header .md-button:not(.md-primary):not(.md-accent),
+.md-card-media-cover
+  .md-card-header
+  .md-button:not(.md-primary):not(.md-accent).md-icon-button
+  .md-icon {
+  color: #fff !important;
+}
+
+// Button expand trigger
+.md-card-expand-trigger.md-icon-button {
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform;
+}
+
+.md-card.md-expand-active .md-card-expand-trigger.md-icon-button {
+  transform: rotate(180deg);
+}
+
+// Responsive design
+@media (max-width: 960px) {
+  .md-toolbar .md-button ~ .md-title {
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .md-button {
+    min-width: 64px;
+    height: 32px;
+    padding: 0 8px;
+    font-size: 13px;
+    line-height: 32px;
+  }
+
+  .md-button.md-large {
+    min-width: 96px;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .md-icon-button {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    margin: 0 4px;
+  }
+
+  .md-icon-button.md-dense {
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+  }
+
+  .md-fab {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .md-fab.md-mini {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .md-fab.md-dense {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+}

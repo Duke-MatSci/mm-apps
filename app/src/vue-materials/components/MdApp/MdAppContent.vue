@@ -1,50 +1,69 @@
 <template>
-  <md-card class="md-app-content md-flex" v-bind="$attrs" v-if="showCard">
-    <slot />
-  </md-card>
-
-  <md-content class="md-app-content md-flex" v-bind="$attrs" v-else>
-    <slot />
-  </md-content>
+  <div :class="contentClasses" :style="contentStyles">
+    <div v-if="showCard" class="md-card">
+      <slot />
+    </div>
+    <slot v-else />
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, inject, computed } from 'vue';
+<script setup lang="ts">
+import { computed, inject } from 'vue';
 
-interface MdAppOptions {
-  mode: string | null;
-  waterfall: boolean;
-  flexible: boolean;
+// Props
+interface Props {
+  mdTheme?: string | boolean;
 }
 
-interface MdApp {
-  options: MdAppOptions;
-}
+const props = withDefaults(defineProps<Props>(), {
+  mdTheme: undefined,
+});
 
-export default defineComponent({
+// Inject MdApp context
+const MdApp = inject('MdApp') as any;
+
+// Computed properties
+const contentClasses = computed(() => {
+  return {
+    'md-app-content': true,
+    [`md-theme-${props.mdTheme}`]: props.mdTheme,
+  };
+});
+
+const contentStyles = computed(() => {
+  return {};
+});
+
+const showCard = computed(() => {
+  return MdApp?.value?.options?.mode === 'overlap';
+});
+
+// Define component name
+defineOptions({
   name: 'MdAppContent',
-  inject: {
-    MdApp: {
-      default: null,
-    },
-  },
-  computed: {
-    showCard(): boolean {
-      const mdApp = this.MdApp as MdApp;
-      return mdApp?.options && mdApp.options.mode === 'overlap';
-    },
-  },
 });
 </script>
 
 <style lang="scss">
-.md-app-content {
-  min-height: 100%;
+@import '../MdAnimation/variables.scss';
+@import '../MdLayout/mixins.scss';
 
-  .md-card {
-    margin-right: 16px;
-    margin-left: 16px;
-    overflow: visible;
+.md-app-content {
+  padding: 16px;
+
+  @include md-layout-small-and-up {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+
+  > p {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 </style>

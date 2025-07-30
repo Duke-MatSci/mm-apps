@@ -1,517 +1,72 @@
-// MdButton Theme Styles
-// Comprehensive theme support for Material Design buttons
+@import '../../theme/mixins.scss';
 
-// Import base variables
-@import '../../../assets/css/abstract/variables';
+@mixin md-icon-on-buttons($state, $type) {
+  .md-icon-font {
+    @include md-theme-property(color, $state, $type);
+  }
 
-// Base button styles
+  .md-icon-image {
+    @include md-theme-property(fill, $state, $type);
+  }
+}
+
 .md-button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 88px;
-  height: 36px;
-  padding: 0 16px;
-  border: none;
-  border-radius: 4px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
-  text-decoration: none;
-  user-select: none;
-  overflow: hidden;
-
-  // Disabled state
-  &.md-disabled,
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-
-  // Focus state
-  &:focus {
-    outline: 2px solid rgba(0, 0, 0, 0.12);
-    outline-offset: 2px;
-  }
-
-  // Ripple effect
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.3s, height 0.3s;
-  }
-
-  &:active::before {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-// Button types
-.md-button.md-flat {
-  background: transparent;
-  color: #1976d2;
-  box-shadow: none;
-
-  &:hover:not(.md-disabled) {
-    background: rgba(25, 118, 210, 0.04);
-  }
-
-  &:active:not(.md-disabled) {
-    background: rgba(25, 118, 210, 0.08);
-  }
-}
-
-.md-button.md-raised {
-  background: #1976d2;
-  color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-  &:hover:not(.md-disabled) {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.32);
-  }
-
-  &:active:not(.md-disabled) {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
-  }
-}
-
-.md-button.md-outlined {
-  background: transparent;
-  color: #1976d2;
-  border: 1px solid #1976d2;
-  box-shadow: none;
-
-  &:hover:not(.md-disabled) {
-    background: rgba(25, 118, 210, 0.04);
-  }
-
-  &:active:not(.md-disabled) {
-    background: rgba(25, 118, 210, 0.08);
-  }
-}
-
-// FAB (Floating Action Button)
-.md-button.md-fab {
-  min-width: 56px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  padding: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-
-  &:hover:not(.md-disabled) {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.32);
-  }
-
-  &:active:not(.md-disabled) {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  }
-}
-
-.md-button.md-mini-fab {
-  min-width: 40px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  padding: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-  &:hover:not(.md-disabled) {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.32);
-  }
-
-  &:active:not(.md-disabled) {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
-  }
-}
-
-// Icon button
-.md-button.md-icon-button {
-  min-width: 40px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  padding: 0;
-  background: transparent;
-  color: rgba(0, 0, 0, 0.87);
-
-  &:hover:not(.md-disabled) {
-    background: rgba(0, 0, 0, 0.04);
-  }
-
-  &:active:not(.md-disabled) {
-    background: rgba(0, 0, 0, 0.08);
-  }
-}
-
-// Theme variations
-// Default theme
-.md-button.md-theme-default {
-  &.md-flat {
-    color: #1976d2;
-  }
-
-  &.md-raised {
-    background: #1976d2;
-    color: white;
-  }
-
-  &.md-outlined {
-    color: #1976d2;
-    border-color: #1976d2;
-  }
-
-  &.md-fab,
-  &.md-mini-fab {
-    background: #1976d2;
-    color: white;
-  }
-}
-
-// Primary theme
-.md-button.md-theme-primary {
-  &.md-flat {
-    color: $primary;
-  }
-
-  &.md-raised {
-    background: $primary;
-    color: white;
-  }
-
-  &.md-outlined {
-    color: $primary;
-    border-color: $primary;
-  }
-
-  &.md-fab,
-  &.md-mini-fab {
-    background: $primary;
-    color: white;
-  }
-
-  &.md-icon-button {
-    color: $primary;
-  }
-}
-
-// Accent theme
-.md-button.md-theme-accent {
-  &.md-flat {
-    color: $accent;
-  }
-
-  &.md-raised {
-    background: $accent;
-    color: white;
-  }
-
-  &.md-outlined {
-    color: $accent;
-    border-color: $accent;
-  }
-
-  &.md-fab,
-  &.md-mini-fab {
-    background: $accent;
-    color: white;
-  }
-
-  &.md-icon-button {
-    color: $accent;
-  }
-}
-
-// Warn theme
-.md-button.md-theme-warn {
-  &.md-flat {
-    color: #f44336;
-  }
-
-  &.md-raised {
-    background: #f44336;
-    color: white;
-  }
-
-  &.md-outlined {
-    color: #f44336;
-    border-color: #f44336;
-  }
-
-  &.md-fab,
-  &.md-mini-fab {
-    background: #f44336;
-    color: white;
-  }
-
-  &.md-icon-button {
-    color: #f44336;
-  }
-}
-
-// Success theme
-.md-button.md-theme-success {
-  &.md-flat {
-    color: #4caf50;
-  }
-
-  &.md-raised {
-    background: #4caf50;
-    color: white;
-  }
-
-  &.md-outlined {
-    color: #4caf50;
-    border-color: #4caf50;
-  }
-
-  &.md-fab,
-  &.md-mini-fab {
-    background: #4caf50;
-    color: white;
-  }
-
-  &.md-icon-button {
-    color: #4caf50;
-  }
-}
-
-// Info theme
-.md-button.md-theme-info {
-  &.md-flat {
-    color: #2196f3;
-  }
-
-  &.md-raised {
-    background: #2196f3;
-    color: white;
-  }
-
-  &.md-outlined {
-    color: #2196f3;
-    border-color: #2196f3;
-  }
-
-  &.md-fab,
-  &.md-mini-fab {
-    background: #2196f3;
-    color: white;
-  }
-
-  &.md-icon-button {
-    color: #2196f3;
-  }
-}
-
-// Dark theme
-.md-button.md-theme-dark {
-  &.md-flat {
-    color: #ffffff;
-  }
-
-  &.md-raised {
-    background: #424242;
-    color: white;
-  }
-
-  &.md-outlined {
-    color: #ffffff;
-    border-color: #ffffff;
-  }
-
-  &.md-fab,
-  &.md-mini-fab {
-    background: #424242;
-    color: white;
-  }
-
-  &.md-icon-button {
-    color: #ffffff;
-  }
-}
-
-// Light theme
-.md-button.md-theme-light {
-  &.md-flat {
-    color: #424242;
-  }
-
-  &.md-raised {
-    background: #f5f5f5;
-    color: #424242;
-  }
-
-  &.md-outlined {
-    color: #424242;
-    border-color: #424242;
-  }
-
-  &.md-fab,
-  &.md-mini-fab {
-    background: #f5f5f5;
-    color: #424242;
-  }
-
-  &.md-icon-button {
-    color: #424242;
-  }
-}
-
-// Size variations
-.md-button.md-size-small {
-  min-width: 64px;
-  height: 28px;
-  padding: 0 12px;
-  font-size: 12px;
-}
-
-.md-button.md-size-large {
-  min-width: 112px;
-  height: 44px;
-  padding: 0 20px;
-  font-size: 16px;
-}
-
-// Icon support
-.md-button .md-icon {
-  margin-right: 8px;
-  font-size: 18px;
-  line-height: 1;
-}
-
-.md-button.md-icon-button .md-icon,
-.md-button.md-fab .md-icon,
-.md-button.md-mini-fab .md-icon {
-  margin-right: 0;
-  font-size: 20px;
-}
-
-// Loading state
-.md-button.md-loading {
-  position: relative;
-  color: transparent !important;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 16px;
-    height: 16px;
-    margin: -8px 0 0 -8px;
-    border: 2px solid transparent;
-    border-top: 2px solid currentColor;
-    border-radius: 50%;
-    animation: md-button-spin 1s linear infinite;
-  }
-}
-
-@keyframes md-button-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-// Responsive design
-@media (max-width: 768px) {
-  .md-button {
-    min-width: 72px;
-    height: 32px;
-    padding: 0 12px;
-    font-size: 13px;
-  }
-
-  .md-button.md-fab {
-    min-width: 48px;
-    width: 48px;
-    height: 48px;
-  }
-
-  .md-button.md-mini-fab {
-    min-width: 36px;
-    width: 36px;
-    height: 36px;
-  }
-
-  .md-button.md-icon-button {
-    min-width: 36px;
-    width: 36px;
-    height: 36px;
-  }
-}
-
-@media (max-width: 480px) {
-  .md-button {
-    min-width: 64px;
-    height: 28px;
-    padding: 0 8px;
-    font-size: 12px;
-  }
-
-  .md-button .md-icon {
-    font-size: 16px;
-  }
-
-  .md-button.md-icon-button .md-icon,
-  .md-button.md-fab .md-icon,
-  .md-button.md-mini-fab .md-icon {
-    font-size: 18px;
-  }
-}
-
-// High contrast mode support
-@media (prefers-contrast: high) {
-  .md-button {
-    border: 1px solid currentColor;
-  }
-
-  .md-button.md-flat {
-    border-color: transparent;
-  }
-}
-
-// Reduced motion support
-@media (prefers-reduced-motion: reduce) {
-  .md-button {
-    transition: none;
-  }
-
-  .md-button::before {
-    transition: none;
-  }
-
-  .md-button.md-loading::after {
-    animation: none;
-  }
-}
-
-// Print styles
-@media print {
-  .md-button {
-    box-shadow: none !important;
-    border: 1px solid #000 !important;
-  }
-
-  .md-button.md-fab,
-  .md-button.md-mini-fab {
-    border-radius: 4px !important;
+  @include md-theme-component() {
+    @include md-theme-property(color, text-primary, background);
+
+    &.md-primary {
+      @include md-theme-property(color, primary, background);
+      @include md-icon-on-buttons(primary, background);
+    }
+
+    &.md-accent {
+      @include md-theme-property(color, accent, background);
+      @include md-icon-on-buttons(accent, background);
+    }
+
+    &.md-raised {
+      &[disabled] {
+        @include md-theme-property(background-color, disabled-background, background);
+        @include md-theme-property(color, disabled);
+      }
+
+      &:not([disabled]) {
+        @include md-theme-property(background-color, background);
+        @include md-theme-property(color, text-primary, background);
+
+        &.md-primary {
+          @include md-theme-property(color, text-primary, primary);
+          @include md-theme-property(background-color, primary);
+          @include md-icon-on-buttons(text-primary, primary);
+        }
+
+        &.md-accent {
+          @include md-theme-property(color, text-primary, accent);
+          @include md-theme-property(background-color, accent);
+          @include md-icon-on-buttons(text-primary, accent);
+        }
+      }
+    }
+
+    &.md-fab {
+      &[disabled] {
+        @include md-theme-property(background-color, disabled-background, background);
+      }
+
+      &:not([disabled]) {
+        @include md-theme-property(background-color, accent);
+        @include md-icon-on-buttons(text-primary, accent);
+
+        &.md-primary {
+          @include md-theme-property(background-color, primary);
+          @include md-icon-on-buttons(text-primary, primary);
+        }
+      }
+    }
+
+    &[disabled] {
+      @include md-theme-property(color, disabled, background);
+      @include md-icon-on-buttons(icon-disabled, background);
+    }
   }
 }

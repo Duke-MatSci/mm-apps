@@ -1,6 +1,5 @@
-@import './palette';
-@import './variables';
-@import './color-contrast';
+@import './palette.scss';
+@import './color-contrast.scss';
 
 /**
  * Theme any css property based on the current palette, accepting a themable
@@ -17,8 +16,8 @@
  * ---
  * @access public
  * ---
- * @param {color} $type — The desired color based on material palette
- * @param {string} $type — A valid hue
+ * @param {color} $type —  The desired color based on material palette
+ * @param {string} $type —  A valid hue
  */
 
 @function md-get-palette-color($color, $hue) {
@@ -55,7 +54,7 @@
  * ---
  * @access public
  * ---
- * @param {string} $type — The themable value
+ * @param {string} $type —  The themable value
  */
 
 @function md-theme($type, $background: '') {
@@ -84,8 +83,8 @@
  * ---
  * @access public
  * ---
- * @param {string} $color-theme — The theme color | Accepts dark or light
- * @param {string} $type — The color type
+ * @param {string} $color-theme —  The theme color | Accepts dark or light
+ * @param {string} $type —  The color type
  */
 
 @function md-get-color-by-theme($color-theme, $type) {
@@ -105,8 +104,8 @@
  * ---
  * @access public
  * ---
- * @param {string} $type — The color type
- * @param {string} $theme — The fallback theme
+ * @param {string} $type —  The color type
+ * @param {string} $theme —  The fallback theme
  */
 
 @function md-get-color-by-type($type, $theme) {

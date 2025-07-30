@@ -32,6 +32,11 @@ body {
   background-color: $primary;
 }
 
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
 img {
   max-width: 100%;
   height: auto;

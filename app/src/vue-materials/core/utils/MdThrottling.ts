@@ -1,7 +1,17 @@
-const getOption = (options: any, key: string) =>
-  options ? (options[key] === false ? false : true) : true;
+interface ThrottleOptions {
+  leading?: boolean;
+  trailing?: boolean;
+}
 
-export default (fn: (...args: any[]) => any, time: number, option?: any) => {
+const getOption = (options: ThrottleOptions | undefined, key: keyof ThrottleOptions): boolean => {
+  return options ? (options[key] === false ? false : true) : true;
+};
+
+export default function MdThrottling<T extends (...args: any[]) => any>(
+  fn: T,
+  time: number,
+  option?: ThrottleOptions
+): T {
   const leading = getOption(option, 'leading');
   const trailing = getOption(option, 'trailing');
   let timeout: number | null = null;
@@ -18,7 +28,7 @@ export default (fn: (...args: any[]) => any, time: number, option?: any) => {
     }
 
     const setThrottling = () => {
-      timeout = setTimeout(() => {
+      timeout = window.setTimeout(() => {
         timeout = null;
 
         if (duplicated && trailing) {
@@ -30,5 +40,5 @@ export default (fn: (...args: any[]) => any, time: number, option?: any) => {
     };
 
     setThrottling();
-  };
-};
+  } as T;
+}

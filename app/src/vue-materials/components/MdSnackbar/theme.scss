@@ -1,4 +1,4 @@
-@import '../../theme/mixins';
+@import '../../theme/mixins.scss';
 
 .md-snackbar {
   @include md-theme-component() {

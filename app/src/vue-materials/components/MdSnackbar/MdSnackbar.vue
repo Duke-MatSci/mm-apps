@@ -1,87 +1,88 @@
 <template>
   <md-portal v-if="mdPersistent && mdDuration !== Infinity">
     <keep-alive>
-      <md-snackbar-content :md-classes="[snackbarClasses, $mdActiveTheme]" v-if="mdActive">
+      <md-snackbar-content :md-classes="[snackbarClasses, mdActiveTheme]" v-if="mdActive">
         <slot />
       </md-snackbar-content>
     </keep-alive>
   </md-portal>
 
   <md-portal v-else>
-    <md-snackbar-content :md-classes="[snackbarClasses, $mdActiveTheme]" v-if="mdActive">
+    <md-snackbar-content :md-classes="[snackbarClasses, mdActiveTheme]" v-if="mdActive">
       <slot />
     </md-snackbar-content>
   </md-portal>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed, watch } from 'vue';
-import MdComponent from '../../core/MdComponent';
-import MdPropValidator from '../../core/utils/MdPropValidator';
+<script setup lang="ts">
+import { computed, inject, watch } from 'vue';
 import MdPortal from '../MdPortal/MdPortal.vue';
 import MdSnackbarContent from './MdSnackbarContent.vue';
 import { createSnackbar, destroySnackbar } from './MdSnackbarQueue';
 
-export default defineComponent({
+interface Props {
+  mdActive?: boolean;
+  mdPersistent?: boolean;
+  mdDuration?: number;
+  mdPosition?: 'center' | 'left';
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  mdActive: false,
+  mdPersistent: false,
+  mdDuration: 4000,
+  mdPosition: 'center',
+});
+
+const emit = defineEmits<{
+  'update:mdActive': [value: boolean];
+  'md-opened': [];
+  'md-closed': [];
+}>();
+
+// Inject theme from parent component
+const mdActiveTheme = inject(
+  'mdActiveTheme',
+  computed(() => null)
+);
+
+const snackbarClasses = computed(() => {
+  return {
+    ['md-position-' + props.mdPosition]: true,
+  };
+});
+
+watch(
+  () => props.mdActive,
+  (isActive) => {
+    if (isActive) {
+      createSnackbar(props.mdDuration, props.mdPersistent, {
+        _vnode: { componentInstance: { initDestroy: (immediate: boolean) => immediate } },
+      }).then(() => {
+        emit('update:mdActive', false);
+        emit('md-opened');
+      });
+    } else {
+      destroySnackbar();
+      emit('md-closed');
+    }
+  }
+);
+
+defineOptions({
   name: 'MdSnackbar',
   components: {
     MdPortal,
     MdSnackbarContent,
   },
-  props: {
-    mdActive: Boolean,
-    mdPersistent: Boolean,
-    mdDuration: {
-      type: Number,
-      default: 4000,
-    },
-    mdPosition: {
-      type: String,
-      default: 'center',
-      ...MdPropValidator('md-position', ['center', 'left']),
-    },
-  },
-  emits: ['update:mdActive', 'md-opened', 'md-closed'],
-  setup(props, { emit }) {
-    const snackbarClasses = computed(() => {
-      return {
-        ['md-position-' + props.mdPosition]: true,
-      };
-    });
-
-    const $mdActiveTheme = computed(() => {
-      return null; // This will be handled by MdComponent
-    });
-
-    watch(
-      () => props.mdActive,
-      (isActive) => {
-        if (isActive) {
-          createSnackbar(props.mdDuration, props.mdPersistent, {
-            _vnode: { componentInstance: { initDestroy: (immediate: boolean) => immediate } },
-          }).then(() => {
-            emit('update:mdActive', false);
-            emit('md-opened');
-          });
-        } else {
-          destroySnackbar();
-          emit('md-closed');
-        }
-      }
-    );
-
-    return {
-      snackbarClasses,
-      $mdActiveTheme,
-    };
-  },
 });
 </script>
 
 <style lang="scss">
-@import '../MdAnimation/variables';
-@import '../MdLayout/mixins';
-@import '../MdElevation/mixins';
+@import '../MdAnimation/variables.scss';
+@import '../MdLayout/mixins.scss';
+@import '../MdElevation/mixins.scss';
+@import './theme.scss';
 
 .md-snackbar {
   @include md-elevation(6);

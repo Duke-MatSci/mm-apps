@@ -1,8 +1,10 @@
-export default (fn: (...args: any[]) => any, time: number) => {
-  let timeout: number;
+export default function MdDebounce<T extends (...args: any[]) => any>(fn: T, time: number): T {
+  let timeout: number | null = null;
   return function (this: any, ...args: any[]) {
     const functionCall = () => fn.apply(this, args);
-    clearTimeout(timeout);
-    timeout = setTimeout(functionCall, time);
-  };
-};
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = window.setTimeout(functionCall, time);
+  } as T;
+}

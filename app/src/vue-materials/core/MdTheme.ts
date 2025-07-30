@@ -1,61 +1,73 @@
-import { reactive, watch } from 'vue';
+import { ref, computed, watch, onMounted } from 'vue';
 
-let msColor: Element | null = null;
-let themeColor: Element | null = null;
-let maskIcon: Element | null = null;
+let msColor: HTMLElement | null = null;
+let themeColor: HTMLElement | null = null;
+let maskIcon: HTMLElement | null = null;
 
-const MdTheme = reactive({
-  prefix: 'md-theme-',
-  theme: 'default',
-  enabled: true,
-  metaColors: false,
+export function useMdTheme() {
+  const prefix = ref('md-theme-');
+  const theme = ref('default');
+  const enabled = ref(true);
+  const metaColors = ref(false);
 
-  get themeTarget() {
-    if (typeof window !== 'undefined') {
+  const themeTarget = computed(() => {
+    if (typeof document !== 'undefined') {
       return document.documentElement;
     }
-    return false;
-  },
+    return null;
+  });
 
-  get fullThemeName() {
-    return this.getThemeName();
-  },
+  const fullThemeName = computed(() => {
+    return getThemeName();
+  });
 
-  getAncestorTheme(component: any) {
+  const getAncestorTheme = (component: any) => {
     if (component) {
       const currentTheme = component.mdTheme;
-      // In Vue 3, we need to handle parent access differently
-      // For now, return the current theme as fallback
-      return currentTheme || this.theme;
+      const getParentThemeName = (parent: any): string | null => {
+        if (parent) {
+          const { mdTheme, $parent } = parent;
+
+          if (mdTheme && mdTheme !== currentTheme) {
+            return mdTheme;
+          }
+
+          return getParentThemeName($parent);
+        }
+
+        return theme.value;
+      };
+
+      return getParentThemeName(component.$parent);
     }
 
     return null;
-  },
+  };
 
-  getThemeName(theme?: string) {
-    const themeName = theme || this.theme;
-    return this.prefix + themeName;
-  },
+  const getThemeName = (themeName?: string) => {
+    const themeValue = themeName || theme.value;
+    return prefix.value + themeValue;
+  };
 
-  setMicrosoftColors(primaryColor: string) {
+  const setMicrosoftColors = (primaryColor: string) => {
     if (msColor) {
       msColor.setAttribute('content', primaryColor);
     }
-  },
+  };
 
-  setThemeColors(primaryColor: string) {
+  const setThemeColors = (primaryColor: string) => {
     if (themeColor) {
       themeColor.setAttribute('content', primaryColor);
     }
-  },
+  };
 
-  setMaskColors(primaryColor: string) {
+  const setMaskColors = (primaryColor: string) => {
     if (maskIcon) {
       maskIcon.setAttribute('color', primaryColor);
     }
-  },
+  };
 
-  setHtmlMetaColors(themeName?: string) {
+  const setHtmlMetaColors = (themeName?: string) => {
     let primaryColor = '#fff';
 
     if (themeName && typeof window !== 'undefined') {
@@ -64,84 +76,81 @@ const MdTheme = reactive({
     }
 
     if (primaryColor) {
-      this.setMicrosoftColors(primaryColor);
-      this.setThemeColors(primaryColor);
-      this.setMaskColors(primaryColor);
+      setMicrosoftColors(primaryColor);
+      setThemeColors(primaryColor);
+      setMaskColors(primaryColor);
     }
-  },
+  };
 
-  updateTheme() {
-    const { fullThemeName, themeTarget, enabled } = this;
+  // Watchers
+  watch(
+    enabled,
+    (isEnabled) => {
+      const target = themeTarget.value;
 
-    if (themeTarget) {
-      if (enabled) {
-        themeTarget.classList.add(fullThemeName);
-        this.metaColors && this.setHtmlMetaColors(fullThemeName);
-      } else {
-        themeTarget.classList.remove(fullThemeName);
-        this.metaColors && this.setHtmlMetaColors();
+      if (target) {
+        if (isEnabled) {
+          target.classList.add(fullThemeName.value);
+          metaColors.value && setHtmlMetaColors(fullThemeName.value);
+        } else {
+          target.classList.remove(fullThemeName.value);
+          metaColors.value && setHtmlMetaColors();
+        }
+      }
+    },
+    { immediate: true }
+  );
+
+  watch(theme, (newTheme, oldTheme) => {
+    const target = themeTarget.value;
+
+    if (target) {
+      const newThemeName = getThemeName(newTheme);
+      target.classList.remove(getThemeName(oldTheme));
+      target.classList.add(newThemeName);
+
+      if (metaColors.value) {
+        setHtmlMetaColors(newThemeName);
       }
     }
-  },
+  });
 
-  changeTheme(newTheme: string, oldTheme: string) {
-    const { getThemeName, themeTarget } = this;
-
-    newTheme = getThemeName(newTheme);
-
-    if (themeTarget && themeTarget instanceof HTMLElement) {
-      themeTarget.classList.remove(getThemeName(oldTheme));
-      themeTarget.classList.add(newTheme);
-    }
-
-    if (this.metaColors) {
-      this.setHtmlMetaColors(newTheme);
-    }
-  },
-
-  init() {
-    msColor = document.querySelector('[name="msapplication-TileColor"]');
-    themeColor = document.querySelector('[name="theme-color"]');
-    maskIcon = document.querySelector('[rel="mask-icon"]');
-
-    if (this.enabled && this.metaColors) {
-      window.addEventListener('load', () => {
-        this.setHtmlMetaColors(this.fullThemeName);
-      });
-    }
-  },
-});
-
-// Watch for changes
-watch(
-  () => MdTheme.enabled,
-  (enabled) => {
-    MdTheme.updateTheme();
-  },
-  { immediate: true }
-);
-
-watch(
-  () => MdTheme.theme,
-  (newTheme, oldTheme) => {
-    MdTheme.changeTheme(newTheme, oldTheme);
-  }
-);
-
-watch(
-  () => MdTheme.metaColors,
-  (meta) => {
+  watch(metaColors, (meta) => {
     if (meta) {
-      MdTheme.setHtmlMetaColors(MdTheme.fullThemeName);
+      setHtmlMetaColors(fullThemeName.value);
     } else {
-      MdTheme.setHtmlMetaColors();
+      setHtmlMetaColors();
     }
-  }
-);
+  });
 
-// Initialize when mounted
-if (typeof window !== 'undefined') {
-  MdTheme.init();
+  onMounted(() => {
+    if (typeof document !== 'undefined') {
+      msColor = document.querySelector('[name="msapplication-TileColor"]');
+      themeColor = document.querySelector('[name="theme-color"]');
+      maskIcon = document.querySelector('[rel="mask-icon"]');
+
+      if (enabled.value && metaColors.value) {
+        window.addEventListener('load', () => {
+          setHtmlMetaColors(fullThemeName.value);
+        });
+      }
+    }
+  });
+
+  return {
+    prefix,
+    theme,
+    enabled,
+    metaColors,
+    themeTarget,
+    fullThemeName,
+    getAncestorTheme,
+    getThemeName,
+    setHtmlMetaColors,
+  };
 }
 
-export default MdTheme;
+// Create a global theme instance
+const globalTheme = useMdTheme();
+
+export default globalTheme;

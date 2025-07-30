@@ -1,13 +1,6 @@
-import MdRipple from '../../components/MdRipple/MdRipple.vue';
+export function useMdRipple() {
+  // Placeholder for MdRipple functionality
+  return {};
+}
 
-export default {
-  components: {
-    MdRipple,
-  },
-  props: {
-    mdRipple: {
-      type: Boolean,
-      default: true,
-    },
-  },
-};
+export default useMdRipple;
