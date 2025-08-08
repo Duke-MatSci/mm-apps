@@ -52,6 +52,21 @@ import MdDialogActions from './components/MdDialog/MdDialogActions.vue';
 import MdDrawer from './components/MdDrawer/MdDrawer.vue';
 import MdDrawerRightPrevious from './components/MdDrawer/MdDrawerRightPrevious.vue';
 import MdAutocomplete from './components/MdAutocomplete/MdAutocomplete.vue';
+import MdTagSwitcher from './components/MdTagSwitcher/MdTagSwitcher.vue';
+import MdTable from './components/MdTable/MdTable.vue';
+import MdTableToolbar from './components/MdTable/MdTableToolbar.vue';
+import MdTableEmptyState from './components/MdTable/MdTableEmptyState.vue';
+import MdTableRow from './components/MdTable/MdTableRow.vue';
+import MdTableHead from './components/MdTable/MdTableHead.vue';
+import MdTableCell from './components/MdTable/MdTableCell.vue';
+import MdTablePagination from './components/MdTable/MdTablePagination.vue';
+import MdTableContainer from './components/MdTable/MdTableContainer';
+import MdTableHeadSelection from './components/MdTable/MdTableHeadSelection.vue';
+import MdTableRowGhost from './components/MdTable/MdTableRowGhost.vue';
+import MdTableThead from './components/MdTable/MdTableThead.vue';
+import MdTableAlternateHeader from './components/MdTable/MdTableAlternateHeader.vue';
+import MdTableCellSelection from './components/MdTable/MdTableCellSelection.vue';
+import MdEmptyState from './components/MdEmptyState/MdEmptyState.vue';
 
 // Create plugin installation function
 const VueMaterialPlugin = {
@@ -124,6 +139,21 @@ const VueMaterialPlugin = {
     app.component(MdDrawer.name || 'MdDrawer', MdDrawer);
     app.component(MdDrawerRightPrevious.name || 'MdDrawerRightPrevious', MdDrawerRightPrevious);
     app.component(MdAutocomplete.name || 'MdAutocomplete', MdAutocomplete);
+    app.component(MdTagSwitcher.name || 'MdTagSwitcher', MdTagSwitcher);
+    app.component(MdTable.name || 'MdTable', MdTable);
+    app.component(MdTableToolbar.name || 'MdTableToolbar', MdTableToolbar);
+    app.component(MdTableEmptyState.name || 'MdTableEmptyState', MdTableEmptyState);
+    app.component(MdTableRow.name || 'MdTableRow', MdTableRow);
+    app.component(MdTableHead.name || 'MdTableHead', MdTableHead);
+    app.component(MdTableCell.name || 'MdTableCell', MdTableCell);
+    app.component(MdTablePagination.name || 'MdTablePagination', MdTablePagination);
+    app.component(MdTableContainer.name || 'MdTableContainer', MdTableContainer);
+    app.component(MdTableHeadSelection.name || 'MdTableHeadSelection', MdTableHeadSelection);
+    app.component(MdTableRowGhost.name || 'MdTableRowGhost', MdTableRowGhost);
+    app.component(MdTableThead.name || 'MdTableThead', MdTableThead);
+    app.component(MdTableAlternateHeader.name || 'MdTableAlternateHeader', MdTableAlternateHeader);
+    app.component(MdTableCellSelection.name || 'MdTableCellSelection', MdTableCellSelection);
+    app.component(MdEmptyState.name || 'MdEmptyState', MdEmptyState);
   },
 };
 
@@ -179,6 +209,21 @@ export {
   MdDrawer,
   MdDrawerRightPrevious,
   MdAutocomplete,
+  MdTagSwitcher,
+  MdTable,
+  MdTableToolbar,
+  MdTableEmptyState,
+  MdTableRow,
+  MdTableHead,
+  MdTableCell,
+  MdTablePagination,
+  MdTableContainer,
+  MdTableHeadSelection,
+  MdTableRowGhost,
+  MdTableThead,
+  MdTableAlternateHeader,
+  MdTableCellSelection,
+  MdEmptyState,
 };
 
 // Export material utilities

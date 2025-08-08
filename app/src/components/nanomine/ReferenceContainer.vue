@@ -39,7 +39,9 @@ const referenceOpen = ref(false);
 
 // Computed
 const referenceList = computed(() => {
-  return Array.from(props.references, (id) => store.getters.getReferenceById(id)).filter(Boolean); // don't keep undefined or null references
+  return Array.from(props.references, (id) =>
+    store.getters['nanomine/referenceContainer/getReferenceById'](id)
+  ).filter(Boolean); // don't keep undefined or null references
 });
 
 // Methods

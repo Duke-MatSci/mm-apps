@@ -1,4 +1,4 @@
-import { ref, Ref } from 'vue';
+import { ref } from 'vue';
 
 interface UploadableFile {
   file: File;
@@ -6,20 +6,12 @@ interface UploadableFile {
   status: string;
 }
 
-interface FileListReturn {
-  files: Ref<UploadableFile[]>;
-  addFiles: (newFiles: FileList | File[]) => void;
-  removeFile: (file: UploadableFile) => void;
-  clearAllFiles: () => void;
-  modifyStatus: (index: number, status: string) => void;
-}
-
-export default function useFileList(): FileListReturn {
+export default function useFileList() {
   const files = ref<UploadableFile[]>([]);
 
-  function addFiles(newFiles: FileList | File[]) {
+  function addFiles(newFiles: FileList | File[]): void {
     const newUploadableFiles = [...newFiles]
-      .map((file) => new UploadableFileClass(file))
+      .map((file) => new UploadableFile(file))
       .filter((file) => !fileExists(file.id));
     files.value = files.value.concat(newUploadableFiles);
   }
@@ -44,7 +36,7 @@ export default function useFileList(): FileListReturn {
   return { files, addFiles, removeFile, clearAllFiles, modifyStatus };
 }
 
-class UploadableFileClass implements UploadableFile {
+class UploadableFile {
   file: File;
   id: string;
   status: string;
@@ -63,5 +55,3 @@ class UploadableFileClass implements UploadableFile {
     this.status = 'incomplete';
   }
 }
-
-export type { UploadableFile, FileListReturn };

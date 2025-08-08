@@ -229,9 +229,11 @@ import { ref, computed } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
 import Spinner from '@/components/Spinner.vue';
+import { useReduce } from '@/composables/useReduce';
 
 const store = useStore();
 const router = useRouter();
+const { reduceDescription } = useReduce();
 
 // Refs
 const articlesRef = ref<HTMLElement>();
@@ -242,9 +244,6 @@ const materialsRef = ref<HTMLElement>();
 const sampleRef = ref<HTMLElement>();
 
 // Reactive data
-const loadError = ref(false);
-const otherArgs = ref(null);
-const defaultImg = ref('');
 const baseUrl = ref(window.location.origin);
 
 // Computed properties
@@ -254,38 +253,7 @@ const getSamples = computed(() => store.getters['explorer/results/getSamples']);
 const getImages = computed(() => store.getters['explorer/results/getImages']);
 const getCharts = computed(() => store.getters['explorer/results/getCharts']);
 const getMaterials = computed(() => store.getters['explorer/results/getMaterials']);
-const getTotal = computed(() => store.getters['explorer/results/getTotal']);
 const getIsloading = computed(() => store.getters['explorer/results/getIsloading']);
-
-// Methods from reduce mixin
-const reduceDescription = (args: string, size = 50) => {
-  const arr = args.split(' ');
-  arr.splice(size);
-  const arrSplice = arr.reduce((a, b) => `${a} ${b}`, '');
-  const res = arrSplice.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  return `${res}...`;
-};
-
-const reduceAsset = (args: 'prev' | 'next') => {
-  let movedAsset: any;
-  let screen: number;
-
-  if (window.matchMedia('(max-width: 40.5em)').matches) {
-    screen = 1;
-  } else if (window.matchMedia('(max-width: 56.25em)').matches) {
-    screen = 2;
-  } else {
-    screen = 3;
-  }
-
-  if (args === 'prev') {
-    // Implementation would need assetItems and pushedAssetItem refs
-    // This is a placeholder for the reduce functionality
-  } else {
-    // Implementation would need assetItems and pushedAssetItem refs
-    // This is a placeholder for the reduce functionality
-  }
-};
 
 // Component methods
 const loadProperties = async (selectedValue: string) => {

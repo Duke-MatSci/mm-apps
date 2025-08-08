@@ -1,5 +1,5 @@
 <template>
-  <div class="u_height--max u--layout-flex-verticalScreen u--layout-flex-column">
+  <div class="u--layout-flex-verticalScreen u--layout-flex-column">
     <div class="section_teams u--margin-centered-verticalScreen" v-if="!searchEnabled">
       <div class="search_box">
         <h2 class="search_box_header teams_header">Welcome to MM Explorer</h2>
@@ -29,13 +29,6 @@
             </button>
           </div>
         </form>
-        <!-- <div class="search-dropdown-menu_parent" v-if="!!suggestions.length && enableAutosuggest">
-					<ul class="search-dropdown-menu" style="width:100%">
-						<li v-for="(suggestion, index) in suggestions" :key="index" class="" @click.prevent="submitSearch(suggestion)">
-							<a href="#">{{ suggestion }}</a>
-						</li>
-					</ul>
-				</div> -->
         <p class="search_box_text">
           MM Explorer is a research-focused discovery tool that enables collaboration among scholars
           of nano and meta materials. Browse or search information on articles, samples, images,
@@ -63,7 +56,7 @@
     </div>
     <search-header v-if="searchEnabled" />
     <search-results-table v-if="searchEnabled" />
-    <div class="explorer_page_footer u_margin-top-auto">
+    <div class="explorer_page_footer u_margin-top-small">
       <span class="explorer_page_footer-text"
         >&copy; {{ new Date().getFullYear() }} MaterialsMine Project</span
       >
@@ -93,23 +86,15 @@ const searchWord = computed({
     return store.getters['explorer/getSearchKeyword'];
   },
   set(payload: string) {
-    // await store.commit('explorer/setEnableAutosuggest', true);
     store.commit('explorer/setSearchKeyword', payload);
-    // await requestSearch(payload);
   },
 });
 
 const searchEnabled = computed(() => store.getters['explorer/getSearching']);
 
-// const suggestions = computed(() => store.getters['explorer/results/getSuggestions']);
-// const enableAutosuggest = computed(() => store.getters['explorer/getAutosuggest']);
-
 // Methods
 const setSearching = () => store.commit('explorer/setSearching');
 const setSearchKeyword = (keyword: string) => store.commit('explorer/setSearchKeyword', keyword);
-// const setResultsTab = (tab: string) => store.commit('explorer/setResultsTab', tab);
-// const setAutosuggest = (suggestions: string[]) =>
-//   store.commit('explorer/results/setAutosuggest', suggestions);
 
 const submitSearch = (payload?: string) => {
   let keyPhrase: string;
@@ -120,13 +105,8 @@ const submitSearch = (payload?: string) => {
   }
   setSearching();
   setSearchKeyword(keyPhrase);
-  // setAutosuggest([]);
   store.dispatch('explorer/results/searchKeyword', keyPhrase);
 };
-
-// const requestSearch = _.debounce(function (payload: string) {
-//   store.dispatch('explorer/results/autosuggestionRequest', payload);
-// }, 1000);
 
 const disableRender = async (e: Event) => {
   const selected = (e.target as Element).closest('.search_box');

@@ -1,6 +1,9 @@
 import mutations from './mutations';
 import actions from './actions';
 import getters from './getters';
+import curation from './curation';
+import gallery from './gallery';
+import results from './results';
 
 export interface ExplorerState {
   // Pagination state
@@ -19,6 +22,11 @@ export interface ExplorerState {
   filters: Record<string, any>;
   sortBy: string;
   sortOrder: 'asc' | 'desc';
+
+  // Facet filter state
+  facetFilterMaterials: any[];
+  selectedFacetFilterMaterialsValue: string | null;
+  selectedFacetFilterMaterials: any;
 }
 
 export default {
@@ -41,9 +49,19 @@ export default {
       filters: {},
       sortBy: '',
       sortOrder: 'asc',
+
+      // Facet filter state
+      facetFilterMaterials: [],
+      selectedFacetFilterMaterialsValue: null,
+      selectedFacetFilterMaterials: {},
     };
   },
   mutations,
   actions,
   getters,
+  modules: {
+    curation,
+    gallery,
+    results,
+  },
 };

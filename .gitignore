@@ -1,11 +1,13 @@
 .DS_Store
 node_modules
 /dist
+app/dist
 
 
 # local env files
 .env.local
 .env.*.local
+.env
 
 # Log files
 npm-debug.log*
@@ -21,3 +23,22 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+mockDB/
+
+# Managed Services
+**/**/__pycache__/
+**/**/celerybeat-schedule.db
+**/**/gs.config*
+**/**/mongo.config*
+
+# Ignore coverage
+app/coverage
+resfulservice/coverage
+resfulservice/.nyc_output
+
+# Ignore old service files
+old_services
+venv/
+__pycache__/
+sparqlqueries.html

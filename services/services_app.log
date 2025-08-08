@@ -1,0 +1,1461 @@
+2024-05-21 16:25:16,508 - app - INFO - [START]: Entering init_chemprops function at 2024-05-21 16:25:16.502995. Request payload: {}
+2024-05-21 16:25:16,527 - app - INFO - [END]: Request Successful. Exiting init_chemprops function at 2024-05-21 16:25:16.527856. Execution time: 24.861 miliseconds. Response sent.
+2024-05-21 16:44:59,950 - app - INFO - [START]: Entering init_chemprops function at 2024-05-21 16:44:59.948433. Request payload: {}
+2024-05-21 16:45:00,225 - INFO - MatrixRaw sheet is saved as /services/app/chemprops/files/MatrixRaw.xlsx
+2024-05-21 16:45:00,240 - INFO - FillerRaw sheet is saved as /services/app/chemprops/files/FillerRaw.xlsx
+2024-05-21 16:45:00,249 - INFO - Filler sheet is saved as /services/app/chemprops/files/Filler.xlsx
+2024-05-21 16:45:00,266 - INFO - Finished processing filler data. Sending to backend.
+2024-05-21 16:45:00,437 - app - INFO - filler Data Seeded Successfully
+2024-05-21 16:45:00,437 - INFO - filler Data Seeded Successfully
+2024-05-21 16:45:00,467 - INFO - Finished processing polymer data. Sending to backend.
+2024-05-21 16:45:00,548 - app - INFO - polymer Data Seeded Successfully
+2024-05-21 16:45:00,548 - INFO - polymer Data Seeded Successfully
+2024-05-21 16:45:00,549 - app - INFO - [END]: Request Successful. Exiting init_chemprops function at 2024-05-21 16:45:00.549494. Execution time: 601.0609999999999 miliseconds. Response sent.
+2024-05-21 16:45:00,549 - INFO - [END]: Request Successful. Exiting init_chemprops function at 2024-05-21 16:45:00.549494. Execution time: 601.0609999999999 miliseconds. Response sent.
+2024-05-21 20:27:14,835 - app - INFO - [START]: Entering call_chemprops function at 2024-05-21 20:27:14.834069. Request payload: {'polfil': 'pol', 'ChemicalName': 'Polysterene', 'Abbreviation': 'Polysterene', 'TradeName': 'Polysterene', 'SMILES': 'Polysterene', 'nmId': '10.1186/s13321-021-00502-6'}
+2024-05-21 20:27:15,735 - INFO - Translation failed due to: You entered an invalid SMILES.
+2024-05-21 20:27:15,760 - app - ERROR - polymer Operation Failed with message: polymer empty. Needs seeding
+2024-05-21 20:27:15,760 - ERROR - polymer Operation Failed with message: polymer empty. Needs seeding
+2024-05-21 20:27:15,760 - app - INFO - Error in search_and_refine_data function: polymer empty. Needs seeding
+2024-05-21 20:27:15,760 - INFO - Error in search_and_refine_data function: polymer empty. Needs seeding
+2024-05-21 20:27:15,761 - app - INFO - [END]: Request Successful. Exiting call_chemprops function at 2024-05-21 20:27:15.761550. Execution time: 927.481 miliseconds. Response sent.
+2024-05-21 20:27:15,761 - INFO - [END]: Request Successful. Exiting call_chemprops function at 2024-05-21 20:27:15.761550. Execution time: 927.481 miliseconds. Response sent.
+2024-05-21 20:27:27,857 - app - INFO - [START]: Entering call_chemprops function at 2024-05-21 20:27:27.856230. Request payload: {'polfil': 'pol', 'ChemicalName': 'Polystyrene', 'Abbreviation': 'Polystyrene', 'TradeName': 'Polystyrene', 'SMILES': 'Polystyrene', 'nmId': '10.1186/s13321-021-00502-6'}
+2024-05-21 20:27:28,332 - INFO - Translation failed due to: You entered an invalid SMILES.
+2024-05-21 20:27:28,342 - app - ERROR - polymer Operation Failed with message: polymer empty. Needs seeding
+2024-05-21 20:27:28,342 - ERROR - polymer Operation Failed with message: polymer empty. Needs seeding
+2024-05-21 20:27:28,342 - app - INFO - Error in search_and_refine_data function: polymer empty. Needs seeding
+2024-05-21 20:27:28,342 - INFO - Error in search_and_refine_data function: polymer empty. Needs seeding
+2024-05-21 20:27:28,344 - app - INFO - [END]: Request Successful. Exiting call_chemprops function at 2024-05-21 20:27:28.344246. Execution time: 488.016 miliseconds. Response sent.
+2024-05-21 20:27:28,344 - INFO - [END]: Request Successful. Exiting call_chemprops function at 2024-05-21 20:27:28.344246. Execution time: 488.016 miliseconds. Response sent.
+2024-05-21 20:28:10,422 - app - INFO - [START]: Entering call_chemprops function at 2024-05-21 20:28:10.421164. Request payload: {'polfil': 'pol', 'ChemicalName': 'pmma', 'Abbreviation': 'pmma', 'TradeName': 'pmma', 'SMILES': 'pmma', 'nmId': '10.1186/s13321-021-00502-6'}
+2024-05-21 20:28:11,055 - INFO - Translation failed due to: You entered an invalid SMILES.
+2024-05-21 20:28:11,063 - app - ERROR - polymer Operation Failed with message: polymer empty. Needs seeding
+2024-05-21 20:28:11,063 - ERROR - polymer Operation Failed with message: polymer empty. Needs seeding
+2024-05-21 20:28:11,063 - app - INFO - Error in search_and_refine_data function: polymer empty. Needs seeding
+2024-05-21 20:28:11,063 - INFO - Error in search_and_refine_data function: polymer empty. Needs seeding
+2024-05-21 20:28:11,064 - app - INFO - [END]: Request Successful. Exiting call_chemprops function at 2024-05-21 20:28:11.064737. Execution time: 643.573 miliseconds. Response sent.
+2024-05-21 20:28:11,064 - INFO - [END]: Request Successful. Exiting call_chemprops function at 2024-05-21 20:28:11.064737. Execution time: 643.573 miliseconds. Response sent.
+2024-05-21 20:28:48,133 - app - INFO - [START]: Entering init_chemprops function at 2024-05-21 20:28:48.132736. Request payload: {}
+2024-05-21 20:28:48,133 - INFO - [START]: Entering init_chemprops function at 2024-05-21 20:28:48.132736. Request payload: {}
+2024-05-21 20:28:48,340 - INFO - MatrixRaw sheet is saved as /services/app/chemprops/files/MatrixRaw.xlsx
+2024-05-21 20:28:48,352 - INFO - FillerRaw sheet is saved as /services/app/chemprops/files/FillerRaw.xlsx
+2024-05-21 20:28:48,361 - INFO - Filler sheet is saved as /services/app/chemprops/files/Filler.xlsx
+2024-05-21 20:28:48,376 - INFO - Finished processing filler data. Sending to backend.
+2024-05-21 20:28:48,448 - app - INFO - filler Data Seeded Successfully
+2024-05-21 20:28:48,448 - INFO - filler Data Seeded Successfully
+2024-05-21 20:28:48,474 - INFO - Finished processing polymer data. Sending to backend.
+2024-05-21 20:28:48,544 - app - INFO - polymer Data Seeded Successfully
+2024-05-21 20:28:48,544 - INFO - polymer Data Seeded Successfully
+2024-05-21 20:28:48,545 - app - INFO - [END]: Request Successful. Exiting init_chemprops function at 2024-05-21 20:28:48.545726. Execution time: 412.99 miliseconds. Response sent.
+2024-05-21 20:28:48,545 - INFO - [END]: Request Successful. Exiting init_chemprops function at 2024-05-21 20:28:48.545726. Execution time: 412.99 miliseconds. Response sent.
+2024-05-21 20:29:17,269 - app - INFO - [START]: Entering call_chemprops function at 2024-05-21 20:29:17.269098. Request payload: {'polfil': 'pol', 'ChemicalName': 'pmma', 'Abbreviation': 'pmma', 'TradeName': 'pmma', 'SMILES': 'pmma', 'nmId': '10.1186/s13321-021-00502-6'}
+2024-05-21 20:29:17,269 - INFO - [START]: Entering call_chemprops function at 2024-05-21 20:29:17.269098. Request payload: {'polfil': 'pol', 'ChemicalName': 'pmma', 'Abbreviation': 'pmma', 'TradeName': 'pmma', 'SMILES': 'pmma', 'nmId': '10.1186/s13321-021-00502-6'}
+2024-05-21 20:29:17,902 - INFO - Translation failed due to: You entered an invalid SMILES.
+2024-05-21 20:29:17,943 - app - INFO - [END]: Request Successful. Exiting call_chemprops function at 2024-05-21 20:29:17.943975. Execution time: 674.877 miliseconds. Response sent.
+2024-05-21 20:29:17,943 - INFO - [END]: Request Successful. Exiting call_chemprops function at 2024-05-21 20:29:17.943975. Execution time: 674.877 miliseconds. Response sent.
+2024-06-14 06:44:23,740 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-14 06:44:23.739094. Request payload: {'file_name': 'dead_whitefish_demetria-2024-06-14T06:44:23.580Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-14 06:44:24,923 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-14 06:44:24.923534. Execution time: 1184.4399999999998 miliseconds. Response sent.
+2024-06-21 20:54:09,557 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 20:54:09.554261. Request payload: {'file_name': 'test.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-21 20:54:09,585 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 20:54:09.584614. Execution time: 30.353 miliseconds. Response sent.
+2024-06-21 20:59:14,199 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 20:59:14.180753. Request payload: {'file_name': 'test.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-21 20:59:14,223 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 20:59:14.223729. Execution time: 42.976 miliseconds. Response sent.
+2024-06-21 21:08:13,940 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 21:08:13.935463. Request payload: {'file_name': 'test.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-21 21:08:13,976 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 21:08:13.975830. Execution time: 40.367 miliseconds. Response sent.
+2024-06-21 21:18:10,341 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 21:18:10.341316. Request payload: {'file_name': 'test.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-21 21:18:10,357 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 21:18:10.357459. Execution time: 16.143 miliseconds. Response sent.
+2024-06-21 21:19:39,006 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 21:19:39.002037. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-21 21:19:40,200 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 21:19:40.200140. Execution time: 1198.1029999999998 miliseconds. Response sent.
+2024-06-21 21:20:13,079 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 21:20:13.078834. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 80, 'model': 'Linear', 'fit_settings': False}
+2024-06-21 21:20:13,777 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 21:20:13.777333. Execution time: 698.499 miliseconds. Response sent.
+2024-06-21 21:27:23,449 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 21:27:23.449128. Request payload: {'file_name': 'raspy_swordfish_merrile-2024-06-21T21:27:23.397Z-PMMA_shift_R10_data.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2024-06-21 21:27:23,470 - app - INFO - Error in upload_init function: Failed to parse file content
+2024-06-21 21:27:23,471 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 21:27:23.471566. Execution time: 22.438 miliseconds. Response sent.
+2024-06-21 22:36:10,280 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 22:36:10.276897. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-21 22:36:11,290 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 22:36:11.289930. Execution time: 1013.0330000000001 miliseconds. Response sent.
+2024-06-21 22:37:32,574 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 22:37:32.571677. Request payload: {'file_name': 'raspy_swordfish_merrile-2024-06-21T22:37:32.431Z-adata.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2024-06-21 22:37:32,649 - app - INFO - Error in upload_init function: Failed to parse file content
+2024-06-21 22:37:32,651 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 22:37:32.650909. Execution time: 79.232 miliseconds. Response sent.
+2024-06-21 22:38:42,254 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-21 22:38:42.246573. Request payload: {'file_name': 'raspy_swordfish_merrile-2024-06-21T22:38:42.170Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2024-06-21 22:38:42,810 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-21 22:38:42.810263. Execution time: 563.69 miliseconds. Response sent.
+2024-06-22 00:54:55,850 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-22 00:54:55.849214. Request payload: {'file_name': 'ytterbic_swallow_miran-2024-06-22T00:54:55.595Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2024-06-22 00:54:56,781 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-22 00:54:56.781810. Execution time: 932.596 miliseconds. Response sent.
+2024-06-22 00:59:23,586 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-22 00:59:23.583330. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-22 00:59:24,374 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-22 00:59:24.374426. Execution time: 791.096 miliseconds. Response sent.
+2024-06-22 13:34:06,138 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-22 13:34:06.137000. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-22 13:34:07,142 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-22 13:34:07.142069. Execution time: 1005.069 miliseconds. Response sent.
+2024-06-24 23:11:41,122 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-24 23:11:41.117042. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-24 23:11:43,159 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-24 23:11:43.158624. Execution time: 2041.582 miliseconds. Response sent.
+2024-06-24 23:12:00,648 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-24 23:12:00.612864. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-24 23:12:02,393 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-24 23:12:02.392982. Execution time: 1780.1180000000002 miliseconds. Response sent.
+2024-06-25 20:20:07,307 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-25 20:20:07.303833. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-06-25 20:20:09,778 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-25 20:20:09.777110. Execution time: 2473.277 miliseconds. Response sent.
+2024-06-25 20:20:47,467 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-25 20:20:47.464566. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 79, 'model': 'Linear', 'fit_settings': False}
+2024-06-25 20:20:48,422 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-25 20:20:48.422509. Execution time: 957.943 miliseconds. Response sent.
+2024-06-25 20:20:56,622 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-25 20:20:56.621415. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 99, 'model': 'Linear', 'fit_settings': False}
+2024-06-25 20:20:56,955 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-25 20:20:56.955187. Execution time: 333.772 miliseconds. Response sent.
+2024-06-25 20:21:02,826 - app - INFO - [START]: Entering extract_data_from_file function at 2024-06-25 20:21:02.821127. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 99, 'model': 'LASSO', 'fit_settings': False}
+2024-06-25 20:21:03,662 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-06-25 20:21:03.662664. Execution time: 841.537 miliseconds. Response sent.
+2024-08-20 17:07:43,029 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:07:43,043 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:07:43,053 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:07:43,072 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:07:57,012 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:07:59,792 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:01,287 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:01,688 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:13,742 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:14,127 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:15,990 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:15,992 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:36,137 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:37,808 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:46,019 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:08:48,256 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:02,424 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:03,736 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:03,747 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:03,888 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:15,185 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:17,294 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:17,695 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:20,058 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:34,833 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:34,908 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:37,934 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:45,598 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:52,222 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:54,313 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:09:57,622 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:05,056 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:05,102 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:10,863 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:18,789 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:27,642 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:30,069 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:30,110 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:31,089 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:39,402 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:44,893 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:45,647 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:46,615 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:50,633 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:52,472 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:55,984 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:10:56,802 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:01,093 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:02,251 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:06,391 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:06,656 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:17,440 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:17,450 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:22,328 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:22,331 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:30,027 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:30,199 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:34,934 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:35,041 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:44,441 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:44,436 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:47,620 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:11:48,094 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:12:01,551 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:12:01,601 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:12:01,977 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:12:02,519 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:12:16,823 - app - CRITICAL - Failed to import a module: No module named 'app.materialsmine'
+2024-08-20 17:12:18,736 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:19,110 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:19,117 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:31,218 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:31,522 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:31,699 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:31,893 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:49,326 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:49,600 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:49,731 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:12:53,997 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:03,485 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:03,633 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:03,693 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:07,030 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:22,835 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:23,541 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:23,722 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:23,715 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:44,373 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:47,758 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:48,533 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:13:49,423 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:14:03,876 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:14:04,181 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:14:13,643 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:24,005 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:24,006 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:24,180 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:24,397 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:41,397 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:42,767 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:42,900 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:43,687 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:59,357 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:33:59,470 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:00,440 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:00,604 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:16,981 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:17,288 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:17,695 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:17,728 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:26,582 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:27,290 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:27,319 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:28,167 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:38,450 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:38,696 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:38,998 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:40,123 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:46,549 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:46,776 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:47,016 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:48,406 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:57,561 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:57,672 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:34:58,373 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-08-20 17:44:36,304 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-20 17:44:36.298315. Request payload: {}
+2024-08-20 17:44:36,325 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-20 17:44:36,327 - app - INFO - [check_cache]: data.json does not exist or is empty. Fetching data from GitHub.
+2024-08-20 17:44:36,329 - app - INFO - [download_file]: Connecting to GitHub to download file
+2024-08-20 17:44:36,930 - app - INFO - [download_file]: File downloaded successfully.
+2024-08-20 17:44:36,931 - app - INFO - [get_commit_dates]: Fetching last commit dates.
+2024-08-20 17:44:37,230 - app - INFO - [details_from_turtle]: Extract Details from the turtle file
+2024-08-20 17:44:37,450 - app - INFO - [details_from_turtle]: Details retrieved successfully from the turtle file
+2024-08-20 17:44:37,451 - app - INFO - [save_to_cache]: Saving data to cache.
+2024-08-20 17:44:37,496 - app - INFO - [save_to_cache]: Data cached successfully.
+2024-08-20 17:44:37,528 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-20 17:44:37.528235. Execution time: 1229.9199999999998 miliseconds. Response sent.
+2024-08-20 17:45:04,009 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-20 17:45:04.005265. Request payload: {}
+2024-08-20 17:45:04,050 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-20 17:45:04,064 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-20 17:45:04,102 - app - INFO - Returning cached data.
+2024-08-20 17:45:04,131 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-20 17:45:04.131744. Execution time: 126.47900000000001 miliseconds. Response sent.
+2024-08-20 17:55:50,343 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-20 17:55:50.332299. Request payload: {}
+2024-08-20 17:55:50,367 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-20 17:55:50,371 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-20 17:55:50,381 - app - INFO - Returning cached data.
+2024-08-20 17:55:50,415 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-20 17:55:50.415161. Execution time: 82.86200000000001 miliseconds. Response sent.
+2024-08-21 09:56:51,233 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-21 09:56:51.217341. Request payload: {}
+2024-08-21 09:56:51,285 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-21 09:56:51,289 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-21 09:56:51,304 - app - INFO - Returning cached data.
+2024-08-21 09:56:51,328 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-21 09:56:51.328113. Execution time: 110.77199999999999 miliseconds. Response sent.
+2024-08-22 09:03:39,982 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-22 09:03:39.971999. Request payload: {}
+2024-08-22 09:03:40,033 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-22 09:03:40,038 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-22 09:03:40,051 - app - INFO - Returning cached data.
+2024-08-22 09:03:40,076 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-22 09:03:40.076603. Execution time: 104.604 miliseconds. Response sent.
+2024-08-22 13:59:07,348 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-22 13:59:07.338346. Request payload: {}
+2024-08-22 13:59:07,384 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-22 13:59:07,388 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-22 13:59:07,399 - app - INFO - Returning cached data.
+2024-08-22 13:59:07,417 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-22 13:59:07.416686. Execution time: 78.34 miliseconds. Response sent.
+2024-08-22 13:59:21,148 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-22 13:59:21.139338. Request payload: {}
+2024-08-22 13:59:21,182 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-22 13:59:21,187 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-22 13:59:21,193 - app - INFO - Returning cached data.
+2024-08-22 13:59:21,204 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-22 13:59:21.204888. Execution time: 65.55 miliseconds. Response sent.
+2024-08-22 14:49:56,952 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-22 14:49:56.932738. Request payload: {}
+2024-08-22 14:49:56,981 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-22 14:49:56,986 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-22 14:49:57,050 - app - INFO - Returning cached data.
+2024-08-22 14:49:57,186 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-22 14:49:57.186914. Execution time: 254.17600000000002 miliseconds. Response sent.
+2024-08-22 14:54:34,564 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-22 14:54:34.550924. Request payload: {}
+2024-08-22 14:54:34,622 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-22 14:54:34,632 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-22 14:54:34,650 - app - INFO - Returning cached data.
+2024-08-22 14:54:34,677 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-22 14:54:34.677259. Execution time: 126.33500000000001 miliseconds. Response sent.
+2024-08-25 16:22:47,340 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:22:47.339271. Request payload: {}
+2024-08-25 16:22:47,349 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:22:47,350 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:22:47,353 - app - INFO - Returning cached data.
+2024-08-25 16:22:47,361 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:22:47.361302. Execution time: 22.031 miliseconds. Response sent.
+2024-08-25 16:24:54,760 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:24:54.760630. Request payload: {}
+2024-08-25 16:24:54,762 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:24:54,764 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:24:54,766 - app - INFO - Returning cached data.
+2024-08-25 16:24:54,772 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:24:54.772894. Execution time: 12.264000000000001 miliseconds. Response sent.
+2024-08-25 16:31:08,795 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:31:08.794673. Request payload: {}
+2024-08-25 16:31:08,799 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:31:08,801 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:31:08,815 - app - INFO - Returning cached data.
+2024-08-25 16:31:08,823 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:31:08.823537. Execution time: 28.864 miliseconds. Response sent.
+2024-08-25 16:36:11,832 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:36:11.831401. Request payload: {}
+2024-08-25 16:36:11,837 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:36:11,841 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:36:11,845 - app - INFO - Returning cached data.
+2024-08-25 16:36:11,853 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:36:11.852955. Execution time: 21.554 miliseconds. Response sent.
+2024-08-25 16:37:34,410 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:37:34.409257. Request payload: {}
+2024-08-25 16:37:34,415 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:37:34,417 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:37:34,420 - app - INFO - Returning cached data.
+2024-08-25 16:37:34,432 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:37:34.431880. Execution time: 22.623 miliseconds. Response sent.
+2024-08-25 16:38:35,595 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:38:35.595745. Request payload: {}
+2024-08-25 16:38:35,597 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:38:35,597 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:38:35,601 - app - INFO - Returning cached data.
+2024-08-25 16:38:35,609 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:38:35.609726. Execution time: 13.981 miliseconds. Response sent.
+2024-08-25 16:39:00,541 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:39:00.541307. Request payload: {}
+2024-08-25 16:39:00,542 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:39:00,543 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:39:00,547 - app - INFO - Returning cached data.
+2024-08-25 16:39:00,553 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:39:00.553586. Execution time: 12.279 miliseconds. Response sent.
+2024-08-25 16:39:53,101 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:39:53.101471. Request payload: {}
+2024-08-25 16:39:53,104 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:39:53,106 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:39:53,130 - app - INFO - Returning cached data.
+2024-08-25 16:39:53,143 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:39:53.143394. Execution time: 41.923 miliseconds. Response sent.
+2024-08-25 16:41:08,861 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:41:08.861002. Request payload: {}
+2024-08-25 16:41:08,863 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:41:08,864 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:41:08,867 - app - INFO - Returning cached data.
+2024-08-25 16:41:08,874 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:41:08.874077. Execution time: 13.075 miliseconds. Response sent.
+2024-08-25 16:41:37,501 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:41:37.501157. Request payload: {}
+2024-08-25 16:41:37,501 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:41:37,502 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:41:37,505 - app - INFO - Returning cached data.
+2024-08-25 16:41:37,511 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:41:37.511634. Execution time: 10.477 miliseconds. Response sent.
+2024-08-25 16:42:33,759 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:42:33.759284. Request payload: {}
+2024-08-25 16:42:33,760 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:42:33,761 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:42:33,763 - app - INFO - Returning cached data.
+2024-08-25 16:42:33,770 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:42:33.770105. Execution time: 10.821000000000002 miliseconds. Response sent.
+2024-08-25 16:43:38,164 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 16:43:38.163490. Request payload: {}
+2024-08-25 16:43:38,168 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 16:43:38,172 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 16:43:38,181 - app - INFO - Returning cached data.
+2024-08-25 16:43:38,198 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 16:43:38.198595. Execution time: 35.105 miliseconds. Response sent.
+2024-08-25 18:10:27,365 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:10:27.364833. Request payload: {}
+2024-08-25 18:10:27,369 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:10:27,370 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:10:27,376 - app - INFO - Returning cached data.
+2024-08-25 18:10:27,386 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:10:27.386055. Execution time: 21.222 miliseconds. Response sent.
+2024-08-25 18:10:47,344 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:10:47.343948. Request payload: {}
+2024-08-25 18:10:47,348 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:10:47,351 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:10:47,360 - app - INFO - Returning cached data.
+2024-08-25 18:10:47,368 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:10:47.368676. Execution time: 24.728 miliseconds. Response sent.
+2024-08-25 18:13:44,427 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:13:44.427320. Request payload: {}
+2024-08-25 18:13:44,431 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:13:44,432 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:13:44,437 - app - INFO - Returning cached data.
+2024-08-25 18:13:44,444 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:13:44.444239. Execution time: 16.919 miliseconds. Response sent.
+2024-08-25 18:13:55,395 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:13:55.394252. Request payload: {}
+2024-08-25 18:13:55,398 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:13:55,399 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:13:55,408 - app - INFO - Returning cached data.
+2024-08-25 18:13:55,417 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:13:55.417602. Execution time: 23.349999999999998 miliseconds. Response sent.
+2024-08-25 18:17:14,827 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:17:14.826822. Request payload: {}
+2024-08-25 18:17:14,831 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:17:14,833 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:17:14,838 - app - INFO - Returning cached data.
+2024-08-25 18:17:14,846 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:17:14.846108. Execution time: 19.286 miliseconds. Response sent.
+2024-08-25 18:17:16,409 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:17:16.409207. Request payload: {}
+2024-08-25 18:17:16,411 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:17:16,413 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:17:16,421 - app - INFO - Returning cached data.
+2024-08-25 18:17:16,429 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:17:16.429803. Execution time: 20.596 miliseconds. Response sent.
+2024-08-25 18:17:17,421 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:17:17.420469. Request payload: {}
+2024-08-25 18:17:17,422 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:17:17,424 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:17:17,428 - app - INFO - Returning cached data.
+2024-08-25 18:17:17,436 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:17:17.436473. Execution time: 16.004 miliseconds. Response sent.
+2024-08-25 18:17:18,166 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:17:18.166157. Request payload: {}
+2024-08-25 18:17:18,170 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:17:18,173 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:17:18,179 - app - INFO - Returning cached data.
+2024-08-25 18:17:18,186 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:17:18.186640. Execution time: 20.483 miliseconds. Response sent.
+2024-08-25 18:17:19,105 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:17:19.105690. Request payload: {}
+2024-08-25 18:17:19,106 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:17:19,110 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:17:19,119 - app - INFO - Returning cached data.
+2024-08-25 18:17:19,127 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:17:19.127890. Execution time: 22.2 miliseconds. Response sent.
+2024-08-25 18:17:23,112 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:17:23.111989. Request payload: {}
+2024-08-25 18:17:23,112 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:17:23,113 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:17:23,120 - app - INFO - Returning cached data.
+2024-08-25 18:17:23,140 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:17:23.140105. Execution time: 28.116 miliseconds. Response sent.
+2024-08-25 18:17:25,516 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-25 18:17:25.516012. Request payload: {}
+2024-08-25 18:17:25,516 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-25 18:17:25,518 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-25 18:17:25,520 - app - INFO - Returning cached data.
+2024-08-25 18:17:25,528 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-25 18:17:25.528639. Execution time: 12.626999999999999 miliseconds. Response sent.
+2024-08-26 09:35:11,986 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-26 09:35:11.985640. Request payload: {}
+2024-08-26 09:35:11,991 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-26 09:35:11,992 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-26 09:35:11,995 - app - INFO - Returning cached data.
+2024-08-26 09:35:12,116 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-26 09:35:12.116159. Execution time: 130.519 miliseconds. Response sent.
+2024-08-27 01:33:22,214 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-27 01:33:22.213809. Request payload: {}
+2024-08-27 01:33:22,218 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-27 01:33:22,219 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-27 01:33:22,226 - app - INFO - Returning cached data.
+2024-08-27 01:33:22,236 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-27 01:33:22.236923. Execution time: 23.114 miliseconds. Response sent.
+2024-08-27 01:33:36,971 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-27 01:33:36.970286. Request payload: {}
+2024-08-27 01:33:36,975 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-27 01:33:36,977 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-27 01:33:36,981 - app - INFO - Returning cached data.
+2024-08-27 01:33:36,988 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-27 01:33:36.988716. Execution time: 18.43 miliseconds. Response sent.
+2024-08-27 01:34:55,837 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-27 01:34:55.835939. Request payload: {}
+2024-08-27 01:34:55,844 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-27 01:34:55,845 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-27 01:34:55,854 - app - INFO - Returning cached data.
+2024-08-27 01:34:55,864 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-27 01:34:55.864394. Execution time: 28.455000000000002 miliseconds. Response sent.
+2024-08-27 01:35:04,064 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-27 01:35:04.063128. Request payload: {}
+2024-08-27 01:35:04,067 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-27 01:35:04,068 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-27 01:35:04,075 - app - INFO - Returning cached data.
+2024-08-27 01:35:04,084 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-27 01:35:04.084193. Execution time: 21.065 miliseconds. Response sent.
+2024-08-27 17:07:58,576 - app - INFO - [START]: Entering get_data_from_file function at 2024-08-27 17:07:58.571085. Request payload: {}
+2024-08-27 17:07:58,645 - app - INFO - [check_cache]: Checking if data.json exists and is not empty.
+2024-08-27 17:07:58,674 - app - INFO - [check_cache]: data.json exists and is not empty.
+2024-08-27 17:07:58,686 - app - INFO - Returning cached data.
+2024-08-27 17:07:58,699 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-08-27 17:07:58.699145. Execution time: 128.06 miliseconds. Response sent.
+2024-09-13 12:57:40,814 - app - INFO - [START]: Entering get_data_from_file function at 2024-09-13 12:57:40.811101. Request payload: {}
+2024-09-13 12:57:40,830 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:57:40,839 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:57:40,840 - app - INFO - [check_cache]: lastUpdateDate not found in the mgs_materialsmin_data.json file.
+2024-09-13 12:57:40,840 - app - INFO - [download_file]: Connecting to GitHub to download file
+2024-09-13 12:57:42,600 - app - INFO - [download_file]: File downloaded successfully.
+2024-09-13 12:57:42,600 - app - INFO - [get_commit_dates]: Fetching last commit dates.
+2024-09-13 12:57:43,409 - app - INFO - [details_from_turtle]: Extract Details from the turtle file
+2024-09-13 12:57:43,563 - app - INFO - [details_from_turtle]: Details retrieved successfully from the turtle file
+2024-09-13 12:57:43,564 - app - INFO - [save_to_cache]: Saving data to cache.
+2024-09-13 12:57:43,591 - app - INFO - [save_to_cache]: Data cached successfully.
+2024-09-13 12:57:43,601 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-09-13 12:57:43.601657. Execution time: 2790.556 miliseconds. Response sent.
+2024-09-13 12:57:46,718 - app - INFO - [START]: Entering get_data_from_file function at 2024-09-13 12:57:46.718737. Request payload: {}
+2024-09-13 12:57:46,719 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:57:46,722 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:57:46,724 - app - INFO - Returning cached data.
+2024-09-13 12:57:46,730 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-09-13 12:57:46.730542. Execution time: 11.805 miliseconds. Response sent.
+2024-09-13 12:58:24,470 - app - INFO - [START]: Entering get_data_from_file function at 2024-09-13 12:58:24.467904. Request payload: {}
+2024-09-13 12:58:24,477 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:58:24,482 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:58:24,499 - app - INFO - Returning cached data.
+2024-09-13 12:58:24,508 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-09-13 12:58:24.508141. Execution time: 40.237 miliseconds. Response sent.
+2024-09-13 12:59:12,467 - app - INFO - [START]: Entering get_data_from_file function at 2024-09-13 12:59:12.464529. Request payload: {}
+2024-09-13 12:59:12,475 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:59:12,496 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:59:12,502 - app - INFO - Returning cached data.
+2024-09-13 12:59:12,512 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-09-13 12:59:12.512503. Execution time: 47.974000000000004 miliseconds. Response sent.
+2024-09-13 12:59:22,085 - app - INFO - [START]: Entering get_data_from_file function at 2024-09-13 12:59:22.085384. Request payload: {}
+2024-09-13 12:59:22,087 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:59:22,098 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:59:22,100 - app - INFO - Returning cached data.
+2024-09-13 12:59:22,110 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-09-13 12:59:22.110523. Execution time: 25.139000000000003 miliseconds. Response sent.
+2024-09-13 12:59:28,038 - app - INFO - [START]: Entering get_data_from_file function at 2024-09-13 12:59:28.034489. Request payload: {}
+2024-09-13 12:59:28,042 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:59:28,051 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 12:59:28,053 - app - INFO - Returning cached data.
+2024-09-13 12:59:28,069 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-09-13 12:59:28.069293. Execution time: 34.804 miliseconds. Response sent.
+2024-09-13 13:03:30,249 - app - INFO - [START]: Entering get_data_from_file function at 2024-09-13 13:03:30.248212. Request payload: {}
+2024-09-13 13:03:30,253 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 13:03:30,259 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 13:03:30,260 - app - INFO - Returning cached data.
+2024-09-13 13:03:30,268 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-09-13 13:03:30.268353. Execution time: 20.141 miliseconds. Response sent.
+2024-09-13 14:04:02,707 - app - INFO - [START]: Entering get_data_from_file function at 2024-09-13 14:04:02.699548. Request payload: {}
+2024-09-13 14:04:02,735 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 14:04:02,758 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-09-13 14:04:02,773 - app - INFO - Returning cached data.
+2024-09-13 14:04:02,905 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-09-13 14:04:02.905236. Execution time: 205.68800000000002 miliseconds. Response sent.
+2024-10-09 15:11:10,657 - app - CRITICAL - Failed to import a module: No module named 'app.utils.db_utils'
+2024-10-09 16:29:19,871 - app - INFO - [START]: Entering extract_data_from_file function at 2024-10-09 16:29:19.869687. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-10-09 16:29:21,066 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-10-09 16:29:21.066071. Execution time: 1196.3839999999998 miliseconds. Response sent.
+2024-10-09 16:56:12,211 - app - INFO - [START]: Entering extract_data_from_file function at 2024-10-09 16:56:12.207447. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-10-09 16:56:12,913 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-10-09 16:56:12.913340. Execution time: 705.893 miliseconds. Response sent.
+2024-10-09 17:01:52,709 - app - INFO - [START]: Entering extract_data_from_file function at 2024-10-09 17:01:52.708837. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2024-10-09 17:01:53,323 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2024-10-09 17:01:53.323174. Execution time: 614.337 miliseconds. Response sent.
+2024-10-27 01:12:59,558 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:12:59,552 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:12:59,548 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:12:59,584 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:11,831 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:12,302 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:12,566 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:12,574 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:23,724 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:23,979 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:25,299 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:25,592 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:36,093 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:36,190 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:37,107 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:39,228 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:44,523 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:44,716 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:44,719 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:45,875 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:51,778 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:52,710 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:53,788 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:13:56,093 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:00,368 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:03,197 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:03,290 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:04,341 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:10,336 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:10,333 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:10,844 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:12,983 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:17,236 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:17,472 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:18,340 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:18,444 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:21,541 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:21,916 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:22,825 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:23,430 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:27,553 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:27,634 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:28,151 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:28,165 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:31,862 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:32,446 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:32,486 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:33,008 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:35,912 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:36,219 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:36,726 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:37,221 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:39,324 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:39,832 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:39,896 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:39,921 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:42,135 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:42,153 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:42,416 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:42,650 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:44,773 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:45,030 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:45,094 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:45,354 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:47,750 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:47,892 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:47,999 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:48,144 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:50,105 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:50,127 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:51,962 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:52,393 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:54,493 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:54,893 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:55,386 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:55,693 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:57,470 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:57,622 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:58,014 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:14:58,298 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:01,133 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:01,328 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:01,345 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:02,113 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:05,307 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:05,326 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:05,363 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:05,494 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:07,689 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:07,914 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:08,033 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:08,396 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:09,811 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:09,832 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:10,044 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:10,220 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:11,942 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:12,050 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:12,192 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:12,254 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:13,953 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:13,978 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:14,084 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:14,450 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:16,335 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:16,407 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:16,784 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:17,225 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:18,424 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:18,721 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:18,734 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:19,147 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:20,677 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:20,775 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:20,932 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:20,938 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:22,613 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:22,933 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:22,976 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:23,026 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:24,537 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:24,700 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:24,930 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:24,947 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:26,294 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:26,325 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:26,800 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:27,087 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:27,964 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:27,986 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:28,676 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:28,785 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:29,525 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:29,565 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:30,313 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:30,576 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:31,124 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:31,262 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:31,780 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:32,502 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:32,853 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:32,881 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:33,380 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:34,503 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:34,545 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:34,695 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:35,129 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:35,858 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:36,273 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:36,273 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:36,760 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:37,594 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:38,019 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:38,216 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:38,930 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:39,677 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:40,098 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:40,193 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:40,934 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:41,236 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:42,327 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:42,374 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:42,500 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:42,794 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:44,103 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:44,317 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:44,372 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:44,433 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:46,089 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:46,403 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:46,546 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:46,608 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:48,229 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:48,322 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:48,464 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:48,580 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:50,118 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:50,123 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:50,408 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:50,514 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:52,698 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:53,409 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:53,412 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:53,433 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:55,723 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:55,894 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:55,906 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:56,360 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:58,903 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:59,025 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:59,399 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:15:59,607 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:01,756 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:01,771 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:02,678 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:03,113 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:04,230 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:04,286 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:04,495 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:04,690 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:05,947 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:06,044 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:06,315 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:06,493 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:07,548 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:07,938 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:08,150 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:08,227 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:09,435 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:09,792 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:09,840 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:10,262 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:11,347 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:11,384 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:11,830 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:12,585 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:14,035 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:14,052 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:14,059 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:14,606 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:15,779 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:16,110 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:16,317 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:16,676 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:17,669 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:17,755 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:17,922 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:18,665 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:19,626 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:19,780 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:19,800 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:20,502 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:21,844 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:22,095 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:22,711 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:22,779 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:23,928 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:24,204 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:24,683 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:24,825 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:25,839 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:25,921 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:26,225 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:26,488 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:27,684 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:27,827 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:27,918 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:28,385 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:29,351 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:29,644 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:29,982 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:30,010 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:31,197 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:31,553 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:31,575 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:31,806 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:33,361 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:33,446 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:33,582 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:33,783 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:34,978 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:35,261 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:35,498 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:35,632 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:36,869 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:37,165 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:37,263 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:37,636 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:38,659 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:39,204 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:39,299 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:39,322 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:40,452 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:41,258 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:41,385 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:41,447 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:42,376 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:43,290 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:43,745 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:44,011 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:44,269 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:45,177 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:45,857 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:45,999 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:46,394 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:47,312 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:47,662 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:47,969 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:48,501 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:49,105 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:49,643 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:49,884 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:50,240 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:50,916 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:52,295 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:53,063 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:53,153 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:53,968 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:54,628 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:55,033 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:55,554 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:55,762 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:56,649 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:56,830 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:57,633 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:57,709 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:58,573 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:58,711 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:59,131 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:16:59,544 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:00,428 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:00,627 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:00,671 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:01,128 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:02,359 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:02,446 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:02,767 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:03,129 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:04,573 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:04,669 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:05,277 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:05,554 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:06,710 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:06,950 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:07,542 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:07,649 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:08,828 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:09,193 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:09,573 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:09,789 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:10,818 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:11,116 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:11,422 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:12,649 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:13,467 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:13,745 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:13,941 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:14,845 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:15,134 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:16,150 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:16,450 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:17,720 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:17,807 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:18,583 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:19,157 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:19,714 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:19,950 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:20,740 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:20,792 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:22,015 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:22,275 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:23,386 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:23,522 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:24,359 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:24,473 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:25,586 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:25,760 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:26,315 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:26,737 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:27,262 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:27,438 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:27,454 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:29,013 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:29,142 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:29,327 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:29,488 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:30,750 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:30,969 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:31,069 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:31,273 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:32,862 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:32,895 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:33,123 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:33,173 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:34,863 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:34,945 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:35,044 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:35,061 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:36,853 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:36,887 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:36,918 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:37,235 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:38,482 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:38,575 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:39,019 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:39,214 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:40,094 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:40,287 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:41,033 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:41,264 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:41,771 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:42,150 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:43,350 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:43,586 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:43,814 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:44,530 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:45,691 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:45,692 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:45,809 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:46,911 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:47,709 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:47,878 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:48,108 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:48,988 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:49,712 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:49,811 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:50,185 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:51,851 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:52,156 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:52,774 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:52,922 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:54,229 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:54,439 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:54,809 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:54,980 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:56,430 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:56,883 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:57,183 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:57,528 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:58,531 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:58,603 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:59,100 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:59,483 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:17:59,925 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:00,164 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:01,355 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:02,650 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:02,910 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:03,152 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:04,046 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:04,598 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:04,855 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:05,207 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:05,844 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:06,674 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:06,997 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:07,339 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:07,628 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:08,699 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:08,813 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:09,268 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:09,503 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:10,883 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:11,026 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:11,447 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:11,577 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:13,455 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:13,457 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:13,484 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:14,107 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:15,607 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:16,152 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:16,208 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:16,224 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:17,554 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:18,239 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:18,284 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:18,431 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:20,160 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:20,170 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:20,191 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:20,509 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:21,687 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:22,206 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:22,457 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:22,484 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:24,262 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:24,548 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:24,765 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:24,917 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:26,508 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:26,551 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:26,572 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:26,762 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:28,206 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:28,304 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:28,309 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:29,000 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:30,121 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:30,177 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:30,256 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:30,947 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:31,880 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:32,265 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:32,348 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:33,226 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:34,402 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:34,500 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:34,524 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:34,856 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:36,308 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:36,414 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:36,560 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:37,582 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:38,530 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:38,769 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:38,859 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:39,834 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:40,615 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:40,766 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:40,956 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:41,917 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:42,786 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:43,104 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:43,274 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:44,129 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:45,017 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:45,328 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:46,052 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:46,679 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:47,103 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:47,295 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:47,967 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:48,476 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:49,035 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:49,489 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:50,043 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:50,173 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:50,892 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:52,236 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:53,230 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:53,260 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:53,691 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:54,492 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:55,539 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:55,551 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:55,572 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:56,194 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:57,443 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:57,672 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:57,743 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:58,351 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:59,375 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:59,557 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:18:59,581 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:00,069 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:00,923 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:01,002 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:01,443 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:01,872 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:02,968 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:02,972 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:03,037 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:03,773 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:04,840 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:05,050 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:05,154 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:05,717 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:06,581 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:07,212 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:07,229 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:07,301 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:08,190 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:09,224 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:09,317 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:09,331 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:10,040 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:11,106 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:11,485 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:11,543 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:12,388 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:13,092 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:13,791 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:13,814 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:14,776 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:15,102 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:16,737 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:17,013 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:17,160 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:17,868 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:19,023 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:19,087 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:19,106 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:19,930 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:20,533 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:21,020 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:21,099 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:22,304 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:22,369 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:23,177 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:23,289 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:24,409 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:24,455 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:24,884 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:25,703 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:26,283 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:26,487 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:26,976 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:27,534 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:27,960 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:28,325 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:29,023 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:29,270 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:29,278 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:30,228 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:30,907 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:31,189 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:31,193 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:32,009 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:32,728 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:33,135 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:33,236 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:34,390 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:34,782 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:34,872 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:35,319 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:36,595 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:36,626 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:36,720 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:37,323 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:38,614 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:38,757 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:38,926 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:39,035 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:40,246 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:40,643 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:40,791 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:40,895 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:42,771 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:43,178 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:43,208 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:43,798 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:45,108 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:45,283 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:45,577 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:45,628 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:46,717 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:47,339 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:47,461 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:47,525 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:48,559 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:49,221 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:49,513 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:49,558 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:50,651 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:50,972 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:51,721 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:51,722 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:53,461 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:53,532 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:53,956 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:54,164 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:55,323 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:55,561 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:55,601 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:55,983 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:57,331 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:57,759 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:57,874 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:57,919 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:59,260 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:59,610 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:19:59,877 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:00,467 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:00,926 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:01,819 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:02,842 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:03,445 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:03,904 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:05,082 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:05,266 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:06,173 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:06,324 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:07,081 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:07,478 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:08,088 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:08,111 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:09,069 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:09,402 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:10,299 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:10,475 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:10,911 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:11,750 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:12,407 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:12,465 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:12,557 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:14,208 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:14,823 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:15,106 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:15,596 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:16,603 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:17,375 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:17,561 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:18,109 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:19,175 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:20,025 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:20,281 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:20,580 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:21,997 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:22,557 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:22,674 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:22,943 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:24,622 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:24,729 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:24,925 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:25,076 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:26,619 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:26,921 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:27,223 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:27,348 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:28,755 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:29,037 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:29,376 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:30,666 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:36,102 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-10-27 01:20:36,612 - app - CRITICAL - Failed to import a module: No module named 'rdflib'
+2024-12-31 20:30:04,538 - app - INFO - [START]: Entering get_data_from_file function at 2024-12-31 20:30:04.509716. Request payload: {}
+2024-12-31 20:30:04,653 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-12-31 20:30:04,689 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-12-31 20:30:04,761 - app - INFO - [check_cache]: lastUpdateDate is older than today. Cache is outdated.
+2024-12-31 20:30:04,765 - app - INFO - [download_file]: Connecting to GitHub to download file
+2024-12-31 20:30:06,056 - app - INFO - [download_file]: File downloaded successfully.
+2024-12-31 20:30:06,060 - app - INFO - [get_commit_dates]: Fetching last commit dates.
+2024-12-31 20:30:07,168 - app - INFO - [details_from_turtle]: Extract Details from the turtle file
+2024-12-31 20:30:07,533 - app - INFO - [details_from_turtle]: Details retrieved successfully from the turtle file
+2024-12-31 20:30:07,547 - app - INFO - [save_to_cache]: Saving data to cache.
+2024-12-31 20:30:07,649 - app - INFO - [save_to_cache]: Data cached successfully.
+2024-12-31 20:30:07,769 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-12-31 20:30:07.755292. Execution time: 3245.576 miliseconds. Response sent.
+2024-12-31 20:30:17,160 - app - INFO - [START]: Entering get_data_from_file function at 2024-12-31 20:30:17.099299. Request payload: {}
+2024-12-31 20:30:17,255 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2024-12-31 20:30:17,286 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2024-12-31 20:30:17,416 - app - INFO - Returning cached data.
+2024-12-31 20:30:17,465 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2024-12-31 20:30:17.464385. Execution time: 365.086 miliseconds. Response sent.
+2025-03-12 23:13:08,895 - app - INFO - [START]: Entering get_data_from_file function at 2025-03-12 23:13:08.887772. Request payload: {}
+2025-03-12 23:13:08,929 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2025-03-12 23:13:08,947 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2025-03-12 23:13:08,966 - app - INFO - [check_cache]: lastUpdateDate is older than today. Cache is outdated.
+2025-03-12 23:13:08,968 - app - INFO - [download_file]: Connecting to GitHub to download file
+2025-03-12 23:13:09,673 - app - INFO - [download_file]: File downloaded successfully.
+2025-03-12 23:13:09,674 - app - INFO - [get_commit_dates]: Fetching last commit dates.
+2025-03-12 23:13:10,005 - app - INFO - [details_from_turtle]: Extract Details from the turtle file
+2025-03-12 23:13:10,221 - app - INFO - [details_from_turtle]: Details retrieved successfully from the turtle file
+2025-03-12 23:13:10,222 - app - INFO - [save_to_cache]: Saving data to cache.
+2025-03-12 23:13:10,262 - app - INFO - [save_to_cache]: Data cached successfully.
+2025-03-12 23:13:10,273 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2025-03-12 23:13:10.273691. Execution time: 1385.9189999999999 miliseconds. Response sent.
+2025-03-12 23:33:02,196 - app - INFO - [START]: Entering extract_data_from_file function at 2025-03-12 23:33:02.188582. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2025-03-12 23:33:04,169 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-03-12 23:33:04.169293. Execution time: 1980.711 miliseconds. Response sent.
+2025-03-12 23:35:38,298 - app - INFO - [START]: Entering extract_data_from_file function at 2025-03-12 23:35:38.298089. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2025-03-12 23:35:39,429 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-03-12 23:35:39.429673. Execution time: 1131.5839999999998 miliseconds. Response sent.
+2025-03-12 23:36:46,740 - app - INFO - [START]: Entering extract_data_from_file function at 2025-03-12 23:36:46.732657. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2025-03-12 23:36:47,216 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-03-12 23:36:47.216790. Execution time: 484.133 miliseconds. Response sent.
+2025-03-12 23:37:11,371 - app - INFO - [START]: Entering extract_data_from_file function at 2025-03-12 23:37:11.367441. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2025-03-12 23:37:12,938 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-03-12 23:37:12.938677. Execution time: 1571.236 miliseconds. Response sent.
+2025-03-13 08:34:52,283 - app - INFO - [START]: Entering extract_data_from_file function at 2025-03-13 08:34:52.272220. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2025-03-13 08:34:53,898 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-03-13 08:34:53.897909. Execution time: 1625.6889999999999 miliseconds. Response sent.
+2025-03-13 08:36:29,374 - app - INFO - [START]: Entering extract_data_from_file function at 2025-03-13 08:36:29.365675. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2025-03-13 08:36:30,619 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-03-13 08:36:30.619374. Execution time: 1253.6989999999998 miliseconds. Response sent.
+2025-03-13 17:04:10,370 - app - INFO - [START]: Entering extract_data_from_file function at 2025-03-13 17:04:10.358732. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2025-03-13 17:04:12,125 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-03-13 17:04:12.124891. Execution time: 1766.159 miliseconds. Response sent.
+2025-03-13 17:19:27,204 - app - INFO - [START]: Entering extract_data_from_file function at 2025-03-13 17:19:27.202625. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False}
+2025-03-13 17:19:29,301 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-03-13 17:19:29.301565. Execution time: 2098.9399999999996 miliseconds. Response sent.
+2025-04-22 01:45:15,195 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 01:45:15.188243. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T01:45:14.802Z-Temperature (C) vs Tan delta.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 01:45:15,417 - app - INFO - Error in upload_init function: Failed to parse file content
+2025-04-22 01:45:15,420 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 01:45:15.420182. Execution time: 231.939 miliseconds. Response sent.
+2025-04-22 01:49:28,703 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 01:49:28.691875. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T01:49:28.488Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 01:49:30,047 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 01:49:30.047504. Execution time: 1355.629 miliseconds. Response sent.
+2025-04-22 01:54:57,481 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 01:54:57.479324. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T01:54:57.354Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 01:54:58,175 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 01:54:58.175286. Execution time: 695.962 miliseconds. Response sent.
+2025-04-22 01:57:54,613 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 01:57:54.612438. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T01:57:54.554Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 01:57:55,697 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 01:57:55.697744. Execution time: 1085.306 miliseconds. Response sent.
+2025-04-22 02:00:17,412 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 02:00:17.406203. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T02:00:17.280Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 02:00:18,279 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 02:00:18.279122. Execution time: 872.919 miliseconds. Response sent.
+2025-04-22 02:03:39,241 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 02:03:39.240914. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T02:03:39.168Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 02:03:40,145 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 02:03:40.145403. Execution time: 904.489 miliseconds. Response sent.
+2025-04-22 02:09:40,972 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 02:09:40.960974. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T02:09:40.837Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 02:09:41,665 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 02:09:41.665707. Execution time: 704.7330000000001 miliseconds. Response sent.
+2025-04-22 02:18:09,771 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 02:18:09.769017. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T02:18:09.680Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 02:18:10,589 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 02:18:10.589002. Execution time: 819.985 miliseconds. Response sent.
+2025-04-22 02:20:36,700 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 02:20:36.699247. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T02:20:36.648Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 02:20:36,986 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 02:20:36.986891. Execution time: 287.644 miliseconds. Response sent.
+2025-04-22 02:23:45,759 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 02:23:45.758553. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T02:23:45.707Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 02:23:46,560 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 02:23:46.560147. Execution time: 801.594 miliseconds. Response sent.
+2025-04-22 02:24:23,013 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 02:24:23.012664. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T02:24:22.937Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 02:24:23,316 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 02:24:23.316076. Execution time: 303.41200000000003 miliseconds. Response sent.
+2025-04-22 02:32:55,393 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 02:32:55.392379. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T02:32:55.319Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 02:32:55,686 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 02:32:55.685931. Execution time: 293.55199999999996 miliseconds. Response sent.
+2025-04-22 02:55:14,432 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 02:55:14.431885. Request payload: {'file_name': 'hostile_mouse_margaretta-2025-04-22T02:55:14.335Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 02:55:14,772 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 02:55:14.772843. Execution time: 340.95799999999997 miliseconds. Response sent.
+2025-04-22 16:29:37,225 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 16:29:37.224103. Request payload: {'file_name': 'squealing_asp_laney-2025-04-22T16:29:37.122Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 16:29:38,238 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 16:29:38.238307. Execution time: 1014.2040000000001 miliseconds. Response sent.
+2025-04-22 16:33:37,536 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 16:33:37.534439. Request payload: {'file_name': 'squealing_asp_laney-2025-04-22T16:33:37.383Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 16:33:38,206 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 16:33:38.205975. Execution time: 671.5360000000001 miliseconds. Response sent.
+2025-04-22 16:34:22,630 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 16:34:22.624683. Request payload: {'file_name': 'squealing_asp_laney-2025-04-22T16:34:22.520Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 16:34:23,125 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 16:34:23.125027. Execution time: 500.344 miliseconds. Response sent.
+2025-04-22 16:52:20,279 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 16:52:20.279035. Request payload: {'file_name': 'squealing_asp_laney-2025-04-22T16:52:20.137Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 16:52:20,741 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 16:52:20.741078. Execution time: 462.043 miliseconds. Response sent.
+2025-04-22 16:53:31,145 - app - INFO - [START]: Entering extract_data_from_file function at 2025-04-22 16:53:31.144475. Request payload: {'file_name': 'squealing_asp_laney-2025-04-22T16:53:31.005Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-04-22 16:53:31,765 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-04-22 16:53:31.765784. Execution time: 621.309 miliseconds. Response sent.
+2025-05-02 15:56:56,838 - app - INFO - [START]: Entering get_data_from_file function at 2025-05-02 15:56:56.829464. Request payload: {}
+2025-05-02 15:56:56,877 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2025-05-02 15:56:56,888 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2025-05-02 15:56:56,899 - app - INFO - [check_cache]: lastUpdateDate is older than today. Cache is outdated.
+2025-05-02 15:56:56,901 - app - INFO - [download_file]: Connecting to GitHub to download file
+2025-05-02 15:56:57,487 - app - INFO - [download_file]: File downloaded successfully.
+2025-05-02 15:56:57,488 - app - INFO - [get_commit_dates]: Fetching last commit dates.
+2025-05-02 15:56:57,801 - app - INFO - [details_from_turtle]: Extract Details from the turtle file
+2025-05-02 15:56:57,999 - app - INFO - [details_from_turtle]: Details retrieved successfully from the turtle file
+2025-05-02 15:56:58,000 - app - INFO - [save_to_cache]: Saving data to cache.
+2025-05-02 15:56:58,034 - app - INFO - [save_to_cache]: Data cached successfully.
+2025-05-02 15:56:58,054 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2025-05-02 15:56:58.054570. Execution time: 1225.106 miliseconds. Response sent.
+2025-05-02 15:57:28,537 - app - INFO - [START]: Entering get_data_from_file function at 2025-05-02 15:57:28.536671. Request payload: {}
+2025-05-02 15:57:28,541 - app - INFO - [check_cache]: Checking if mgs_materialsmin_data.json exists and is not empty.
+2025-05-02 15:57:28,561 - app - INFO - [check_cache]: mgs_materialsmin_data.json exists and is not empty.
+2025-05-02 15:57:28,562 - app - INFO - Returning cached data.
+2025-05-02 15:57:28,578 - app - INFO - [END]: Request Successful. Exiting get_data_from_file function at 2025-05-02 15:57:28.578202. Execution time: 41.531 miliseconds. Response sent.
+2025-05-02 17:47:05,417 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 17:47:05.395629. Request payload: {'file_name': 'rising_whippet_janessa-2025-05-02T17:47:05.157Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-05-02 17:47:07,358 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 17:47:07.358606. Execution time: 1962.9769999999999 miliseconds. Response sent.
+2025-05-02 17:49:18,607 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 17:49:18.604016. Request payload: {'file_name': 'rising_whippet_janessa-2025-05-02T17:49:18.481Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-05-02 17:49:20,306 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 17:49:20.306191. Execution time: 1702.175 miliseconds. Response sent.
+2025-05-02 18:36:50,799 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 18:36:50.787093. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T18:36:50.302Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-05-02 18:36:52,011 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 18:36:52.011207. Execution time: 1224.114 miliseconds. Response sent.
+2025-05-02 18:37:22,885 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 18:37:22.878748. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T18:37:22.662Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-05-02 18:37:23,939 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 18:37:23.939206. Execution time: 1060.4579999999999 miliseconds. Response sent.
+2025-05-02 18:39:35,616 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 18:39:35.615898. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T18:39:35.422Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-05-02 18:39:36,688 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 18:39:36.687977. Execution time: 1072.079 miliseconds. Response sent.
+2025-05-02 18:41:10,434 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 18:41:10.431331. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T18:41:10.306Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-05-02 18:41:10,988 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 18:41:10.988659. Execution time: 557.3280000000001 miliseconds. Response sent.
+2025-05-02 18:52:27,613 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 18:52:27.606453. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T18:52:27.316Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-05-02 18:52:30,546 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 18:52:30.545086. Execution time: 2938.633 miliseconds. Response sent.
+2025-05-02 19:00:46,129 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 19:00:46.127619. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T19:00:45.945Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-05-02 19:00:48,770 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 19:00:48.770623. Execution time: 2643.004 miliseconds. Response sent.
+2025-05-02 19:03:42,351 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 19:03:42.349882. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T19:03:42.119Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False}
+2025-05-02 19:03:44,845 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 19:03:44.845031. Execution time: 2495.149 miliseconds. Response sent.
+2025-05-02 19:05:09,139 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 19:05:09.137809. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T19:05:09.011Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 19:05:11,285 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 19:05:11.285340. Execution time: 2147.531 miliseconds. Response sent.
+2025-05-02 19:14:26,088 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 19:14:26.086720. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T19:14:25.875Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 19:14:27,271 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 19:14:27.271475. Execution time: 1184.755 miliseconds. Response sent.
+2025-05-02 19:15:50,224 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 19:15:50.222619. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T19:15:50.144Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 19:15:51,458 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 19:15:51.458322. Execution time: 1235.703 miliseconds. Response sent.
+2025-05-02 19:18:22,494 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 19:18:22.493589. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T19:18:22.312Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 19:18:23,694 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 19:18:23.694871. Execution time: 1201.282 miliseconds. Response sent.
+2025-05-02 20:02:11,942 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 20:02:11.940604. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T20:02:11.652Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 20:02:13,073 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 20:02:13.072966. Execution time: 1132.362 miliseconds. Response sent.
+2025-05-02 20:03:08,901 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 20:03:08.888125. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T20:03:08.622Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 20:03:10,109 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 20:03:10.109049. Execution time: 1220.924 miliseconds. Response sent.
+2025-05-02 20:16:17,765 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 20:16:17.759809. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T20:16:17.599Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 20:16:19,107 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 20:16:19.107806. Execution time: 1347.9969999999998 miliseconds. Response sent.
+2025-05-02 20:20:58,708 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 20:20:58.706934. Request payload: {'file_name': 'flaky_barnacle_fredra-2025-05-02T20:20:58.572Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 20:20:59,879 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 20:20:59.879366. Execution time: 1172.432 miliseconds. Response sent.
+2025-05-02 20:58:56,203 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 20:58:56.200966. Request payload: {'file_name': 'supposed_tiger_lorain-2025-05-02T20:58:56.028Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 20:58:57,481 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 20:58:57.481835. Execution time: 1280.8690000000001 miliseconds. Response sent.
+2025-05-02 20:59:24,162 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 20:59:24.150167. Request payload: {'file_name': 'supposed_tiger_lorain-2025-05-02T20:59:23.930Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 20:59:26,064 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 20:59:26.064163. Execution time: 1913.996 miliseconds. Response sent.
+2025-05-02 21:53:21,401 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 21:53:21.399892. Request payload: {'file_name': 'supposed_tiger_lorain-2025-05-02T21:53:21.311Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 21:53:22,091 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-02 21:53:22,092 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 21:53:22.092735. Execution time: 692.843 miliseconds. Response sent.
+2025-05-02 21:54:37,216 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 21:54:37.214764. Request payload: {'file_name': 'supposed_tiger_lorain-2025-05-02T21:54:37.112Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 21:54:37,772 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-02 21:54:37,773 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 21:54:37.773806. Execution time: 559.042 miliseconds. Response sent.
+2025-05-02 21:56:20,730 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 21:56:20.728922. Request payload: {'file_name': 'supposed_tiger_lorain-2025-05-02T21:56:20.659Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 21:56:21,251 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-02 21:56:21,254 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 21:56:21.253964. Execution time: 525.042 miliseconds. Response sent.
+2025-05-02 21:56:39,332 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-02 21:56:39.330023. Request payload: {'file_name': 'supposed_tiger_lorain-2025-05-02T21:56:39.141Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-02 21:56:40,061 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-02 21:56:40,062 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-02 21:56:40.062666. Execution time: 732.643 miliseconds. Response sent.
+2025-05-05 18:16:35,683 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:16:35.678059. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:16:35.360Z-dynamfit-template.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-05 18:16:37,494 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-05 18:16:37,496 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:16:37.496534. Execution time: 1818.4750000000001 miliseconds. Response sent.
+2025-05-05 18:20:06,338 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:20:06.336855. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:20:06.264Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-05 18:20:06,963 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-05 18:20:06,964 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:20:06.964831. Execution time: 627.976 miliseconds. Response sent.
+2025-05-05 18:21:00,901 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:21:00.895239. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:21:00.702Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-05 18:21:01,492 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-05 18:21:01,494 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:21:01.494053. Execution time: 598.814 miliseconds. Response sent.
+2025-05-05 18:23:30,286 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:23:30.285679. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:23:30.137Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-05 18:23:30,938 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-05 18:23:30,939 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:23:30.939401. Execution time: 653.722 miliseconds. Response sent.
+2025-05-05 18:25:11,100 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:25:11.099238. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:25:10.984Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-05 18:25:11,682 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-05 18:25:11,683 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:25:11.683228. Execution time: 583.99 miliseconds. Response sent.
+2025-05-05 18:28:40,971 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:28:40.953527. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:28:40.847Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-05 18:28:42,419 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-05 18:28:42,420 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:28:42.420741. Execution time: 1467.214 miliseconds. Response sent.
+2025-05-05 18:29:53,235 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:29:53.234367. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:29:53.127Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-05 18:29:54,426 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:29:54.426793. Execution time: 1192.426 miliseconds. Response sent.
+2025-05-05 18:32:23,918 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:32:23.913986. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:32:23.797Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:32:26,330 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-05-05 18:32:26,331 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:32:26.331779. Execution time: 2417.793 miliseconds. Response sent.
+2025-05-05 18:34:04,705 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:34:04.704457. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:34:04.589Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:34:07,368 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:34:07.368297. Execution time: 2663.84 miliseconds. Response sent.
+2025-05-05 18:35:26,087 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:35:26.086303. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:35:25.975Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-05 18:35:27,448 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:35:27.448046. Execution time: 1361.743 miliseconds. Response sent.
+2025-05-05 18:37:31,087 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:37:31.086373. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:37:30.947Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:37:34,139 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:37:34.139188. Execution time: 3052.815 miliseconds. Response sent.
+2025-05-05 18:39:01,221 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:39:01.203875. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:39:01.075Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:39:04,012 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:39:04.011864. Execution time: 2807.989 miliseconds. Response sent.
+2025-05-05 18:42:56,348 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:42:56.336476. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:42:56.228Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:42:58,944 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:42:58.943940. Execution time: 2607.464 miliseconds. Response sent.
+2025-05-05 18:44:50,582 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:44:50.581004. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:42:56.228Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 46, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:44:52,957 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:44:52.957711. Execution time: 2376.7070000000003 miliseconds. Response sent.
+2025-05-05 18:45:07,965 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:45:07.964853. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:42:56.228Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 4, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:45:10,081 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:45:10.081082. Execution time: 2116.2290000000003 miliseconds. Response sent.
+2025-05-05 18:45:26,505 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:45:26.504646. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:42:56.228Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:45:28,763 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:45:28.763316. Execution time: 2258.67 miliseconds. Response sent.
+2025-05-05 18:45:33,593 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:45:33.592142. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:42:56.228Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'LASSO', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:45:35,608 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:45:35.608530. Execution time: 2016.3880000000001 miliseconds. Response sent.
+2025-05-05 18:46:03,172 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:46:03.171333. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:42:56.228Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Ridge', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:46:05,132 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:46:05.132623. Execution time: 1961.29 miliseconds. Response sent.
+2025-05-05 18:46:45,659 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:46:45.658064. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:42:56.228Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'LASSO', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:46:47,752 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:46:47.752226. Execution time: 2094.162 miliseconds. Response sent.
+2025-05-05 18:52:21,294 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:52:21.288038. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:52:21.113Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-05 18:52:22,411 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:52:22.411354. Execution time: 1123.316 miliseconds. Response sent.
+2025-05-05 18:53:30,340 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-05 18:53:30.339134. Request payload: {'file_name': 'wet_anteater_felicia-2025-05-05T18:53:30.251Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-05 18:53:32,756 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-05 18:53:32.756314. Execution time: 2417.1800000000003 miliseconds. Response sent.
+2025-05-08 15:29:46,715 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-08 15:29:46.707676. Request payload: {'file_name': 'slow_perch_merissa-2025-05-08T15:29:46.352Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-08 15:29:50,503 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-08 15:29:50.502482. Execution time: 3794.806 miliseconds. Response sent.
+2025-05-08 16:09:19,542 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-08 16:09:19.530033. Request payload: {'file_name': 'slow_perch_merissa-2025-05-08T16:09:19.123Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-08 16:09:23,036 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-08 16:09:23.035585. Execution time: 3505.5519999999997 miliseconds. Response sent.
+2025-05-08 16:09:40,094 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-08 16:09:40.075463. Request payload: {'file_name': 'slow_perch_merissa-2025-05-08T16:09:39.766Z-PMMA_shifted_R10_data 5.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-05-08 16:09:43,130 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-08 16:09:43.130013. Execution time: 3054.5499999999997 miliseconds. Response sent.
+2025-05-13 03:32:30,641 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 03:32:30.636663. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 03:32:33,461 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 03:32:33.460919. Execution time: 2824.2560000000003 miliseconds. Response sent.
+2025-05-13 03:37:06,908 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 03:37:06.905206. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 03:37:09,114 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 03:37:09.114847. Execution time: 2209.641 miliseconds. Response sent.
+2025-05-13 03:51:45,745 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 03:51:45.743987. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 03:51:47,504 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 03:51:47.504318. Execution time: 1760.3310000000001 miliseconds. Response sent.
+2025-05-13 04:03:52,433 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:03:52.428504. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 04:03:54,739 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:03:54.739349. Execution time: 2310.8450000000003 miliseconds. Response sent.
+2025-05-13 04:05:30,613 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:05:30.612740. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 04:05:32,369 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:05:32.369603. Execution time: 1756.863 miliseconds. Response sent.
+2025-05-13 04:06:21,279 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:06:21.278753. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 04:06:22,664 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:06:22.664455. Execution time: 1385.702 miliseconds. Response sent.
+2025-05-13 04:09:30,298 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:09:30.285768. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 04:09:31,850 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:09:31.850566. Execution time: 1564.798 miliseconds. Response sent.
+2025-05-13 04:10:30,442 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:10:30.440850. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 04:10:32,145 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:10:32.145251. Execution time: 1704.401 miliseconds. Response sent.
+2025-05-13 04:11:31,967 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:11:31.966636. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 04:11:33,558 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:11:33.558446. Execution time: 1591.81 miliseconds. Response sent.
+2025-05-13 04:11:49,484 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:11:49.483249. Request payload: {'numberOfProny': 100, 'model': 'LASSO', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 04:11:51,038 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:11:51.037987. Execution time: 1554.738 miliseconds. Response sent.
+2025-05-13 04:12:36,238 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:12:36.233903. Request payload: {'numberOfProny': 100, 'model': 'Ridge', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 04:12:38,277 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:12:38.277164. Execution time: 2043.2610000000002 miliseconds. Response sent.
+2025-05-13 04:28:16,475 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:28:16.473783. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 04:28:18,504 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:28:18.502526. Execution time: 2028.743 miliseconds. Response sent.
+2025-05-13 04:41:59,266 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:41:59.260707. Request payload: {'file_name': 'external_swordtail_jerrylee-2025-05-13T04:41:59.084Z-PETMP-TATATO temp.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-13 04:41:59,828 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:41:59.828901. Execution time: 568.194 miliseconds. Response sent.
+2025-05-13 04:43:33,626 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 04:43:33.615886. Request payload: {'file_name': 'external_swordtail_jerrylee-2025-05-13T04:43:33.383Z-PETMP-TATATO temp.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-13 04:43:34,430 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 04:43:34.430424. Execution time: 814.538 miliseconds. Response sent.
+2025-05-13 05:10:08,758 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 05:10:08.755483. Request payload: {'file_name': 'external_swordtail_jerrylee-2025-05-13T05:10:08.584Z-PETMP-TATATO temp.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-13 05:10:10,235 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 05:10:10.235047. Execution time: 1479.564 miliseconds. Response sent.
+2025-05-13 05:19:09,879 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 05:19:09.873317. Request payload: {'file_name': 'external_swordtail_jerrylee-2025-05-13T05:19:09.649Z-PETMP-TATATO temp.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-13 05:19:10,714 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 05:19:10.714132. Execution time: 840.8149999999999 miliseconds. Response sent.
+2025-05-13 05:24:34,242 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 05:24:34.241417. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 05:24:36,974 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 05:24:36.973756. Execution time: 2732.339 miliseconds. Response sent.
+2025-05-13 17:20:38,354 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 17:20:38.340954. Request payload: {'file_name': 'changing_gopher_aubine-2025-05-13T17:20:37.766Z-PETMP-TATATO temp.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-13 17:20:41,295 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 17:20:41.295661. Execution time: 2954.707 miliseconds. Response sent.
+2025-05-13 17:22:44,002 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-13 17:22:44.000388. Request payload: {'numberOfProny': 100, 'model': 'Linear', 'fitSettings': False, 'file_name': '6822738754ff9a8bef49bd82_0.csv'}
+2025-05-13 17:22:46,403 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-13 17:22:46.403233. Execution time: 2402.8450000000003 miliseconds. Response sent.
+2025-05-29 15:19:57,996 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-29 15:19:57.994555. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'domain': 'select'}
+2025-05-29 15:19:58,005 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-29 15:19:58.004956. Execution time: 10.401 miliseconds. Response sent.
+2025-05-29 15:20:23,247 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-29 15:20:23.243809. Request payload: {'file_name': 'test_pmma.tsv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'domain': 'select'}
+2025-05-29 15:20:23,255 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-29 15:20:23.255683. Execution time: 11.873999999999999 miliseconds. Response sent.
+2025-05-29 15:27:33,529 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-29 15:27:33.528287. Request payload: {'file_name': 'devoted_catfish_lilah-2025-05-29T15:27:33.412Z-PETMP-TATATO temp.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-29 15:27:34,634 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-29 15:27:34.634775. Execution time: 1106.4879999999998 miliseconds. Response sent.
+2025-05-29 15:28:30,813 - app - INFO - [START]: Entering extract_data_from_file function at 2025-05-29 15:28:30.812757. Request payload: {'file_name': 'devoted_catfish_lilah-2025-05-29T15:27:33.412Z-PETMP-TATATO temp.txt', 'number_of_prony': 100, 'model': 'Ridge', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-05-29 15:28:31,531 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-05-29 15:28:31.531568. Execution time: 718.8109999999999 miliseconds. Response sent.
+2025-06-20 15:02:33,392 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:02:33.380014. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:02:32.963Z-PETMP-TATATO temp.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:02:33,683 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-06-20 15:02:33,686 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:02:33.685963. Execution time: 305.949 miliseconds. Response sent.
+2025-06-20 15:04:15,907 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:04:15.900901. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:04:15.583Z-PETMP-TATATO temp.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:04:16,116 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-06-20 15:04:16,119 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:04:16.119033. Execution time: 218.132 miliseconds. Response sent.
+2025-06-20 15:07:42,485 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:07:42.478863. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:07:42.172Z-PETMP-TATATO temp.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:07:42,729 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-06-20 15:07:42,731 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:07:42.731081. Execution time: 252.218 miliseconds. Response sent.
+2025-06-20 15:10:08,704 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:10:08.701730. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:10:08.458Z-PETMP-TATATO temp.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:10:08,784 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-06-20 15:10:08,787 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:10:08.786980. Execution time: 85.25 miliseconds. Response sent.
+2025-06-20 15:11:35,087 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:11:35.085093. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:11:34.801Z-PETMP-TATATO temp.txt', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:11:36,533 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:11:36.533679. Execution time: 1448.586 miliseconds. Response sent.
+2025-06-20 15:16:48,560 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:16:48.558321. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:16:48.339Z-veroblack-test.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:16:49,948 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:16:49.948881. Execution time: 1390.56 miliseconds. Response sent.
+2025-06-20 15:21:17,307 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:21:17.304919. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:21:17.161Z-veroblack-test2.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:21:17,375 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-06-20 15:21:17,390 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:21:17.390132. Execution time: 85.213 miliseconds. Response sent.
+2025-06-20 15:28:11,088 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:28:11.085148. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:28:10.858Z-veroblack-test2.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:28:11,202 - app - INFO - Error in update_line_chart function: File contains corrupt data
+2025-06-20 15:28:11,203 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:28:11.203602. Execution time: 118.45400000000001 miliseconds. Response sent.
+2025-06-20 15:28:42,094 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:28:42.093427. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:28:41.922Z-veroblack-test2.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:28:43,242 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:28:43.242403. Execution time: 1148.9759999999999 miliseconds. Response sent.
+2025-06-20 15:59:41,971 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 15:59:41.970390. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:28:41.922Z-veroblack-test2.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': True, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 15:59:43,161 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 15:59:43.161911. Execution time: 1191.521 miliseconds. Response sent.
+2025-06-20 16:00:10,263 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 16:00:10.262562. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T15:28:41.922Z-veroblack-test2.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 16:00:11,494 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 16:00:11.494147. Execution time: 1231.585 miliseconds. Response sent.
+2025-06-20 18:59:38,355 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 18:59:38.327987. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T18:59:37.744Z-veroblack-test2.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'temperature'}
+2025-06-20 18:59:42,508 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 18:59:42.508030. Execution time: 4180.043000000001 miliseconds. Response sent.
+2025-06-20 19:01:18,756 - app - INFO - [START]: Entering extract_data_from_file function at 2025-06-20 19:01:18.742973. Request payload: {'file_name': 'yabbering_chickadee_idaline-2025-06-20T19:01:18.373Z-veroblack-test2.csv', 'number_of_prony': 100, 'model': 'Linear', 'fit_settings': False, 'useSample': False, 'domain': 'frequency'}
+2025-06-20 19:01:21,056 - app - INFO - [END]: Request Successful. Exiting extract_data_from_file function at 2025-06-20 19:01:21.056821. Execution time: 2313.848 miliseconds. Response sent.

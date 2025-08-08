@@ -3,9 +3,9 @@
     class="md-app-internal-drawer u--layout-flex u--layout-flex-column u--layout-flex-justify-sb"
   >
     <md-list :md-expand-single="true" class="utility-transparentbg">
-      <md-toolbar class="md-transparent u--font-emph-l u_toggle-display-off" md-elevation="0"
+      <!-- <md-toolbar class="md-transparent u--font-emph-l u_toggle-display-off" md-elevation="0"
         ><small>App Navigation</small></md-toolbar
-      >
+      > -->
       <div class="visualize-pagination-width-mod footer_content-mobile u_margin-none">
         <md-toolbar class="md-transparent u--font-emph-l" md-elevation="0"
           ><small>Welcome {{ name }}</small></md-toolbar

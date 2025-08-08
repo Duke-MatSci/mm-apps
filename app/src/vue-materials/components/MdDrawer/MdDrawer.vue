@@ -155,7 +155,7 @@ defineOptions({
   z-index: 1000;
 
   @include md-layout-xsmall {
-    width: 250px;
+    width: 280px;
   }
 
   &.md-right {

@@ -1,15 +1,9 @@
-import mutations from './mutations'
-import actions from './actions'
-import getters from './getters'
+import howto from './howto';
+import referenceContainer from './referenceContainer';
 
 export default {
-  namespaced: true,
-  state (): any {
-    return {
-      // $module state will be defined here
-    }
+  modules: {
+    howto,
+    referenceContainer,
   },
-  mutations,
-  actions,
-  getters
-}
+};

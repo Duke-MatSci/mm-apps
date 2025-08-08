@@ -90,4 +90,26 @@ export default {
       commit('SET_LOADING', false);
     }
   },
+
+  // Facet filter actions
+  async searchFacetFilterMaterials(
+    { commit }: ActionContext<ExplorerState, any>,
+    selectedValue: string
+  ) {
+    commit('SET_LOADING', true);
+    commit('SET_ERROR', null);
+
+    try {
+      // This would typically make an API call to search for facet filter materials
+      // For now, we'll just set the selected value
+      commit('SET_SELECTED_FACET_FILTER_MATERIALS_VALUE', selectedValue);
+      // You would add the actual API call here
+      // const response = await api.searchFacetFilterMaterials(selectedValue);
+      // commit('SET_SELECTED_FACET_FILTER_MATERIALS', response);
+    } catch (error) {
+      commit('SET_ERROR', error instanceof Error ? error.message : 'Facet filter search failed');
+    } finally {
+      commit('SET_LOADING', false);
+    }
+  },
 };

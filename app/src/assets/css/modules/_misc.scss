@@ -145,15 +145,15 @@
 
   &_profile {
     &-pic {
-      margin: 5% auto;
+      margin: 5% auto !important;
       transition: 0.5s ease;
 
       & > img {
-        width: 140px;
-        height: 140px;
-        object-fit: cover;
-        border-radius: 50%;
-        background-position: top;
+        width: 140px !important;
+        height: 140px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        background-position: top !important;
       }
     }
 
@@ -247,6 +247,7 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      vertical-align: bottom;
 
       @include respond(phone) {
         font-size: 4.2rem;
@@ -315,8 +316,8 @@
     }
 
     & > img {
-      height: 21rem;
-      width: auto;
+      height: 21rem !important;
+      width: auto !important;
     }
 
     & > i {

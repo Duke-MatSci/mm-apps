@@ -62,7 +62,7 @@
         </li>
         <li
           class="inline-display mid-first-container"
-          @click.prevent="openLinks('/how')"
+          @click.prevent="openLinks('/nm/how')"
           style="cursor: pointer"
         >
           <i class="material-icons card-icon">arrow_right_alt</i>

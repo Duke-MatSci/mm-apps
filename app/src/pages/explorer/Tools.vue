@@ -323,6 +323,6 @@
 import Accordion from '../../components/accordion.vue';
 // Component name for debugging
 defineOptions({
-  name: 'CurateHome',
+  name: 'ToolsHome',
 });
 </script>

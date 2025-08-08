@@ -31,11 +31,15 @@
           <ul v-if="isAuth" class="nav_menu--container">
             <a
               class="u--default-size nav_menu--handler"
-              style="color: #fff; font-size: 1.2rem !important"
+              style="
+                color: #fff !important;
+                font-size: 1.3rem !important;
+                font-weight: 500 !important;
+              "
             >
               Hi {{ displayName }}
             </a>
-            <div class="nav_menu--siblings">
+            <div class="nav_menu--siblings u_margin-top-small">
               <span class="nav_menu--siblings-lists" @click="store.dispatch('auth/logout')"
                 ><a id="authmenu">Logout</a></span
               >

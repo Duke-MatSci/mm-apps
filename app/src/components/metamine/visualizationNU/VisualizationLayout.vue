@@ -104,8 +104,8 @@ const hideSide = async () => {
 };
 
 // Lifecycle
-onMounted(async () => {
+onMounted(() => {
   store.commit('metamineNU/setRefreshStatus', true);
-  await store.dispatch('metamineNU/fetchMetamineDataset');
+  store.dispatch('metamineNU/fetchMetamineDataset');
 });
 </script>

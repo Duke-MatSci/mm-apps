@@ -66,4 +66,12 @@ export default {
     const end = Math.min(state.totalPages, state.currentPage + 2);
     return Array.from({ length: end - start + 1 }, (_, i) => start + i);
   },
+
+  // Facet filter getters
+  getFacetFilterMaterials: (state: ExplorerState) => state.facetFilterMaterials,
+
+  getSelectedFacetFilterMaterials: (state: ExplorerState) => state.selectedFacetFilterMaterials,
+
+  getSelectedFacetFilterMaterialsValue: (state: ExplorerState) =>
+    state.selectedFacetFilterMaterialsValue,
 };

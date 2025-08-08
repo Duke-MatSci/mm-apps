@@ -1,12 +1,15 @@
 import { RouteRecordRaw } from 'vue-router';
 import ChartBase from '@/pages/explorer/chart/Base.vue';
 import ImageBase from '@/pages/explorer/image/Base.vue';
+import Visualization from '@/pages/explorer/Visualization.vue';
+import Home from '@/pages/explorer/Home.vue';
+import Article from '@/pages/explorer/article/Article.vue';
 
 const explorerRoutes: Array<RouteRecordRaw> = [
   {
     path: '',
     name: 'ExplorerHome',
-    component: () => import('@/pages/explorer/Home.vue'),
+    component: Home,
     meta: { requiresAuth: false },
   },
   {
@@ -14,78 +17,78 @@ const explorerRoutes: Array<RouteRecordRaw> = [
     // extended path regex needed to match those multiple segments
     path: 'article/:doi+',
     name: 'Article',
-    component: () => import('@/pages/explorer/article/Article.vue'),
+    component: Article,
     meta: { requiresAuth: false },
   },
   {
     path: 'visualization',
     name: 'ExplorerVisualization',
-    component: () => import('@/pages/explorer/Visualization.vue'),
+    component: Visualization,
     meta: { requiresAuth: false },
   },
-  // {
-  //   path: 'tools',
-  //   component: () => import('@/pages/explorer/tools/ToolsBase.vue'),
-  //   children: [
-  //     {
-  //       path: '',
-  //       name: 'ToolsExplorer',
-  //       component: () => import('@/pages/explorer/Tools.vue'),
-  //       meta: { requiresAuth: false },
-  //     },
-  //     {
-  //       path: 'dynamfit',
-  //       name: 'DynamFit',
-  //       component: () => import('@/pages/explorer/tools/dynamfit/DynamFit.vue'),
-  //       meta: { requiresAuth: true },
-  //     },
-  //   ],
-  // },
-  // {
-  //   path: 'curate',
-  //   component: () => import('@/pages/explorer/curate/CurateBase.vue'),
-  //   children: [
-  //     {
-  //       path: '',
-  //       name: 'Curate',
-  //       component: () => import('@/pages/explorer/Curate.vue'),
-  //       meta: { requiresAuth: false },
-  //     },
-  //     {
-  //       path: 'spreadsheet',
-  //       component: () => import('@/pages/explorer/curate/spreadsheet/SpreadsheetBase.vue'),
-  //     },
-  //     {
-  //       path: 'spreadsheet/:datasetId',
-  //       name: 'CurateSpreadsheet',
-  //       props: true,
-  //       component: () => import('@/pages/explorer/curate/spreadsheet/SpreadsheetUpload.vue'),
-  //       meta: { requiresAuth: true },
-  //     },
-  //     {
-  //       path: 'bulk',
-  //       name: 'CurateBulk',
-  //       component: () => import('@/pages/explorer/curate/spreadsheet/SpreadsheetUploadBulk.vue'),
-  //       meta: { requiresAuth: true },
-  //     },
-  //     {
-  //       path: 'stepper',
-  //       name: 'CurationForm',
-  //       component: () => import('@/pages/explorer/curate/form/CurationForm.vue'),
-  //       meta: { requiresAuth: true },
-  //     },
-  //     {
-  //       path: 'stepper/edit',
-  //       name: 'EditXmlCuration',
-  //       component: () => import('@/pages/explorer/curate/form/CurationForm.vue'),
-  //       meta: { requiresAuth: true },
-  //     },
-  //     {
-  //       path: 'xml',
-  //       component: () => import('@/pages/explorer/curate/xml/xmlUpload.vue'),
-  //     },
-  //   ],
-  // },
+  {
+    path: 'tools',
+    component: () => import('@/pages/explorer/tools/ToolsBase.vue'),
+    children: [
+      {
+        path: '',
+        name: 'ToolsExplorer',
+        component: () => import('@/pages/explorer/Tools.vue'),
+        meta: { requiresAuth: false },
+      },
+      {
+        path: 'dynamfit',
+        name: 'DynamFit',
+        component: () => import('@/pages/explorer/tools/dynamfit/DynamFit.vue'),
+        meta: { requiresAuth: true },
+      },
+    ],
+  },
+  {
+    path: 'curate',
+    component: () => import('@/pages/explorer/curate/CurateBase.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Curate',
+        component: () => import('@/pages/explorer/Curate.vue'),
+        meta: { requiresAuth: false },
+      },
+      {
+        path: 'spreadsheet',
+        component: () => import('@/pages/explorer/curate/spreadsheet/SpreadsheetBase.vue'),
+      },
+      {
+        path: 'spreadsheet/:datasetId',
+        name: 'CurateSpreadsheet',
+        props: true,
+        component: () => import('@/pages/explorer/curate/spreadsheet/SpreadsheetUpload.vue'),
+        meta: { requiresAuth: true },
+      },
+      {
+        path: 'bulk',
+        name: 'CurateBulk',
+        component: () => import('@/pages/explorer/curate/spreadsheet/SpreadsheetUploadBulk.vue'),
+        meta: { requiresAuth: true },
+      },
+      // {
+      //   path: 'stepper',
+      //   name: 'CurationForm',
+      //   component: () => import('@/pages/explorer/curate/form/CurationForm.vue'),
+      //   meta: { requiresAuth: true },
+      // },
+      // {
+      //   path: 'stepper/edit',
+      //   name: 'EditXmlCuration',
+      //   component: () => import('@/pages/explorer/curate/form/CurationForm.vue'),
+      //   meta: { requiresAuth: true },
+      // },
+      {
+        path: 'xml',
+        component: () => import('@/pages/explorer/curate/xml/xmlUpload.vue'),
+      },
+    ],
+  },
   // {
   //   path: 'curate/edit',
   //   component: () => import('@/pages/explorer/curate/CurateBase.vue'),
@@ -150,126 +153,126 @@ const explorerRoutes: Array<RouteRecordRaw> = [
   // //   name: 'CurateStepper',
   // //   component: () => import('@/pages/explorer/curate/stepper/StepperForm.vue'),
   // // },
-  // {
-  //   path: 'curate/sdd',
-  //   name: 'CurateSDD',
-  //   component: () => import('@/pages/explorer/curate/sdd/SddForm.vue'),
-  //   meta: { requiresAuth: true },
-  // },
-  // {
-  //   path: 'curate/sdd/edit/:datasetId',
-  //   name: 'EditSDD',
-  //   props: true,
-  //   component: () => import('@/pages/explorer/curate/sdd/SddForm.vue'),
-  //   meta: { requiresAuth: true },
-  // },
-  // {
-  //   path: 'curate/sdd/link/:datasetId',
-  //   name: 'LinkSDD',
-  //   props: true,
-  //   component: () => import('@/pages/explorer/curate/sdd/SddLinking.vue'),
-  //   meta: { requiresAuth: true },
-  // },
-  // {
-  //   path: 'chart',
-  //   component: ChartBase,
-  //   children: [
-  //     {
-  //       path: '',
-  //       name: 'ChartGallery',
-  //       component: () => import('@/pages/explorer/Gallery.vue'),
-  //       meta: { requiresAuth: false },
-  //     },
-  //     ...['editor/:type', 'editor/:type/:chartId(.*)'].map((path) => ({
-  //       path,
-  //       component: () => import('@/pages/explorer/chart/editor/Chart.vue'),
-  //       props: true,
-  //       meta: { requiresAuth: true },
-  //     })),
-  //     {
-  //       path: 'view/:chartId(.*)',
-  //       name: 'ChartView',
-  //       component: () => import('@/pages/explorer/chart/view/VegaView.vue'),
-  //       props: true,
-  //       meta: { requiresAuth: false },
-  //     },
-  //     {
-  //       path: 'voyager/:chartId(.*)',
-  //       name: 'ChartDataVoyager',
-  //       component: () => import('@/pages/explorer/chart/datavoyager/DataVoyagerPage.vue'),
-  //       props: true,
-  //       meta: { requiresAuth: false },
-  //     },
-  //     {
-  //       path: 'voyager',
-  //       name: 'NewChartDataVoyager',
-  //       component: () => import('@/pages/explorer/chart/datavoyager/DataVoyagerPage.vue'),
-  //       props: true,
-  //       meta: { requiresAuth: false },
-  //     },
-  //   ],
-  // },
-  // {
-  //   path: 'images',
-  //   component: ImageBase,
-  //   children: [
-  //     {
-  //       path: '',
-  //       name: 'ImageGallery',
-  //       component: () => import('@/pages/explorer/image/Image.vue'),
-  //       meta: { requiresAuth: false },
-  //     },
-  //     {
-  //       path: ':id/:fileId',
-  //       name: 'ImageDetailView',
-  //       component: () => import('@/pages/explorer/image/ImageDetailView.vue'),
-  //       props: true,
-  //       meta: { requiresAuth: false },
-  //     },
-  //   ],
-  // },
+  {
+    path: 'curate/sdd',
+    name: 'CurateSDD',
+    component: () => import('@/pages/explorer/curate/sdd/SddForm.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: 'curate/sdd/edit/:datasetId',
+    name: 'EditSDD',
+    props: true,
+    component: () => import('@/pages/explorer/curate/sdd/SddForm.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: 'curate/sdd/link/:datasetId',
+    name: 'LinkSDD',
+    props: true,
+    component: () => import('@/pages/explorer/curate/sdd/SddLinking.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: 'chart',
+    component: ChartBase,
+    children: [
+      {
+        path: '',
+        name: 'ChartGallery',
+        component: () => import('@/pages/explorer/Gallery.vue'),
+        meta: { requiresAuth: false },
+      },
+      ...['editor/:type', 'editor/:type/:chartId(.*)'].map((path) => ({
+        path,
+        component: () => import('@/pages/explorer/chart/editor/Chart.vue'),
+        props: true,
+        meta: { requiresAuth: true },
+      })),
+      {
+        path: 'view/:chartId(.*)',
+        name: 'ChartView',
+        component: () => import('@/pages/explorer/chart/view/VegaView.vue'),
+        props: true,
+        meta: { requiresAuth: false },
+      },
+      {
+        path: 'voyager/:chartId(.*)',
+        name: 'ChartDataVoyager',
+        component: () => import('@/pages/explorer/chart/datavoyager/DataVoyagerPage.vue'),
+        props: true,
+        meta: { requiresAuth: false },
+      },
+      {
+        path: 'voyager',
+        name: 'NewChartDataVoyager',
+        component: () => import('@/pages/explorer/chart/datavoyager/DataVoyagerPage.vue'),
+        props: true,
+        meta: { requiresAuth: false },
+      },
+    ],
+  },
+  {
+    path: 'images',
+    component: () => import('@/pages/explorer/image/Base.vue'),
+    children: [
+      {
+        path: '',
+        name: 'ImageGallery',
+        component: () => import('@/pages/explorer/image/Image.vue'),
+        meta: { requiresAuth: false },
+      },
+      {
+        path: ':id/:fileId',
+        name: 'ImageDetailView',
+        component: () => import('@/pages/explorer/image/ImageDetailView.vue'),
+        props: true,
+        meta: { requiresAuth: false },
+      },
+    ],
+  },
   // {
   //   path: 'sample/:label',
   //   name: 'SampleView',
   //   component: () => import('@/pages/explorer/sample/Sample.vue'),
   //   meta: { requiresAuth: false },
   // },
-  // {
-  //   path: 'filter/property/:label',
-  //   name: 'FacetFilterView',
-  //   component: () => import('@/pages/explorer/FacetFilter.vue'),
-  //   meta: { requiresAuth: false },
-  // },
-  // {
-  //   path: 'parameterized_query',
-  //   name: 'ParameterizedQuery',
-  //   component: () => import('@/pages/explorer/parameterized-query/parameterized-query-page.vue'),
-  //   meta: { requiresAuth: true },
-  // },
-  // {
-  //   path: 'sparql',
-  //   name: 'Sparql',
-  //   component: () => import('@/pages/explorer/Sparql.vue'),
-  //   meta: { requiresAuth: true },
-  // },
-  // {
-  //   path: 'xmls',
-  //   name: 'XmlGallery',
-  //   component: () => import('@/pages/explorer/xml/Xml.vue'),
-  //   meta: { requiresAuth: false },
-  // },
-  // {
-  //   path: 'xmlvisualizer/:id',
-  //   name: 'XmlVisualizer',
-  //   component: () => import('@/pages/explorer/xml/XmlLoader.vue'),
-  //   meta: { requiresAuth: false },
-  // },
-  // {
-  //   path: 'yamlvisualizer/:id',
-  //   name: 'YamlVisualizer',
-  //   component: () => import('@/pages/explorer/xml/YamlLoader.vue'),
-  //   meta: { requiresAuth: false },
-  // },
+  {
+    path: 'filter/property/:label',
+    name: 'FacetFilterView',
+    component: () => import('@/pages/explorer/FacetFilter.vue'),
+    meta: { requiresAuth: false },
+  },
+  {
+    path: 'parameterized_query',
+    name: 'ParameterizedQuery',
+    component: () => import('@/pages/explorer/parameterized-query/parameterized-query-page.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: 'sparql',
+    name: 'Sparql',
+    component: () => import('@/pages/explorer/Sparql.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: 'xmls',
+    name: 'XmlGallery',
+    component: () => import('@/pages/explorer/xml/Xml.vue'),
+    meta: { requiresAuth: false },
+  },
+  {
+    path: 'xmlvisualizer/:id',
+    name: 'XmlVisualizer',
+    component: () => import('@/pages/explorer/xml/XmlLoader.vue'),
+    meta: { requiresAuth: false },
+  },
+  {
+    path: 'yamlvisualizer/:id',
+    name: 'YamlVisualizer',
+    component: () => import('@/pages/explorer/xml/YamlLoader.vue'),
+    meta: { requiresAuth: false },
+  },
   // {
   //   path: 'dataset',
   //   component: ChartBase,

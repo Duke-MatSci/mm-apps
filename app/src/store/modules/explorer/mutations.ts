@@ -60,4 +60,17 @@ export default {
     state.searchResults = [];
     state.error = null;
   },
+
+  // Facet filter mutations
+  SET_FACET_FILTER_MATERIALS(state: ExplorerState, materials: any[]) {
+    state.facetFilterMaterials = materials;
+  },
+
+  SET_SELECTED_FACET_FILTER_MATERIALS(state: ExplorerState, materials: any) {
+    state.selectedFacetFilterMaterials = materials;
+  },
+
+  SET_SELECTED_FACET_FILTER_MATERIALS_VALUE(state: ExplorerState, value: string | null) {
+    state.selectedFacetFilterMaterialsValue = value;
+  },
 };

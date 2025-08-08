@@ -10,7 +10,7 @@ defineOptions({ name: 'Auth' });
 const route = useRoute();
 const store = useStore();
 
-onMounted(async () => {
-  await store.dispatch('auth/authProcessor', route.params.auth);
+onMounted(() => {
+  store.dispatch('auth/authProcessor', route.params.auth);
 });
 </script>

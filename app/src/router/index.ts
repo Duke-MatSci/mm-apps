@@ -49,10 +49,10 @@ const routes: Array<RouteRecordRaw> = [
   //   component: PortalBase,
   //   children: [...portalRoutes],
   // },
-  // {
-  //   path: '/auth/:auth',
-  //   component: () => import('@/auth/auth.vue'),
-  // },
+  {
+    path: '/auth/:auth',
+    component: () => import('@/auth/auth.vue'),
+  },
   // {
   //   path: '/countdown',
   //   component: () => import('@/pages/CountDown.vue'),
