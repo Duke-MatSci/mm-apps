@@ -1,210 +1,42 @@
 <template>
   <div
     class="md-app-internal-drawer u--layout-flex u--layout-flex-column u--layout-flex-justify-sb"
-  >
-    <md-list :md-expand-single="true" class="utility-transparentbg">
-      <!-- <md-toolbar class="md-transparent u--font-emph-l u_toggle-display-off" md-elevation="0"
-        ><small>App Navigation</small></md-toolbar
-      > -->
-      <div class="visualize-pagination-width-mod footer_content-mobile u_margin-none">
-        <md-toolbar class="md-transparent u--font-emph-l" md-elevation="0"
-          ><small>Welcome {{ name }}</small></md-toolbar
-        >
-      </div>
-      <md-divider></md-divider>
-
-      <md-list-item md-expand>
-        <md-icon class="utility-navfonticon">home</md-icon>
-        <span class="md-list-item-text">Home</span>
-        <template #md-expand>
-          <md-list>
-            <router-link to="/explorer" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-nav-link">
-                Explorer
-              </md-list-item>
-            </router-link>
-            <router-link to="/mm" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Metamine
-              </md-list-item>
-            </router-link>
-            <router-link to="/nm" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Nanomine
-              </md-list-item>
-            </router-link>
-            <router-link to="/ns" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Ontology
-              </md-list-item>
-            </router-link>
-          </md-list>
-        </template>
-      </md-list-item>
-      <md-list-item md-expand>
-        <md-icon class="utility-navfonticon">groups</md-icon>
-        <span class="md-list-item-text">About</span>
-        <template #md-expand>
-          <md-list>
-            <router-link :to="'/nm/about'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                About Us
-              </md-list-item>
-            </router-link>
-            <router-link :to="'/nm/how'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                How To
-              </md-list-item>
-            </router-link>
-            <router-link :to="'/nm/news'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Research + News
-              </md-list-item>
-            </router-link>
-          </md-list>
-        </template>
-      </md-list-item>
-
-      <md-toolbar class="md-transparent u--font-emph-l u_margin-top-small" md-elevation="0"
-        ><small>Explore</small></md-toolbar
-      >
-      <md-divider></md-divider>
-
-      <md-list-item md-expand>
-        <md-icon class="utility-navfonticon">view_comfy</md-icon>
-        <span class="md-list-item-text">Visualize</span>
-        <template #md-expand>
-          <md-list>
-            <router-link to="/explorer" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Browse Data
-              </md-list-item>
-            </router-link>
-            <router-link to="/explorer/chart" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Chart Gallery
-              </md-list-item>
-            </router-link>
-            <router-link to="/explorer/images" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Image Gallery
-              </md-list-item>
-            </router-link>
-            <router-link to="/explorer/dataset" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Dataset Gallery
-              </md-list-item>
-            </router-link>
-            <router-link to="/explorer/xmls" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                View Xmls
-              </md-list-item>
-            </router-link>
-          </md-list>
-        </template>
-      </md-list-item>
-      <md-list-item md-expand>
-        <md-icon class="utility-navfonticon">handyman</md-icon>
-        <span class="md-list-item-text">Tools</span>
-        <template #md-expand>
-          <md-list>
-            <router-link :to="'/explorer/tools'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Module & Simulation Tools
-              </md-list-item>
-            </router-link>
-            <router-link :to="'/nm/tools/plot-curation'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Easy CSV Plotter
-              </md-list-item>
-            </router-link>
-            <router-link :to="'/explorer/sparql'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Sparql Query Interface
-              </md-list-item>
-            </router-link>
-          </md-list>
-        </template>
-      </md-list-item>
-
-      <md-toolbar
-        class="md-transparent u--font-emph-l u_margin-top-small"
-        md-elevation="0"
-        v-if="isAuth"
-        ><small>User Dashboard</small></md-toolbar
-      >
-      <md-divider v-if="isAuth"></md-divider>
-      <md-list-item md-expand v-if="isAuth">
-        <md-icon class="utility-navfonticon">upload</md-icon>
-        <span class="md-list-item-text utility-navfont">Curate</span>
-        <template #md-expand>
-          <md-list>
-            <router-link :to="'/explorer/curate/spreadsheet'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Upload a Spreadsheet
-              </md-list-item>
-            </router-link>
-            <router-link :to="'/explorer/curate/stepper'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Fill a Form
-              </md-list-item>
-            </router-link>
-            <router-link :to="'/explorer/curate/sdd'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Submit SDD
-              </md-list-item>
-            </router-link>
-            <router-link :to="'/explorer/chart/editor/new'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Create New Chart
-              </md-list-item>
-            </router-link>
-            <router-link :to="'/explorer/curate/validlist'" v-slot="{ navigate, href }" custom>
-              <md-list-item :href="href" @click="navigate" class="md-inset utility-navfont">
-                Add Xlsx List Entry
-              </md-list-item>
-            </router-link>
-          </md-list>
-        </template>
-      </md-list-item>
-      <md-toolbar
-        class="md-transparent u--font-emph-l u_margin-top-small"
-        md-elevation="0"
-        v-if="isAuth && isAdmin"
-        ><small>Admin</small></md-toolbar
-      >
-      <md-divider v-if="isAuth && isAdmin"></md-divider>
-
-      <router-link v-if="isAuth && isAdmin" :to="'/portal'" v-slot="{ navigate, href }" custom>
-        <md-list-item @click="navigate" :href="href">
-          <md-icon class="utility-navfonticon">admin_panel_settings</md-icon>
-          <span class="md-list-item-text utility-navfont">Admin Center</span>
-        </md-list-item>
-      </router-link>
-    </md-list>
-
-    <md-list class="utility-transparentbg">
-      <md-list-item v-if="isAuth" @click="logout">
-        <md-icon class="utility-navfonticon">logout</md-icon>
-        <span class="md-list-item-text utility-navfont">Log out</span>
-      </md-list-item>
-      <md-list-item v-if="!isAuth" @click="login">
-        <md-icon class="utility-navfonticon">login</md-icon>
-        <span class="md-list-item-text utility-navfont">Login</span>
-      </md-list-item>
-    </md-list>
-  </div>
+  ></div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useStore } from 'vuex';
 
 const store = useStore();
 
+// Reactive data for expandable sections
+const showHome = ref(false);
+const showAbout = ref(false);
+const showVisualize = ref(false);
+const showTools = ref(false);
+const showCurate = ref(false);
+
 const isAuth = computed(() => store.getters['auth/isAuthenticated']);
 const isAdmin = computed(() => store.getters['auth/isAdmin']);
 const name = computed(() => store.getters['auth/displayName']);
+
+// Toggle methods for expandable sections
+const toggleHome = () => {
+  showHome.value = !showHome.value;
+};
+const toggleAbout = () => {
+  showAbout.value = !showAbout.value;
+};
+const toggleVisualize = () => {
+  showVisualize.value = !showVisualize.value;
+};
+const toggleTools = () => {
+  showTools.value = !showTools.value;
+};
+const toggleCurate = () => {
+  showCurate.value = !showCurate.value;
+};
 
 const login = () => {
   window.location.href = '/secure';
@@ -216,3 +48,15 @@ defineOptions({
   name: 'Drawer',
 });
 </script>
+
+<style scoped>
+.md-list-expand {
+  padding-left: 16px;
+  background-color: rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.utility-navfonticon {
+  margin-right: 8px;
+}
+</style>

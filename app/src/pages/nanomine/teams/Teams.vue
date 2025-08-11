@@ -250,24 +250,18 @@
 </template>
 
 <script setup lang="ts">
-import { useStore } from 'vuex';
 import { onMounted } from 'vue';
+import { useStore } from 'vuex';
 
 // Component name for debugging
 defineOptions({
   name: 'TeamsPage',
 });
 
-// Store
 const store = useStore();
 
-// Lifecycle hooks
+// Lifecycle
 onMounted(() => {
-  // Set app header info on component creation
   store.commit('setAppHeaderInfo', { icon: 'groups', name: 'Our Team' });
 });
 </script>
-
-<style scoped>
-/* Component-specific styles can be added here if needed */
-</style>

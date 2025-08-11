@@ -18,13 +18,13 @@
           <div class="visualize--links">
             <div
               class="visualize--link-icons visualize--link-mm visualize--link-left"
-              @click.prevent="handleReduceAsset('prev')"
+              @click.prevent="reduceAsset('prev', assetItems, pushedAssetItem)"
             >
               <i class="material-icons">keyboard_arrow_left</i>
             </div>
             <div
               class="visualize--link-icons visualize--link-mm visualize--link-right"
-              @click.prevent="handleReduceAsset('next')"
+              @click.prevent="reduceAsset('next', assetItems, pushedAssetItem)"
             >
               <i class="material-icons">keyboard_arrow_right</i>
             </div>
@@ -62,7 +62,7 @@
         </li>
         <li
           class="inline-display mid-first-container"
-          @click.prevent="openLinks('/nm/how')"
+          @click.prevent="openLinks('/how')"
           style="cursor: pointer"
         >
           <i class="material-icons card-icon">arrow_right_alt</i>
@@ -167,6 +167,7 @@ interface AssetItem {
 }
 
 const pushedAssetItem = ref<AssetItem[]>([]);
+
 const assetItems = ref<AssetItem[]>([
   {
     label: 'Curation',
@@ -201,10 +202,6 @@ const openLinks = (arg: string) => {
   router.push({
     path: arg,
   });
-};
-
-const handleReduceAsset = (args: 'prev' | 'next') => {
-  reduceAsset(args, assetItems.value, pushedAssetItem.value);
 };
 
 defineOptions({

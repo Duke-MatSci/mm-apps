@@ -70,6 +70,9 @@
     margin: 5rem 10rem;
     .md-tabs-navigation {
       border-bottom: 1px solid $primary !important;
+      a.md-tab-nav-button {
+        height: 48px !important;
+      }
     }
     .md-tabs.md-theme-default .md-tabs-indicator {
       background-color: $primary-white !important;
@@ -134,15 +137,12 @@
         width: 30rem !important;
       }
 
-      &_icon,
-      & > &_icon#nav-icon {
-        margin-top: 8rem;
+      &_icon {
+        margin-top: 9rem;
         font-size: 12rem !important;
         color: $primary !important;
       }
-
       &_text {
-        margin-top: 0.5rem;
         color: $primary;
         // font-size: 3rem;
         font-size: 2.8rem;

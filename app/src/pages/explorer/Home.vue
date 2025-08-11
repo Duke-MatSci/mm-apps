@@ -1,14 +1,14 @@
 <template>
-  <div class="u--layout-flex-verticalScreen u--layout-flex-column">
+  <div class="u_height--max u--layout-flex-verticalScreen u--layout-flex-column">
     <div class="section_teams u--margin-centered-verticalScreen" v-if="!searchEnabled">
       <div class="search_box">
         <h2 class="search_box_header teams_header">Welcome to MM Explorer</h2>
-        <form class="form" @submit.prevent="submitSearch()">
+        <form class="form" @submit.prevent="() => submitSearch()">
           <div class="search_box_form">
             <div class="form__group search_box_form-item-1">
               <input
                 type="text"
-                ref="searchInput"
+                ref="search_input"
                 class="form__input form__input--adjust"
                 autocomplete="off"
                 placeholder="Search"
@@ -29,6 +29,13 @@
             </button>
           </div>
         </form>
+        <!-- <div class="search-dropdown-menu_parent" v-if="!!suggestions.length && enableAutosuggest">
+					<ul class="search-dropdown-menu" style="width:100%">
+						<li v-for="(suggestion, index) in suggestions" :key="index" class="" @click.prevent="submitSearch(suggestion)">
+							<a href="#">{{ suggestion }}</a>
+						</li>
+					</ul>
+				</div> -->
         <p class="search_box_text">
           MM Explorer is a research-focused discovery tool that enables collaboration among scholars
           of nano and meta materials. Browse or search information on articles, samples, images,
@@ -43,9 +50,7 @@
             <li v-for="link in pageNavLinks" :key="link.text">
               <router-link :to="'/' + link.link" v-slot="{ navigate, href }" custom>
                 <div class="teams_container explorer_page-nav-card" :href="href" @click="navigate">
-                  <md-icon id="nav-icon" class="explorer_page-nav-card_icon">{{
-                    link.icon
-                  }}</md-icon>
+                  <md-icon class="explorer_page-nav-card_icon">{{ link.icon }}</md-icon>
                   <span class="explorer_page-nav-card_text">{{ link.text }}</span>
                 </div>
               </router-link>
@@ -56,7 +61,7 @@
     </div>
     <search-header v-if="searchEnabled" />
     <search-results-table v-if="searchEnabled" />
-    <div class="explorer_page_footer u_margin-top-small">
+    <div class="explorer_page_footer u_margin-top-auto">
       <span class="explorer_page_footer-text"
         >&copy; {{ new Date().getFullYear() }} MaterialsMine Project</span
       >
@@ -65,62 +70,42 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useStore } from 'vuex';
+import { useExplorerSearch } from '@/composables/useExplorerSearch';
 import SearchHeader from '@/components/explorer/SearchHeader.vue';
 import SearchResultsTable from '@/components/explorer/SearchResultsTable.vue';
 
-const store = useStore();
-const searchInput = ref<HTMLInputElement>();
+interface PageNavLink {
+  icon: string;
+  text: string;
+  link: string;
+}
 
-// Reactive data
-const pageNavLinks = ref([
+const store = useStore();
+const { searchWord, searchEnabled, submitSearch } = useExplorerSearch();
+
+const search_input = ref<HTMLInputElement | null>(null);
+
+const pageNavLinks = ref<PageNavLink[]>([
   { icon: 'grid_view', text: 'Gallery', link: 'explorer/visualization' },
   { icon: 'cloud_upload', text: 'Curate', link: 'explorer/curate' },
   { icon: 'help', text: 'Help', link: 'nm/how' },
 ]);
 
-// Computed properties
-const searchWord = computed({
-  get() {
-    return store.getters['explorer/getSearchKeyword'];
-  },
-  set(payload: string) {
-    store.commit('explorer/setSearchKeyword', payload);
-  },
-});
-
-const searchEnabled = computed(() => store.getters['explorer/getSearching']);
-
-// Methods
-const setSearching = () => store.commit('explorer/setSearching');
-const setSearchKeyword = (keyword: string) => store.commit('explorer/setSearchKeyword', keyword);
-
-const submitSearch = (payload?: string) => {
-  let keyPhrase: string;
-  if (typeof payload === 'string') {
-    keyPhrase = payload;
-  } else {
-    keyPhrase = searchWord.value;
-  }
-  setSearching();
-  setSearchKeyword(keyPhrase);
-  store.dispatch('explorer/results/searchKeyword', keyPhrase);
-};
-
 const disableRender = async (e: Event) => {
-  const selected = (e.target as Element).closest('.search_box');
+  const target = e.target as HTMLElement;
+  const selected = target.closest('.search_box');
   if (!selected) {
-    store.commit('explorer/setEnableAutosuggest', false);
+    await store.commit('explorer/setEnableAutosuggest', false);
   }
 };
 
-// Lifecycle hooks
 onMounted(() => {
   document.addEventListener('click', disableRender);
 });
 
-onBeforeUnmount(() => {
+onUnmounted(() => {
   document.removeEventListener('click', disableRender);
 });
 

@@ -2,6 +2,7 @@
 node_modules
 /dist
 app/dist
+app/src/assets/old-css/
 
 
 # local env files
@@ -14,6 +15,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+resfulservice/logs
 
 # Editor directories and files
 .idea

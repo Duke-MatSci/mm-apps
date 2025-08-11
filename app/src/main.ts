@@ -1,13 +1,12 @@
 import { createApp, provide, h } from 'vue';
 import { DefaultApolloClient } from '@vue/apollo-composable';
-import App from './App.vue';
-import VueMaterial from './vue-materials';
-import './vue-materials/base/index.scss';
-import './vue-materials/theme/default.css';
-import './vue-materials/theme/all.scss';
+import VueMaterial from '@duke-matsci/vue-materials';
+import '@duke-matsci/vue-materials/dist/style.css';
+import '@duke-matsci/vue-materials/dist/theme/default.css';
 import './registerServiceWorker';
 import router from './router';
 import store from './store';
+import App from './App.vue';
 import apolloClient from './modules/gql/apolloClient';
 
 const app = createApp({

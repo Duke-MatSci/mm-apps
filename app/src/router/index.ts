@@ -5,13 +5,12 @@ import MetamineBase from '@/pages/metamine/Base.vue';
 import NanomineBase from '@/pages/nanomine/Base.vue';
 // import PortalBase from '@/pages/portal/Base.vue';
 // import XsdBase from '@/pages/portal/curation/xsd/Base.vue';
-// import NotFound from '@/pages/NotFound.vue';
 import nanomineRoutes from '@/router/module/nanomine';
 import metamineRoutes from '@/router/module/metamine';
 import explorerRoutes from '@/router/module/explorer';
 // import portalRoutes from '@/router/module/portal';
 // import xsdRoutes from '@/router/module/xsd';
-// import nsRoutes from './module/ns';
+import nsRoutes from './module/ns';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,11 +23,11 @@ const routes: Array<RouteRecordRaw> = [
     component: NanomineBase,
     children: [...nanomineRoutes],
   },
-  // {
-  //   path: '/ns',
-  //   component: () => import('@/pages/ns/Base.vue'),
-  //   children: [...nsRoutes],
-  // },
+  {
+    path: '/ns',
+    component: () => import('@/pages/ns/Base.vue'),
+    children: [...nsRoutes],
+  },
   {
     path: '/mm',
     component: MetamineBase,
@@ -53,14 +52,14 @@ const routes: Array<RouteRecordRaw> = [
     path: '/auth/:auth',
     component: () => import('@/auth/auth.vue'),
   },
-  // {
-  //   path: '/countdown',
-  //   component: () => import('@/pages/CountDown.vue'),
-  // },
-  // { path: '/explorer:notFound(.*)', component: NotFound },
-  // { path: '/mm:notFound(.*)', component: NotFound },
-  // { path: '/nm:notFound(.*)', component: NotFound },
-  // { path: '/:notFound(.*)', component: NotFound },
+  {
+    path: '/countdown',
+    component: () => import('@/pages/CountDown.vue'),
+  },
+  { path: '/explorer:notFound(.*)', component: () => import('@/pages/NotFound.vue') },
+  { path: '/mm:notFound(.*)', component: () => import('@/pages/NotFound.vue') },
+  { path: '/nm:notFound(.*)', component: () => import('@/pages/NotFound.vue') },
+  { path: '/:notFound(.*)', component: () => import('@/pages/NotFound.vue') },
 ];
 
 const router = createRouter({

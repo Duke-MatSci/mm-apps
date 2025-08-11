@@ -1,23 +1,23 @@
 <template>
   <div>
-    <MdSnackbar
+    <md-snackbar
       :md-position="position"
       :md-active="show"
       :md-duration="!snackbar?.duration ? Infinity : snackbar.duration"
       class="md-snackbar-adjust"
       @update:md-active="show = $event"
     >
-      {{ snackbar?.message || '' }}
       <span>
-        <MdButton
-          v-if="snackbar?.action && !snackbar?.duration"
-          id="snackbarAction"
-          class="md-primary"
-          @click="snackBarAction"
-          >{{ snackbar?.callToActionText || 'Retry' }}</MdButton
-        >
+        {{ snackbar?.message || '' }}
       </span>
-    </MdSnackbar>
+      <md-button
+        v-if="snackbar?.action && !snackbar?.duration"
+        id="snackbarAction"
+        class="md-primary"
+        @click="snackBarAction"
+        >{{ snackbar?.callToActionText || 'Retry' }}</md-button
+      >
+    </md-snackbar>
   </div>
 </template>
 
@@ -38,7 +38,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  position: 'left',
+  position: 'left', // Valid options: 'center' | 'left'
 });
 
 // Store and Router

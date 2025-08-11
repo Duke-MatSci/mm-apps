@@ -40,7 +40,7 @@
     <div class="page-not-found">
       <h1 class="page-not-found-header u_margin-bottom-small">Oops!</h1>
       <h2 class="u_margin-top-med u_margin-bottom-small">404 - Page Not Found</h2>
-      <p>
+      <p class="content">
         The page you are looking for might have been removed, had its name changed or is temporarily
         unavailable. Would you like to go back to
         <a @click="goBack">previous page</a>?
@@ -74,5 +74,7 @@ defineOptions({
 </script>
 
 <style scoped>
-/* Add any component-specific styles here */
+.content {
+  font-size: 14px;
+}
 </style>

@@ -3,7 +3,7 @@
     <spinner :loading="getIsloading" text="Loading..." v-if="getIsloading" />
     <div class="utility-roverflow explorer_page-results metadata" v-else>
       <!-- Articles -->
-      <div v-if="resultsTab === 'getArticles'" class="grid_explorer-fullrow" ref="articlesRef">
+      <div v-if="resultsTab === 'getArticles'" class="grid_explorer-fullrow" ref="articles_ref">
         <div
           v-for="(result, index) in getArticles"
           :key="index"
@@ -28,12 +28,12 @@
       </div>
 
       <!-- Samples -->
-      <div class="grid_explorer-fullrow" v-if="resultsTab === 'getSamples'" ref="samplesRef">
+      <div class="grid_explorer-fullrow" v-if="resultsTab === 'getSamples'" ref="samples_ref">
         <div
           v-for="(result, index) in getSamples"
           :key="index"
           class="btn--animated md-card gallery-item results_card u--font-emph-900"
-          ref="sampleRef"
+          ref="sample_ref"
         >
           <md-card-header style="padding: 0px">
             <md-avatar v-if="result.thumbnail">
@@ -65,7 +65,7 @@
       </div>
 
       <!-- Charts -->
-      <div class="grid_explorer-boxes" v-if="resultsTab === 'getCharts'" ref="chartsRef">
+      <div class="grid_explorer-boxes" v-if="resultsTab === 'getCharts'" ref="charts_ref">
         <div
           v-for="(result, index) in getCharts"
           :key="index"
@@ -104,7 +104,7 @@
       </div>
 
       <!-- Images -->
-      <div class="grid_explorer-boxes" v-if="resultsTab === 'getImages'" ref="imagesRef">
+      <div class="grid_explorer-boxes" v-if="resultsTab === 'getImages'" ref="images_ref">
         <div
           v-for="(result, index) in getImages"
           :key="index"
@@ -130,7 +130,7 @@
       </div>
 
       <!-- Materials -->
-      <div class="grid_explorer-fullrow" v-if="resultsTab === 'getMaterials'" ref="materialsRef">
+      <div class="grid_explorer-fullrow" v-if="resultsTab === 'getMaterials'" ref="materials_ref">
         <div
           v-for="({ label }, index) in getMaterials"
           :key="index"
@@ -228,23 +228,26 @@
 import { ref, computed } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
-import Spinner from '@/components/Spinner.vue';
 import { useReduce } from '@/composables/useReduce';
+import Spinner from '@/components/Spinner.vue';
 
 const store = useStore();
 const router = useRouter();
 const { reduceDescription } = useReduce();
 
-// Refs
-const articlesRef = ref<HTMLElement>();
-const samplesRef = ref<HTMLElement>();
-const chartsRef = ref<HTMLElement>();
-const imagesRef = ref<HTMLElement>();
-const materialsRef = ref<HTMLElement>();
-const sampleRef = ref<HTMLElement>();
-
 // Reactive data
+const loadError = ref(false);
+const otherArgs = ref(null);
+const defaultImg = ref('');
 const baseUrl = ref(window.location.origin);
+
+// Template refs
+const articles_ref = ref<HTMLElement | null>(null);
+const samples_ref = ref<HTMLElement | null>(null);
+const charts_ref = ref<HTMLElement | null>(null);
+const images_ref = ref<HTMLElement | null>(null);
+const materials_ref = ref<HTMLElement | null>(null);
+const sample_ref = ref<HTMLElement | null>(null);
 
 // Computed properties
 const resultsTab = computed(() => store.getters['explorer/getResultsTab']);
@@ -253,9 +256,10 @@ const getSamples = computed(() => store.getters['explorer/results/getSamples']);
 const getImages = computed(() => store.getters['explorer/results/getImages']);
 const getCharts = computed(() => store.getters['explorer/results/getCharts']);
 const getMaterials = computed(() => store.getters['explorer/results/getMaterials']);
+const getTotal = computed(() => store.getters['explorer/results/getTotal']);
 const getIsloading = computed(() => store.getters['explorer/results/getIsloading']);
 
-// Component methods
+// Methods
 const loadProperties = async (selectedValue: string) => {
   await store.dispatch('explorer/searchFacetFilterMaterials', selectedValue);
 };
@@ -275,13 +279,12 @@ const fixUriBeforeRouting = (address: string, prefix: string) => {
   }
 };
 
-// Placeholder for bookmark functionality
+// Placeholder bookmark method (not implemented in original)
 const bookmark = (name: string, isBookmarked: boolean) => {
-  // Implementation would depend on bookmark store actions
-  console.log('Bookmark:', name, isBookmarked);
+  console.log('Bookmark functionality not implemented:', name, isBookmarked);
 };
 
 defineOptions({
-  name: 'search-results',
+  name: 'SearchResultsTable',
 });
 </script>

@@ -20,10 +20,28 @@
   z-index: 20;
 }
 
-#reset_tab_bg.md-tabs.md-theme-default.md-primary .md-tabs-navigation {
-  background-color: transparent !important;
-  font-weight: 400;
-  font-size: 1.6rem;
+#reset_tab_bg {
+  &.md-tabs.md-theme-default.md-primary .md-tabs-navigation {
+    background-color: transparent !important;
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+
+  .md-tabs-navigation {
+    .md-tab-nav-button {
+      max-width: 264px;
+      min-width: 72px;
+      height: 48px !important;
+      margin: 0;
+
+      & > .md-ripple {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .md-tabs-navigation .md-ripple {

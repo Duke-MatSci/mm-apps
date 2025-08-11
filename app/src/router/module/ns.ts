@@ -39,4 +39,4 @@ const nsRoutes: Array<RouteRecordRaw> = [
   },
 ];
 
-// export default nsRoutes;
+export default nsRoutes;

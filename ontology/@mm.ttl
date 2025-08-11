@@ -41,10 +41,9 @@
     owl:versionIRI :1.1 .
 
 # Classes
-
 :1DGeometry a owl:Class ;
     rdfs:label "1D Geometry"@en, "Géométrie 1D"@fr, "Geometría 1D"@es, "1D-Geometrie"@de ;
-    rdfs:subClassOf materialsmine:UnitCellGeometry ;
+    rdfs:subClassOf :UnitCellGeometry ;
     skos:definition "One-dimensional geometry, which can be fully described as a function of one coordinate."@en,
                     "Géométrie unidimensionnelle, qui peut être entièrement décrite en fonction d'une seule coordonnée."@fr,
                     "Geometría unidimensional, que puede describirse completamente como una función de una sola coordenada."@es,
@@ -59,7 +58,7 @@
 
 :2DGeometry a owl:Class ;
     rdfs:label "2D Geometry"@en, "Géométrie 2D"@fr, "Geometría 2D"@es, "2D-Geometrie"@de ;
-    rdfs:subClassOf materialsmine:Geometry ;
+    rdfs:subClassOf :Geometry ;
     skos:definition "Two-dimensional geometry which can be fully described as a function of two coordinates."@en,
                     "Géométrie bidimensionnelle, qui peut être entièrement décrite comme une fonction de deux coordonnées."@fr,
                     "Geometría bidimensional que puede describirse completamente como una función de dos coordenadas."@es,
@@ -75,7 +74,7 @@
 
 :3DGeometry a owl:Class ;
     rdfs:label "3D Geometry"@en, "Géométrie 3D"@fr, "Geometría 3D"@es, "3D-Geometrie"@de ;
-    rdfs:subClassOf materialsmine:Geometry ;
+    rdfs:subClassOf :Geometry ;
     skos:definition "Three-dimensional geometry which can be fully described as a function of three coordinates."@en,
                     "Géométrie tridimensionnelle qui peut être entièrement décrite comme une fonction de trois coordonnées."@fr,
                     "Geometría tridimensional que puede describirse completamente como una función de tres coordenadas."@es,
@@ -83,12 +82,12 @@
 
 :Air a owl:Class ;
     rdfs:label "Air"@en, "Air"@fr, "Aire"@es, "Luft"@de ;
-    rdfs:subClassOf materialsmine:AmbientCondition ;
+    rdfs:subClassOf :AmbientCondition ;
     skos:definition "Gaseous medium surrounding the solid boundaries of a material."@en, "Milieu gazeux entourant les limites solides d’un matériau."@fr, "Medio gaseoso que rodea los límites sólidos de un material."@es .
 
 :Aperiodic a owl:Class ;
     rdfs:label "Aperiodic"@en, "Apériodique"@fr, "Aperiódico"@es, "Aperiodisch"@de ;
-    rdfs:subClassOf materialsmine:Periodicity ;
+    rdfs:subClassOf :Periodicity ;
     skos:definition "Not appearing or occurring at intervals."@en,
                     "Ne se produisant pas ou n'apparaissant pas à intervalles réguliers."@fr,
                     "No aparece o ocurre a intervalos."@es,
@@ -96,7 +95,7 @@
 
 :BandGap a owl:Class ;
     rdfs:label "Band Gap"@en, "Bande interdite"@fr, "Banda prohibida"@es, "Bandlücke"@de ;
-    rdfs:subClassOf materialsmine:ElectricalProperty ;
+    rdfs:subClassOf :ElectricalProperty ;
     skos:definition "A band of frequencies for which there do not exist eigenfrequency solutions in the dispersion relation (for any wavevector)."@en,
                     "Une bande de fréquences pour laquelle il n'existe pas de solutions d'autofréquences dans la relation de dispersion (pour aucun vecteur d'onde)."@fr,
                     "Una banda de frecuencias para las cuales no existen soluciones de autofrecuencia en la relación de dispersión (para cualquier vector de onda)."@es,
@@ -104,7 +103,7 @@
 
 :BandGapIndex a owl:Class ;
     rdfs:label "Band Gap Index"@en, "Indice de bande interdite"@fr, "Índice de banda prohibida"@es, "Bandlückenindex"@de ;
-    rdfs:subClassOf materialsmine:Index ;
+    rdfs:subClassOf :Index ;
     skos:definition "Integer rank of a band gap."@en,
                     "Rang entier d'une bande interdite."@fr,
                     "Rango entero de una brecha de banda."@es,
@@ -121,7 +120,7 @@
 :BandGapMechanism a owl:Class ;
     rdfs:label "Band Gap Mechanism"@en, "Mécanisme de bande interdite"@fr, "Mecanismo de banda prohibida"@es, "Bandlückenmechanismus"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-          owl:someValuesFrom materialsmine:BandGapMechanism ] .
+          owl:someValuesFrom :BandGapMechanism ] .
 
 :BandGapSize a owl:Class ;
     rdfs:label "Band Gap Size"@en, "Taille de la bande interdite"@fr, "Tamaño de la banda prohibida"@es, "Bandlückengröße"@de ;
@@ -133,7 +132,7 @@
 
 :BandGapType a owl:Class ;
     rdfs:label "Band Gap Type"@en, "Type de bande interdite"@fr, "Tipo de banda prohibida"@es, "Bandlückentyp"@de ;
-    rdfs:subClassOf materialsmine:BandGap ;
+    rdfs:subClassOf :BandGap ;
     skos:definition "If the band gap is particular to a specific type of mode, which type of mode?"@en,
                     "Si la bande interdite est propre à un type spécifique de mode, quel type de mode ?"@fr,
                     "Si la banda prohibida es particular de un tipo específico de modo, ¿qué tipo de modo?"@es,
@@ -144,7 +143,7 @@
 
 :Beam a owl:Class ;
     rdfs:label "Beam"@en, "Poutre"@fr, "Viga"@es, "Träger"@de ;
-    rdfs:subClassOf materialsmine:1DSolidMechanicsModel ;
+    rdfs:subClassOf :1DSolidMechanicsModel ;
     skos:definition "A slender 1D structural element that primarily bears lateral loads."@en,
                     "Un élément structurel 1D élancé qui supporte principalement des charges latérales."@fr,
                     "Un elemento estructural 1D delgado que soporta principalmente cargas laterales."@es,
@@ -152,7 +151,7 @@
 
 :Binary2DGeometry a owl:Class ;
     rdfs:label "Binary 2D Geometry"@en, "Géométrie binaire 2D"@fr, "Geometría 2D binaria"@es, "Binäre 2D-Geometrie"@de ;
-    rdfs:subClassOf materialsmine:Geometry ;
+    rdfs:subClassOf :Geometry ;
     skos:definition "A string that represents the entire pixelated unit cell, e.g., using 0s and 1s to represent different material compositions at each pixel."@en,
                     "Une chaîne qui représente l'intégralité de la cellule unitaire pixelisée, par exemple en utilisant des 0 et des 1 pour représenter différentes compositions de matériaux à chaque pixel."@fr,
                     "Una cadena que representa toda la celda unitaria pixelada, por ejemplo, usando 0 y 1 para representar diferentes composiciones de material en cada píxel."@es,
@@ -160,7 +159,7 @@
 
 :BinaryMaterialPropertyField a owl:Class ;
     rdfs:label "Binary Material Property Field"@en, "Champ de propriétés matérielles binaires"@fr, "Campo de propiedades materiales binario"@es, "Binäres Materialeigenschaftsfeld"@de ;
-    rdfs:subClassOf materialsmine:DiscreteMaterialPropertyField ;
+    rdfs:subClassOf :DiscreteMaterialPropertyField ;
     skos:definition "A variable that describes the presence of one of the two materials. No intermediate materials are allowed."@en,
                     "Une variable qui décrit la présence de l'un des deux matériaux. Aucun matériau intermédiaire n'est autorisé."@fr,
                     "Una variable que describe la presencia de uno de los dos materiales. No se permiten materiales intermedios."@es,
@@ -168,7 +167,7 @@
 
 :C11 a owl:Class ;
     rdfs:label "C11"@en, "C11"@fr, "C11"@es, "C11"@de ;
-    rdfs:subClassOf materialsmine:CMatrixElement ;
+    rdfs:subClassOf :CMatrixElement ;
     skos:definition "C matrix element with indices 1 and 1."@en,
                     "Élément de la matrice C avec les indices 1 et 1."@fr,
                     "Elemento de la matriz C con índices 1 y 1."@es,
@@ -176,7 +175,7 @@
 
 :C12 a owl:Class ;
     rdfs:label "C12"@en, "C12"@fr, "C12"@es, "C12"@de ;
-    rdfs:subClassOf materialsmine:CMatrixElement ;
+    rdfs:subClassOf :CMatrixElement ;
     skos:definition "C matrix element with indices 1 and 2."@en,
                     "Élément de la matrice C avec les indices 1 et 2."@fr,
                     "Elemento de la matriz C con índices 1 y 2."@es,
@@ -184,7 +183,7 @@
 
 :C16 a owl:Class ;
     rdfs:label "C16"@en, "C16"@fr, "C16"@es, "C16"@de ;
-    rdfs:subClassOf materialsmine:CMatrixElement ;
+    rdfs:subClassOf :CMatrixElement ;
     skos:definition "C matrix element with indices 1 and 6."@en,
                     "Élément de la matrice C avec les indices 1 et 6."@fr,
                     "Elemento de la matriz C con índices 1 y 6."@es,
@@ -192,7 +191,7 @@
 
 :C22 a owl:Class ;
     rdfs:label "C22"@en, "C22"@fr, "C22"@es, "C22"@de ;
-    rdfs:subClassOf materialsmine:CMatrixElement ;
+    rdfs:subClassOf :CMatrixElement ;
     skos:definition "C matrix element with indices 2 and 2."@en,
                     "Élément de la matrice C avec les indices 2 et 2."@fr,
                     "Elemento de la matriz C con índices 2 y 2."@es,
@@ -200,7 +199,7 @@
 
 :C26 a owl:Class ;
     rdfs:label "C26"@en, "C26"@fr, "C26"@es, "C26"@de ;
-    rdfs:subClassOf materialsmine:CMatrixElement ;
+    rdfs:subClassOf :CMatrixElement ;
     skos:definition "C matrix element with indices 2 and 6."@en,
                     "Élément de la matrice C avec les indices 2 et 6."@fr,
                     "Elemento de la matriz C con índices 2 y 6."@es,
@@ -208,7 +207,7 @@
 
 :C66 a owl:Class ;
     rdfs:label "C66"@en, "C66"@fr, "C66"@es, "C66"@de ;
-    rdfs:subClassOf materialsmine:CMatrixElement ;
+    rdfs:subClassOf :CMatrixElement ;
     skos:definition "C matrix element with indices 6 and 6."@en,
                     "Élément de la matrice C avec les indices 6 et 6."@fr,
                     "Elemento de la matriz C con índices 6 y 6."@es,
@@ -247,7 +246,7 @@
 
 :CMatrixIndexI a owl:Class ;
     rdfs:label "C Matrix Index I"@en, "Indice I de la matrice C"@fr, "Índice I de la matriz C"@es, "C-Matrixindex I"@de ;
-    rdfs:subClassOf materialsmine:Index ;
+    rdfs:subClassOf :Index ;
     skos:definition "The corresponding row of an element within a stiffness matrix (Voigt notation)."@en,
                     "La ligne correspondante d’un élément au sein d’une matrice de rigidité (notation de Voigt)."@fr,
                     "La fila correspondiente de un elemento dentro de una matriz de rigidez (notación de Voigt)."@es,
@@ -255,7 +254,7 @@
 
 :CMatrixIndexJ a owl:Class ;
     rdfs:label "C Matrix Index J"@en, "Indice J de la matrice C"@fr, "Índice J de la matriz C"@es, "C-Matrixindex J"@de ;
-    rdfs:subClassOf materialsmine:Index ;
+    rdfs:subClassOf :Index ;
     skos:definition "The corresponding column of an element within a stiffness matrix (Voigt notation)."@en,
                     "La colonne correspondante d’un élément dans une matrice de rigidité (notation de Voigt)."@fr,
                     "La columna correspondiente de un elemento dentro de una matriz de rigidez (notación de Voigt)."@es,
@@ -271,7 +270,7 @@
 
 :CondensedBinary2DGeometry a owl:Class ;
     rdfs:label "Condensed Binary 2D Geometry"@en, "Géométrie binaire 2D condensée"@fr, "Geometría 2D binaria condensada"@es, "Kondensierte binäre 2D-Geometrie"@de ;
-    rdfs:subClassOf materialsmine:Binary2DGeometry ;
+    rdfs:subClassOf :Binary2DGeometry ;
     skos:definition "If a representative unit cell geometry has a given symmetry type, the condensed binary 2D geometry is a string that represents only the unique pixels in the pixelated geometry."@en,
                     "Si une géométrie de cellule unitaire représentative possède un type de symétrie donné, la géométrie binaire 2D condensée est une chaîne qui représente uniquement les pixels uniques dans la géométrie pixellisée."@fr,
                     "Si una geometría representativa de celda unitaria tiene un tipo de simetría dado, la geometría binaria 2D condensada es una cadena que representa únicamente los píxeles únicos en la geometría pixelada."@es,
@@ -279,14 +278,14 @@
 
 :CondensedMaterialPropertyField a owl:Class ;
     rdfs:label "Condensed Material Property Field"@en, "Champ de propriétés matérielles condensé"@fr, "Campo de propiedades materiales condensado"@es, "Kondensiertes Materialeigenschaftsfeld"@de ;
-    rdfs:subClassOf materialsmine:MaterialPropertyField .
+    rdfs:subClassOf :MaterialPropertyField .
 
 :CondensedMaterialPropertyFieldVector a owl:Class ;
     rdfs:label "Condensed Material Property Field Vector"@en, "Vecteur de champ de propriétés matérielles condensé"@fr, "Vector de campo de propiedades materiales condensado"@es, "Kondensierter Materialeigenschaftsfeldvektor"@de .
 
 :Condition a owl:Class ;
     rdfs:label "Condition"@en, "Condition"@fr, "Condición"@es, "Bedingung"@de ;
-    rdfs:subClassOf materialsmine:CompressionProperty ;
+    rdfs:subClassOf :CompressionProperty ;
     skos:definition "The approximation, such as Plane Stress or Plane Strain, used to calculate the stress state of the material."@en,
                     "L’approximation, telle que la contrainte plane ou la déformation plane, utilisée pour calculer l’état de contrainte du matériau."@fr,
                     "La aproximación, como el esfuerzo plano o la deformación plana, utilizada para calcular el estado de esfuerzo del material."@es,
@@ -302,7 +301,7 @@
 
 :ContinuousMaterialPropertyField a owl:Class ;
     rdfs:label "Continuous Material Property Field"@en, "Champ de propriétés matérielles continu"@fr, "Campo de propiedades materiales continuo"@es, "Kontinuierliches Materialeigenschaftsfeld"@de ;
-    rdfs:subClassOf materialsmine:MaterialPropertyField ;
+    rdfs:subClassOf :MaterialPropertyField ;
     skos:definition "A continuous field showing the distribution of material properties in a given region."@en,
                     "Un champ continu montrant la distribution des propriétés matérielles dans une région donnée."@fr,
                     "Un campo continuo que muestra la distribución de las propiedades materiales en una región dada."@es,
@@ -311,10 +310,10 @@
 :ConcretizedModel a owl:Class ;
     rdfs:label "Concretized Model"@en, "Modèle concrétisé"@fr, "Modelo concretizado"@es, "Konkretisiertes Modell"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Property ],
+            owl:someValuesFrom :Property ],
         [ a owl:Restriction ;
             owl:onProperty prov:used ;
-            owl:someValuesFrom materialsmine:Property ].
+            owl:someValuesFrom :Property ].
 
 :CTensor a owl:Class ;
     rdfs:label "Material Stiffness Tensor"@en, "Tenseur de rigidité du matériau"@fr, "Tensor de rigidez del material"@es, "Materialsteifigkeitstensor"@de ;
@@ -334,7 +333,7 @@
 
 :CTensorIndexI a owl:Class ;
     rdfs:label "C Tensor Index I"@en, "Indice I du tenseur C"@fr, "Índice I del tensor C"@es, "C-Tensorindex I"@de ;
-    rdfs:subClassOf materialsmine:Index ;
+    rdfs:subClassOf :Index ;
     skos:definition "The i component of an element's location within a material stiffness tensor."@en,
                     "La composante i de la position d’un élément dans un tenseur de rigidité du matériau."@fr,
                     "El componente i de la ubicación de un elemento dentro de un tensor de rigidez del material."@es,
@@ -342,7 +341,7 @@
 
 :CTensorIndexJ a owl:Class ;
     rdfs:label "C Tensor Index J"@en, "Indice J du tenseur C"@fr, "Índice J del tensor C"@es, "C-Tensorindex J"@de ;
-    rdfs:subClassOf materialsmine:Index ;
+    rdfs:subClassOf :Index ;
     skos:definition "The j component of an element's location within a material stiffness tensor."@en,
                     "La composante j de la position d’un élément dans un tenseur de rigidité du matériau."@fr,
                     "El componente j de la ubicación de un elemento dentro de un tensor de rigidez del material."@es,
@@ -350,7 +349,7 @@
 
 :CTensorIndexK a owl:Class ;
     rdfs:label "C Tensor Index K"@en, "Indice K du tenseur C"@fr, "Índice K del tensor C"@es, "C-Tensorindex K"@de ;
-    rdfs:subClassOf materialsmine:Index ;
+    rdfs:subClassOf :Index ;
     skos:definition "The k component of an element's location within a material stiffness tensor."@en,
                     "La composante k de la position d’un élément dans un tenseur de rigidité du matériau."@fr,
                     "El componente k de la ubicación de un elemento dentro de un tensor de rigidez del material."@es,
@@ -358,7 +357,7 @@
 
 :CTensorIndexL a owl:Class ;
     rdfs:label "C Tensor Index L"@en, "Indice L du tenseur C"@fr, "Índice L del tensor C"@es, "C-Tensorindex L"@de ;
-    rdfs:subClassOf materialsmine:Index ;
+    rdfs:subClassOf :Index ;
     skos:definition "The l component of an element's location within a material stiffness tensor."@en,
                     "La composante l de la position d’un élément dans un tenseur de rigidité du matériau."@fr,
                     "El componente l de la ubicación de un elemento dentro de un tensor de rigidez del material."@es,
@@ -374,7 +373,7 @@
 
 :CubeGeometry a owl:Class ;
     rdfs:label "Cube Geometry"@en, "Géométrie cubique"@fr, "Geometría cúbica"@es, "Würfelgeometrie"@de ;
-    rdfs:subClassOf materialsmine:CuboidalGeometry ;
+    rdfs:subClassOf :CuboidalGeometry ;
     skos:definition "The shape of the unitcell: Characterized by a parallelogram with two equal side lengths, perpendicular sides. "@en,
                     "La forme de la maille élémentaire : caractérisée par un parallélogramme avec deux côtés de même longueur et des côtés perpendiculaires."@fr,
                     "La forma de la celda unitaria: caracterizada por un paralelogramo con dos lados de igual longitud y lados perpendiculares."@es,
@@ -382,7 +381,7 @@
 
 :CuboidalGeometry a owl:Class ;
     rdfs:label "Cuboidal Geometry"@en, "Géométrie cuboïde"@fr, "Geometría cuboidal"@es, "Kuboidgeometrie"@de ;
-    rdfs:subClassOf materialsmine:3DGeometry ;
+    rdfs:subClassOf :3DGeometry ;
     skos:definition "The shape of the unit cell in 3D: Represented as a cuboid with not all equal side lengths."@en,
                     "La forme de la cellule unitaire en 3D : Représentée comme un cuboïde avec des longueurs de côtés non toutes égales."@fr,
                     "La forma de la celda unitaria en 3D: Representada como un cuboide con lados de longitudes no todas iguales."@es,
@@ -391,9 +390,9 @@
 :DispersionBand a owl:Class ;
     rdfs:label "Dispersion Band"@en, "Bande de dispersion"@fr, "Banda de dispersión"@es, "Dispersionsband"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:BandIndex ],
+            owl:someValuesFrom :BandIndex ],
             [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:DispersionBandValue ] .
+            owl:someValuesFrom :DispersionBandValue ] .
 
 :DispersionBandValue a owl:Class ;
     rdfs:label "Dispersion Band Value"@en, "Valeur de bande de dispersion"@fr, "Valor de banda de dispersión"@es, "Dispersionsbandwert"@de .
@@ -405,7 +404,7 @@
 :DispersionRelation a owl:Class ;
     rdfs:label "Dispersion Relation"@en, "Relation de dispersion"@fr, "Relación de dispersión"@es, "Dispersionsrelation"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:BandGap ],
+            owl:someValuesFrom :BandGap ],
             sio:SIO_000017 ;
     skos:definition "Frequency-wavevector pairs that represent the propagation of wave modes."@en,
                     "Paires fréquence-vecteur d'onde qui représentent la propagation des modes d'onde."@fr,
@@ -414,7 +413,7 @@
 
 :DispersionRelation1D a owl:Class ;
     rdfs:label "1D Dispersion Relation"@en, "Relation de dispersion 1D"@fr, "Relación de dispersión 1D"@es, "1D-Dispersionsrelation"@de ;
-    rdfs:subClassOf materialsmine:DispersionRelation ;
+    rdfs:subClassOf :DispersionRelation ;
     skos:definition "Frequency-wavevector pairs that represent the propagation of wave modes found in a specific 1D geometry."@en,
                     "Paires fréquence-vecteur d'onde qui représentent la propagation des modes d'onde dans une géométrie unidimensionnelle spécifique."@fr,
                     "Pares de frecuencia-vector de onda que representan la propagación de modos de onda encontrados en una geometría unidimensional específica."@es,
@@ -422,7 +421,7 @@
 
 :DispersionRelation2D a owl:Class ;
     rdfs:label "2D Dispersion Relation"@en, "Relation de dispersion 2D"@fr, "Relación de dispersión 2D"@es, "2D-Dispersionsrelation"@de ;
-    rdfs:subClassOf materialsmine:DispersionRelation ;
+    rdfs:subClassOf :DispersionRelation ;
     skos:definition "Frequency-wavevector pairs that represent the propagation of wave modes found in a specific 2D geometry."@en,
                     "Paires fréquence-vecteur d'onde qui représentent la propagation des modes d'onde trouvés dans une géométrie 2D spécifique."@fr,
                     "Pares de frecuencia-vector de onda que representan la propagación de modos de onda encontrados en una geometría 2D específica."@es,
@@ -430,7 +429,7 @@
 
 :DispersionRelation3D a owl:Class ;
     rdfs:label "3D Dispersion Relation"@en, "Relation de dispersion 3D"@fr, "Relación de dispersión 3D"@es, "3D-Dispersionsrelation"@de ;
-    rdfs:subClassOf materialsmine:DispersionRelation ;
+    rdfs:subClassOf :DispersionRelation ;
     skos:definition "Frequency-wavevector pairs that represent the propagation of wave modes found in a specific 3D geometry."@en,
                     "Paires fréquence-vecteur d’onde qui représentent la propagation des modes d’onde présents dans une géométrie 3D spécifique."@fr,
                     "Pares de frecuencia y vector de onda que representan la propagación de modos de onda en una geometría 3D específica."@es,
@@ -438,7 +437,7 @@
 
 :DiscreteMaterialPropertyField a owl:Class ;
     rdfs:label "Discrete Material Property Field"@en, "Champ de propriétés matérielles discret"@fr, "Campo de propiedades materiales discreto"@es, "Diskretes Materialeigenschaftsfeld"@de ;
-    rdfs:subClassOf materialsmine:MaterialPropertyField ;
+    rdfs:subClassOf :MaterialPropertyField ;
     skos:definition "A discretized field showing the distribution of material properties in a given region."@en,
                     "Un champ discrétisé montrant la distribution des propriétés matérielles dans une région donnée."@fr,
                     "Un campo discreto que muestra la distribución de las propiedades materiales en una región dada."@es,
@@ -461,7 +460,7 @@
 
 :FiniteMetamaterial a owl:Class ;
     rdfs:label "Finite Metamaterial"@en, "Métamatériau fini"@fr, "Metamaterial finito"@es, "Endliches Metamaterial"@de ;
-    rdfs:subClassOf materialsmine:Metamaterial ;
+    rdfs:subClassOf :Metamaterial ;
     skos:definition "A metamaterial that has a finite length, that doesn't extend infinitely in the space."@en,
                     "Un métamatériau qui a une longueur finie, qui ne s'étend pas à l'infini dans l'espace."@fr,
                     "Un metamaterial que tiene una longitud finita, que no se extiende infinitamente en el espacio."@es,
@@ -470,7 +469,7 @@
 :FirstBrillouinZone a owl:Class ;
     rdfs:label "First Brillouin Zone"@en, "Première zone de Brillouin"@fr, "Primera zona de Brillouin"@es, "Erste Brillouin-Zone"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-          owl:someValuesFrom materialsmine:IrreducibleBrillouinZone ] ;
+          owl:someValuesFrom :IrreducibleBrillouinZone ] ;
     skos:definition "Primitive cell in reciprocal space."@en,
                     "Cellule primitive dans l'espace réciproque."@fr,
                     "Celda primitiva en el espacio recíproco."@es,
@@ -481,11 +480,11 @@
 
 :FrequencyBand a owl:Class ;
     rdfs:label "Frequency Band"@en, "Bande de fréquence"@fr, "Banda de frecuencia"@es, "Frequenzband"@de ;
-    rdfs:subClassOf materialsmine:DispersionBand .
+    rdfs:subClassOf :DispersionBand .
 
 :FullMaterialPropertyField a owl:Class ;
     rdfs:label "Full Material Property Field"@en, "Champ de propriétés matérielles complet"@fr, "Campo de propiedades materiales completo"@es, "Vollständiges Materialeigenschaftsfeld"@de ;
-    rdfs:subClassOf materialsmine:MaterialPropertyField .
+    rdfs:subClassOf :MaterialPropertyField .
 
 :FullMaterialPropertyFieldMatrix a owl:Class ;
     rdfs:label "Full Material Property Field Matrix"@en, "Matrice de champ de propriétés matérielles complète"@fr, "Matriz de campo de propiedades materiales completa"@es, "Vollständige Materialeigenschaftsfeldmatrix"@de .
@@ -493,7 +492,7 @@
 :Geometry a owl:Class ;
     rdfs:label "Geometry"@en, "Géométrie"@fr, "Geometría"@es, "Geometrie"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Symmetry ],
+            owl:someValuesFrom :Symmetry ],
             sio:SIO_000506 ;
     skos:definition "Representation of the spatial extent and form of an object."@en,
                     "Représentation de l'étendue spatiale et de la forme d'un objet."@fr,
@@ -510,7 +509,7 @@
 
 :GroupVelocity a owl:Class ;
     rdfs:label "Group Velocity"@en, "Vitesse de groupe"@fr, "Velocidad de grupo"@es, "Gruppengeschwindigkeit"@de ;
-    rdfs:subClassOf materialsmine:DispersionBand ;
+    rdfs:subClassOf :DispersionBand ;
     skos:definition "The group velocity associated with a solution to the wave equation. This can be computed as the gradient of the eigenfrequency with respect to the wavevector."@en,
                     "La vitesse de groupe associée à une solution de l'équation d'onde. Elle peut être calculée comme le gradient de la fréquence propre par rapport au vecteur d'onde."@fr,
                     "La velocidad de grupo asociada con una solución de la ecuación de onda. Esto se puede calcular como el gradiente de la autofrecuencia con respecto al vector de onda."@es,
@@ -518,11 +517,11 @@
 
 :GroupVelocityBand a owl:Class ;
     rdfs:label "Group Velocity Band"@en, "Bande de vitesse de groupe"@fr, "Banda de velocidad de grupo"@es, "Gruppengeschwindigkeitsband"@de ;
-    rdfs:subClassOf materialsmine:DispersionBand .
+    rdfs:subClassOf :DispersionBand .
 
 :HexagonalGeometry a owl:Class ;
     rdfs:label "Hexagonal Geometry"@en, "Géométrie hexagonale"@fr, "Geometría hexagonal"@es, "Hexagonale Geometrie"@de ;
-    rdfs:subClassOf materialsmine:2DGeometry ;
+    rdfs:subClassOf :2DGeometry ;
     skos:definition "The shape of the unit cell: Regular hexagon."@en,
                     "La forme de la cellule unitaire : Hexagone régulier."@fr,
                     "La forma de la celda unitaria: Hexágono regular."@es,
@@ -546,7 +545,7 @@
 
 :InfiniteMetamaterial a owl:Class ;
     rdfs:label "Infinite Metamaterial"@en, "Métamatériau infini"@fr, "Metamaterial infinito"@es, "Unendliches Metamaterial"@de ;
-    rdfs:subClassOf materialsmine:Metamaterial ;
+    rdfs:subClassOf :Metamaterial ;
     skos:definition "A metamaterial that doesn't have a finite length, that extends infinitely in the space."@en,
                     "Un métamatériau qui n'a pas une longueur finie, qui s'étend à l’infini dans l'espace."@fr,
                     "Un metamaterial que no tiene una longitud finita, que se extiende infinitamente en el espacio."@es,
@@ -555,8 +554,8 @@
 :IrreducibleBrillouinZone a owl:Class ;
     rdfs:label "Irreducible Brillouin Zone"@en, "Zone de Brillouin irréductible"@fr, "Zona de Brillouin irreducible"@es, "Irreduzible Brillouin-Zone"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:IrreducibleBrillouinZoneContour ],
-            materialsmine:ReciprocalSpaceGeometry ;
+            owl:someValuesFrom :IrreducibleBrillouinZoneContour ],
+            :ReciprocalSpaceGeometry ;
     skos:definition "The smallest subspace of wavevector space that can be tessellated to form the dispersion relation over the entire wavevector space. Also the largest subspace of wavevector space that does not contain redundant information. The shape and size of this subspace depends on the geometry and symmetry of the unit cell."@en,
                     "Le plus petit sous-espace de l’espace des vecteurs d’onde qui peut être tessellé pour former la relation de dispersion sur l’ensemble de l’espace des vecteurs d’onde. C’est aussi le plus grand sous-espace de l’espace des vecteurs d’onde qui ne contient pas d’informations redondantes. La forme et la taille de ce sous-espace dépendent de la géométrie et de la symétrie de la cellule unitaire."@fr,
                     "El subespacio más pequeño del espacio de vectores de onda que puede teselar para formar la relación de dispersión en todo el espacio de vectores de onda. También es el subespacio más grande del espacio de vectores de onda que no contiene información redundante. La forma y el tamaño de este subespacio dependen de la geometría y la simetría de la celda unitaria."@es,
@@ -564,7 +563,7 @@
 
 :IrreducibleBrillouinZoneContour a owl:Class ;
     rdfs:label "Irreducible Brillouin Zone Contour"@en, "Contour de la zone de Brillouin irréductible"@fr, "Contorno de la zona de Brillouin irreducible"@es, "Kontur der irreduziblen Brillouin-Zone"@de ;
-    rdfs:subClassOf materialsmine:ReciprocalSpaceGeometry ;
+    rdfs:subClassOf :ReciprocalSpaceGeometry ;
     skos:definition "A contour in wavevector space that traverses the perimeter of the Irreducible Brillouin Zone."@en,
                     "Un contour dans l’espace des vecteurs d’onde qui parcourt le périmètre de la zone de Brillouin irréductible."@fr,
                     "Un contorno en el espacio del vector de onda que recorre el perímetro de la Zona de Brillouin Irreducible."@es,
@@ -580,7 +579,7 @@
 :KinematicModel a owl:Class ;
     rdfs:label "Kinematic Model"@en, "Modèle cinématique"@fr, "Modelo cinemático"@es, "Kinematisches Modell"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:SolidContinuumPhysicsModel ] ;
+            owl:someValuesFrom :SolidContinuumPhysicsModel ] ;
     skos:definition "A model of a system that primarily describes the motion such as displacements, velocities etc without describing the cause of the motion."@en,
                     "Un modèle d’un système qui décrit principalement le mouvement, comme les déplacements, les vitesses, etc., sans décrire la cause du mouvement."@fr,
                     "Un modelo de un sistema que describe principalmente el movimiento, como desplazamientos, velocidades, etc., sin describir la causa del movimiento."@es,
@@ -605,7 +604,7 @@
     rdfs:label "Lattice Basis"@en, "Base de réseau"@fr, "Base de red"@es, "Gitterbasis"@de ;
     skos:altLabel "Lattice Vectors"@en, "Vecteurs de réseau"@fr, "Vectores de red"@es, "Gittervektoren"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:CartesianVector ],
+            owl:someValuesFrom :CartesianVector ],
             sio:SIO_001433 .
 
 :LatticeVector a owl:Class ;
@@ -632,7 +631,7 @@
 
 :LinearPhysicsModel a owl:Class ;
     rdfs:label "Linear Physics Model"@en, "Modèle physique linéaire"@fr, "Modelo físico lineal"@es, "Lineares Physikmodell"@de ;
-    rdfs:subClassOf materialsmine:PhysicsModel ;
+    rdfs:subClassOf :PhysicsModel ;
     skos:definition "A model of a system in which the change of the output is proportional to the change of the input."@en,
                     "Un modèle d'un système dans lequel le changement de la sortie est proportionnel au changement de l'entrée."@fr,
                     "Un modelo de un sistema en el que el cambio de la salida es proporcional al cambio de la entrada."@es,
@@ -642,7 +641,7 @@
 :Location a owl:Class ;
     rdfs:label "Location"@en, "Emplacement"@fr, "Ubicación"@es, "Ort"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:BandGapLocation ] ;
+            owl:someValuesFrom :BandGapLocation ] ;
     skos:definition "Position within a space."@en,
                     "Position dans un espace."@fr,
                     "Posición dentro de un espacio."@es,
@@ -657,7 +656,7 @@
 
 :MassSpringPhysicsModel a owl:Class ;
     rdfs:label "Mass Spring Physics Model"@en, "Modèle physique de masse-ressort"@fr, "Modelo físico de masa-resorte"@es, "Masse-Feder-Physikmodell"@de ;
-    rdfs:subClassOf materialsmine:PhysicsModel ;
+    rdfs:subClassOf :PhysicsModel ;
     skos:definition "A dynamic system modeled using a mass attached to a spring, with or without damping effects."@en,
                     "Un système dynamique modélisé à l'aide d'une masse attachée à un ressort, avec ou sans effets d'amortissement."@fr,
                     "Un sistema dinámico modelado usando una masa unida a un resorte, con o sin efectos de amortiguación."@es,
@@ -666,17 +665,17 @@
 :Material a owl:Class ;
     rdfs:label "Material"@en, "Matériau"@fr, "Material"@es, "Material"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:LameConstantMu ],
+            owl:someValuesFrom :LameConstantMu ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ShearModulus ],
+            owl:someValuesFrom :ShearModulus ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:YoungModulus ],
+            owl:someValuesFrom :YoungModulus ],
         [ a owl:Restriction ;
             owl:someValuesFrom sio:SIO_001406 ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:PoissonRatio ],
+            owl:someValuesFrom :PoissonRatio ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:LameConstantLambda ] ;
+            owl:someValuesFrom :LameConstantLambda ] ;
     skos:definition "A physical entity that has mass."@en,
                     "Une entité physique qui a une masse."@fr,
                     "Una entidad física que tiene masa."@es,
@@ -730,7 +729,7 @@
 
 :MolecularDynamicsPhysicsModel a owl:Class ;
     rdfs:label "Molecular Dynamics Physics Model"@en, "Modèle physique de dynamique moléculaire"@fr, "Modelo físico de dinámica molecular"@es, "Molekulardynamik-Physikmodell"@de ;
-    rdfs:subClassOf materialsmine:PhysicsModel ;
+    rdfs:subClassOf :PhysicsModel ;
     skos:definition "A model that uses molecular dynamics (MD) for computer simulation of a system. Often used for analyzing the physical movements of atoms and molecules."@en,
                     "Un modèle qui utilise la dynamique moléculaire (MD) pour la simulation informatique d’un système. Souvent utilisé pour analyser les mouvements physiques des atomes et des molécules."@fr,
                     "Un modelo que utiliza la dinámica molecular (MD) para la simulación por computadora de un sistema. A menudo se usa para analizar los movimientos físicos de átomos y moléculas."@es,
@@ -739,7 +738,7 @@
 
 :MultiMaterial a owl:Class ;
     rdfs:label "Multi Material"@en, "Multi-matériau"@fr, "Multimaterial"@es, "Multimaterial"@de ;
-    rdfs:subClassOf materialsmine:Material ;
+    rdfs:subClassOf :Material ;
     skos:definition "A material composed of two or more distinct materials."@en,
                     "Un matériau composé de deux ou plusieurs matériaux distincts."@fr,
                     "Un material compuesto por dos o más materiales distintos."@es,
@@ -764,7 +763,7 @@
 :NonlinearPhysicsModel a owl:Class ;
     rdfs:label "Nonlinear Physics Model"@en, "Modèle physique non linéaire"@fr, "Modelo físico no lineal"@es, "Nichtlineares Physikmodell"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:PhysicsModel ] ;
+            owl:someValuesFrom :PhysicsModel ] ;
     skos:definition "A model of a nonlinear system in which the change of the output is not proportional to the change of the input."@en,
                     "Un modèle d’un système non linéaire dans lequel le changement de la sortie n’est pas proportionnel au changement de l’entrée."@fr,
                     "Un modelo de un sistema no lineal en el que el cambio de la salida no es proporcional al cambio de la entrada."@es,
@@ -777,7 +776,7 @@
 
 :ParallelepipedGeometry a owl:Class ;
     rdfs:label "Parallelepiped Geometry"@en, "Géométrie du parallélépipède"@fr, "Geometría del paralelepípedo"@es, "Geometrie des Parallelepipeds"@de ;
-    rdfs:subClassOf materialsmine:3DGeometry ;
+    rdfs:subClassOf :3DGeometry ;
     skos:definition "The shape of the unitcell: Characterized by a parallelogram with two unequal side lengths, and the angle between the sides is either acute or obtuse. "@en,
                     "La forme de la cellule unitaire : caractérisée par un parallélogramme avec deux longueurs de côtés inégales, et l'angle entre les côtés est soit aigu, soit obtus."@fr,
                     "La forma de la celda unitaria: caracterizada por un paralelogramo con dos longitudes de lado desiguales, y el ángulo entre los lados es agudo u obtuso."@es,
@@ -785,7 +784,7 @@
 
 :ParametricGeometry a owl:Class ;
     rdfs:label "Parametric Geometry"@en, "Géométrie paramétrique"@fr, "Geometría paramétrica"@es, "Parametrische Geometrie"@de ;
-    rdfs:subClassOf materialsmine:Geometry ;
+    rdfs:subClassOf :Geometry ;
     skos:definition "Representing a geometry using a function of independent variables (i.e., parameters)."@en,
                     "Représentation d’une géométrie à l’aide d’une fonction de variables indépendantes (c.-à-d. paramètres)."@fr,
                     "Representación de una geometría utilizando una función de variables independientes (es decir, parámetros)."@es,
@@ -793,7 +792,7 @@
 
 :ParametricMaterialPropertyField a owl:Class ;
     rdfs:label "Parametric Material Property Field"@en, "Champ de propriétés matérielles paramétrique"@fr, "Campo de propiedades materiales paramétrico"@es, "Parametrisches Materialeigenschaftsfeld"@de ;
-    rdfs:subClassOf materialsmine:MaterialPropertyField ;
+    rdfs:subClassOf :MaterialPropertyField ;
     skos:definition "A variable that describes the distribution of materials using the parameters defined by the user."@en,
                     "Une variable qui décrit la distribution des matériaux à l’aide des paramètres définis par l’utilisateur."@fr,
                     "Una variable que describe la distribución de materiales utilizando los parámetros definidos por el usuario."@es,
@@ -801,7 +800,7 @@
 
 :Periodic a owl:Class ;
     rdfs:label "Periodic"@en, "Périodique"@fr, "Periódico"@es, "Periodisch"@de ;
-    rdfs:subClassOf materialsmine:Periodicity ;
+    rdfs:subClassOf :Periodicity ;
     skos:definition "Appearing or occurring at intervals."@en,
                     "Apparaissant ou se produisant à intervalles réguliers."@fr,
                     "Que aparece o ocurre a intervalos."@es,
@@ -816,7 +815,7 @@
 
 :PhaseVelocity a owl:Class ;
     rdfs:label "Phase Velocity"@en, "Vitesse de phase"@fr, "Velocidad de fase"@es, "Phasengeschwindigkeit"@de ;
-    rdfs:subClassOf sio:SIO_001369, materialsmine:DispersionBand ;
+    rdfs:subClassOf sio:SIO_001369, :DispersionBand ;
     skos:definition "The phase velocity associated with a solution to the wave equation. This can be computed as the eigenfrequency divided by each component of the wavevector."@en,
                     "La vitesse de phase associée à une solution de l'équation des ondes. Elle peut être calculée en divisant la fréquence propre par chaque composante du vecteur d'onde."@fr,
                     "La velocidad de fase asociada con una solución de la ecuación de ondas. Se puede calcular dividiendo la frecuencia propia entre cada componente del vector de onda."@es,
@@ -824,11 +823,11 @@
 
 :PhaseVelocityBand a owl:Class ;
     rdfs:label "Phase Velocity Band"@en, "Bande de vitesse de phase"@fr, "Banda de velocidad de fase"@es, "Phasengeschwindigkeitsband"@de ;
-    rdfs:subClassOf materialsmine:DispersionBand .
+    rdfs:subClassOf :DispersionBand .
 
 :PhotonicDispersionRelation a owl:Class ;
     rdfs:label "Photonic Dispersion Relation"@en, "Relation de dispersion photonique"@fr, "Relación de dispersión fotónica"@es, "Photonische Dispersionsrelation"@de ;
-    rdfs:subClassOf materialsmine:DispersionRelation ;
+    rdfs:subClassOf :DispersionRelation ;
     skos:definition "A dispersion relation in a medium defined for optical properties."@en,
                     "Une relation de dispersion dans un milieu définie pour les propriétés optiques."@fr,
                     "Una relación de dispersión en un medio definida para propiedades ópticas."@es,
@@ -836,7 +835,7 @@
 
 :PhononicDispersionRelation a owl:Class ;
     rdfs:label "Phononic Dispersion Relation"@en, "Relation de dispersion phononique"@fr, "Relación de dispersión fonónica"@es, "Phononische Dispersionsrelation"@de ;
-    rdfs:subClassOf materialsmine:DispersionRelation ;
+    rdfs:subClassOf :DispersionRelation ;
     skos:definition "A dispersion relation in a medium defined for acoustic properties."@en,
                     "Une relation de dispersion dans un milieu définie pour les propriétés acoustiques."@fr,
                     "Una relación de dispersión en un medio definida para propiedades acústicas."@es,
@@ -844,11 +843,11 @@
 
 :PhysicalSpaceGeometry a owl:Class ;
     rdfs:label "Physical Space Geometry"@en, "Géométrie de l'espace physique"@fr, "Geometría del espacio físico"@es, "Physikalische Raumgeometrie"@de ;
-    rdfs:subClassOf materialsmine:UnitCellGeometry .
+    rdfs:subClassOf :UnitCellGeometry .
 
 :PhysicsModel a owl:Class ;
     rdfs:label "Physics Model"@en, "Modèle physique"@fr, "Modelo físico"@es, "Physikmodell"@de ;
-    rdfs:subClassOf materialsmine:Continuous ;
+    rdfs:subClassOf :Continuous ;
     skos:definition "A model of a system to study a specific physics, for example linear elasticity, dielectricity etc. "@en,
                     "Un modèle d’un système pour étudier une physique spécifique, par exemple l’élasticité linéaire, la diélectricité, etc."@fr,
                     "Un modelo de un sistema para estudiar una física específica, por ejemplo, la elasticidad lineal, la dieléctrica, etc."@es,
@@ -884,7 +883,7 @@
 
 :PixelatedUnitCell a owl:Class ;
     rdfs:label "Pixelated Unit Cell"@en, "Cellule unitaire pixellisée"@fr, "Celda unitaria pixelada"@es, "Pixelierte Einheitszelle"@de ;
-    rdfs:subClassOf materialsmine:UnitCellGeometry ;
+    rdfs:subClassOf :UnitCellGeometry ;
     skos:definition "The unit cell is divided into discrete pixels, each assigned a material property."@en,
                     "La cellule unitaire est divisée en pixels discrets, chacun assigné à une propriété matérielle."@fr,
                     "La celda unitaria se divide en píxeles discretos, cada uno asignado a una propiedad material."@es,
@@ -892,7 +891,7 @@
 
 :PixelMaterialPropertyField a owl:Class ;
     rdfs:label "Pixel Material Property Field"@en, "Champ de propriétés matérielles pixellisé"@fr, "Campo de propiedades materiales pixelado"@es, "Pixel-Materialeigenschaftsfeld"@de ;
-    rdfs:subClassOf materialsmine:MaterialPropertyField ;
+    rdfs:subClassOf :MaterialPropertyField ;
     skos:definition "Material property field represented as a pixelated image."@en,
                     "Champ de propriétés matérielles représenté sous forme d’image pixellisée."@fr,
                     "Campo de propiedades materiales representado como una imagen pixelada."@es,
@@ -900,7 +899,7 @@
 
 :PlaneStrain a owl:Class ;
     rdfs:label "Plane Strain"@en, "Déformation plane"@fr, "Deformación plana"@es, "Ebene Verformung"@de ;
-    rdfs:subClassOf materialsmine:Strain ;
+    rdfs:subClassOf :Strain ;
     skos:definition "A state of strain where the out of plane component of strain is zero."@en,
                     "Un état de déformation où la composante hors plan de la déformation est nulle."@fr,
                     "Un estado de deformación donde la componente fuera del plano de la deformación es cero."@es,
@@ -908,7 +907,7 @@
 
 :PlaneStress a owl:Class ;
     rdfs:label "Plane Stress"@en, "Contrainte plane"@fr, "Esfuerzo plano"@es, "Ebene Spannung"@de ;
-    rdfs:subClassOf materialsmine:Stress ;
+    rdfs:subClassOf :Stress ;
     skos:definition "A state of stress where the out of plane component of stress is zero."@en,
                     "Un état de contrainte où la composante hors plan de la contrainte est nulle."@fr,
                     "Un estado de esfuerzo donde la componente fuera del plano del esfuerzo es cero."@es,
@@ -950,7 +949,7 @@
 
 :ReciprocalSpaceGeometry a owl:Class ;
     rdfs:label "Reciprocal Space Geometry"@en, "Géométrie de l'espace réciproque"@fr, "Geometría del espacio recíproco"@es, "Reziproke Raumgeometrie"@de ;
-    rdfs:subClassOf materialsmine:FirstBrillouinZone ;
+    rdfs:subClassOf :FirstBrillouinZone ;
     skos:definition "The Fourier transform of a periodic geometry."@en,
                     "La transformée de Fourier d’une géométrie périodique."@fr,
                     "La transformada de Fourier de una geometría periódica."@es,
@@ -958,7 +957,7 @@
 
 :RectangularGeometry a owl:Class ;
     rdfs:label "Rectangular Geometry"@en, "Géométrie rectangulaire"@fr, "Geometría rectangular"@es, "Rechteckige Geometrie"@de ;
-    rdfs:subClassOf materialsmine:2DGeometry ;
+    rdfs:subClassOf :2DGeometry ;
     skos:definition "The shape of the unit cell: Characterized by a parallelogram with two unequal side lengths, perpendicular sides."@en,
                     "La forme de la cellule unitaire : Caractérisée par un parallélogramme avec deux longueurs de côtés inégales, des côtés perpendiculaires."@fr,
                     "La forma de la celda unitaria: Caracterizada por un paralelogramo con dos longitudes de lados desiguales, lados perpendiculares."@es,
@@ -966,7 +965,7 @@
 
 :RepresentativeVolumeElementGeometry a owl:Class ;
     rdfs:label "Representative Volume Element Geometry"@en, "Géométrie de l'élément de volume représentatif"@fr, "Geometría del elemento de volumen representativo"@es, "Geometrie des repräsentativen Volumenelements"@de ;
-    rdfs:subClassOf materialsmine:Geometry ;
+    rdfs:subClassOf :Geometry ;
     skos:definition "The simplest repeating unit in a structure in 3D that will yield.the same behavior as the whole structure."@en,
                     "L’unité répétitive la plus simple dans une structure en 3D qui produira le même comportement que l’ensemble de la structure."@fr,
                     "La unidad repetitiva más simple en una estructura en 3D que dará el mismo comportamiento que toda la estructura."@es,
@@ -990,10 +989,10 @@
 :SolidContinuumPhysicsModel a owl:Class ;
     rdfs:label "Solid Continuum Physics Model"@en, "Modèle physique de continuum solide"@fr, "Modelo físico de continuo sólido"@es, "Festkörperkontinuums-Physikmodell"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:MaterialConstitutiveModel ],
+            owl:someValuesFrom :MaterialConstitutiveModel ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:SolidMechanicsModel ],
-            materialsmine:PhysicsModel ;
+            owl:someValuesFrom :SolidMechanicsModel ],
+            :PhysicsModel ;
     skos:definition "A model of a system where a material is represented as a continuum without considering any internal architectures or microstructures."@en,
                     "Un modèle d’un système où un matériau est représenté comme un continuum sans prendre en compte les architectures ou microstructures internes."@fr,
                     "Un modelo de un sistema donde un material se representa como un continuo sin considerar arquitecturas o microestructuras internas."@es,
@@ -1001,7 +1000,7 @@
 
 :SolidMechanicsModel a owl:Class ;
     rdfs:label "Solid Mechanics Model"@en, "Modèle de mécanique des solides"@fr, "Modelo de mecánica de sólidos"@es, "Festkörpermechanikmodell"@de ;
-    rdfs:subClassOf materialsmine:2DSolidMechanicsModel ;
+    rdfs:subClassOf :2DSolidMechanicsModel ;
     skos:definition "A model of a material/system that models interactions caused by forces resulting in stresses and strains."@en,
                     "Un modèle d’un matériau/système qui modélise les interactions causées par des forces entraînant des contraintes et des déformations."@fr,
                     "Un modelo de un material/sistema que modela las interacciones causadas por fuerzas que resultan en esfuerzos y deformaciones."@es,
@@ -1009,7 +1008,7 @@
 
 :SquareGeometry a owl:Class ;
     rdfs:label "Square Geometry"@en, "Géométrie carrée"@fr, "Geometría cuadrada"@es, "Quadratische Geometrie"@de ;
-    rdfs:subClassOf materialsmine:RectangularGeometry ;
+    rdfs:subClassOf :RectangularGeometry ;
     skos:definition "The shape of the unit cell: Characterized by a parallelogram with two equal side lengths, perpendicular sides."@en,
                     "La forme de la cellule unitaire : Caractérisée par un parallélogramme avec deux longueurs de côtés égales, des côtés perpendiculaires."@fr,
                     "La forma de la celda unitaria: Caracterizada por un paralelogramo con dos longitudes de lados iguales, lados perpendiculares."@es,
@@ -1033,11 +1032,11 @@
 
 :StructuralGeometry a owl:Class ;
     rdfs:label "Structural Geometry"@en, "Géométrie structurelle"@fr, "Geometría estructural"@es, "Strukturgeometrie"@de ;
-    rdfs:subClassOf materialsmine:Geometry .
+    rdfs:subClassOf :Geometry .
 
 :SurrogateModel a owl:Class ;
     rdfs:label "Surrogate Model"@en, "Modèle de substitution"@fr, "Modelo sustituto"@es, "Surrogatmodell"@de ;
-    rdfs:subClassOf materialsmine:ConcretizedModel ;
+    rdfs:subClassOf :ConcretizedModel ;
     skos:definition "A model that mimics the input/output behavior of complex systems."@en,
                     "Un modèle qui imite le comportement entrée/sortie de systèmes complexes."@fr,
                     "Un modelo que imita el comportamiento de entrada/salida de sistemas complejos."@es,
@@ -1067,7 +1066,7 @@
 
 :TriangularGeometry a owl:Class ;
     rdfs:label "Triangular Geometry"@en, "Géométrie triangulaire"@fr, "Geometría triangular"@es, "Dreieckige Geometrie"@de ;
-    rdfs:subClassOf materialsmine:2DGeometry ;
+    rdfs:subClassOf :2DGeometry ;
     skos:definition "The shape of the unit cell: Equilateral triangle."@en,
                     "La forme de la cellule unitaire : Triangle équilatéral."@fr,
                     "La forma de la celda unitaria: Triángulo equilátero."@es,
@@ -1076,9 +1075,9 @@
 :UnitCell a owl:Class ;
     rdfs:label "Unit Cell"@en, "Cellule unitaire"@fr, "Celda unitaria"@es, "Einheitszelle"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:MaterialPropertyField ],
+            owl:someValuesFrom :MaterialPropertyField ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:UnitCellGeometry ],
+            owl:someValuesFrom :UnitCellGeometry ],
         [ a owl:Restriction ;
             owl:someValuesFrom sio:SIO_000043 ] ;
     skos:definition "The simplest repeating unit in a structure."@en,
@@ -1112,7 +1111,7 @@
 
 :UnitCellGeometry a owl:Class ;
     rdfs:label "Unit Cell Geometry"@en, "Géométrie de la cellule unitaire"@fr, "Geometría de la celda unitaria"@es, "Geometrie der Einheitszelle"@de ;
-    rdfs:subClassOf materialsmine:Geometry ;
+    rdfs:subClassOf :Geometry ;
     skos:definition "The geometry of a unit cell."@en,
                     "La géométrie d'une cellule unitaire."@fr,
                     "La geometría de una celda unitaria."@es,
@@ -1120,7 +1119,7 @@
 
  :UserDefinedMaterialPropertyField a owl:Class ;
     rdfs:label "User Defined Material Property Field"@en, "Champ de propriétés matérielles défini par l’utilisateur"@fr, "Campo de propiedades materiales definido por el usuario"@es, "Benutzerdefiniertes Materialeigenschaftsfeld"@de ;
-    rdfs:subClassOf materialsmine:MaterialPropertyField ;
+    rdfs:subClassOf :MaterialPropertyField ;
     skos:definition "A variable that describes the distribution of materials using the parameters defined by the user."@en,
                     "Une variable qui décrit la distribution des matériaux à l’aide des paramètres définis par l’utilisateur."@fr,
                     "Una variable que describe la distribución de materiales utilizando los parámetros definidos por el usuario."@es,
@@ -1176,11 +1175,11 @@
 :WaveVector a owl:Class ;
     rdfs:label "Wave Vector"@en, "Vecteur d'onde"@fr, "Vector de onda"@es, "Wellenvektor"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:DispersionBandValue ],
+            owl:someValuesFrom :DispersionBandValue ],
             [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:DispersionRelation ], 
+            owl:someValuesFrom :DispersionRelation ], 
             [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ReciprocalSpaceGeometry ], 
+            owl:someValuesFrom :ReciprocalSpaceGeometry ], 
             sio:SIO_000071 .
 
 :YoungModulus a owl:Class ;
@@ -1244,7 +1243,7 @@
 :Dissolving a owl:Class ;
     rdfs:label "Dissolving"@en, "Dissolution"@fr, "Disolución"@es, "Auflösen"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Solvent ],
+            owl:someValuesFrom :Solvent ],
         sio:SIO_000999 ;
     skos:definition "Dissolving into solution without external force."@en,
                     "Dissolution dans une solution sans force externe."@fr,
@@ -1264,7 +1263,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:someValuesFrom <obo:PATO_0001025> ],
             [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:AmbientCondition ],
+            owl:someValuesFrom :AmbientCondition ],
         [ a owl:Restriction ;
             owl:someValuesFrom <obo:PATO_0000146> ],
             sio:SIO_000999 ;
@@ -1276,7 +1275,7 @@
 
 :AmbientCondition a owl:Class ;
     rdfs:label "Ambient Condition"@en, "Condition ambiante"@fr, "Condición ambiental"@es, "Umgebungsbedingung"@de ;
-    rdfs:subClassOf materialsmine:ProcessingCondition ;
+    rdfs:subClassOf :ProcessingCondition ;
     skos:definition "Ambient conditions."@en,
                     "Conditions ambiantes."@fr,
                     "Condiciones ambientales."@es,
@@ -1292,7 +1291,7 @@
 
 :Air a owl:Class ;
     rdfs:label "Air"@en, "Air"@fr, "Aire"@es, "Luft"@de ;
-    rdfs:subClassOf materialsmine:AmbientCondition ;
+    rdfs:subClassOf :AmbientCondition ;
     skos:definition "Ambient condition involving air as the surrounding medium."@en,
                     "Condition ambiante impliquant l’air comme milieu environnant."@fr,
                     "Condición ambiental que involucra el aire como medio circundante."@es,
@@ -1300,7 +1299,7 @@
 
 :Vacuum a owl:Class ;
     rdfs:label "Vacuum"@en, "Vide"@fr, "Vacío"@es, "Vakuum"@de ;
-    rdfs:subClassOf materialsmine:AmbientCondition ;
+    rdfs:subClassOf :AmbientCondition ;
     skos:definition "Ambient condition involving a vacuum environment."@en,
                     "Condition ambiante impliquant un environnement sous vide."@fr,
                     "Condición ambiental que involucra un entorno de vacío."@es,
@@ -1308,7 +1307,7 @@
 
 :Inert a owl:Class ;
     rdfs:label "Inert"@en, "Inerte"@fr, "Inerte"@es, "Inert"@de ;
-    rdfs:subClassOf materialsmine:AmbientCondition ;
+    rdfs:subClassOf :AmbientCondition ;
     skos:definition "Ambient condition involving an inert gas environment."@en,
                     "Condition ambiante impliquant un environnement de gaz inerte."@fr,
                     "Condición ambiental que involucra un entorno de gas inerte."@es,
@@ -1321,7 +1320,7 @@
         [ a owl:Restriction ;
             owl:someValuesFrom <obo:PATO_0000146> ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:AmbientCondition ],
+            owl:someValuesFrom :AmbientCondition ],
         sio:SIO_000999 ;
     pico:Duration sio:SIO_000417 ;
     skos:definition "Process for reducing the temperature of a material."@en,
@@ -1337,7 +1336,7 @@
         [ a owl:Restriction ;
             owl:someValuesFrom <obo:PATO_0000146> ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:AmbientCondition ],
+            owl:someValuesFrom :AmbientCondition ],
         sio:SIO_000999 ;
     pico:Duration sio:SIO_000417 ;
     skos:definition "Process for drying and evaporation of liquid solutions."@en,
@@ -1368,7 +1367,7 @@
         [ a owl:Restriction ;
             owl:someValuesFrom <obo:PATO_0000146> ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:AmbientCondition ],
+            owl:someValuesFrom :AmbientCondition ],
         [ a owl:Restriction ;
             owl:someValuesFrom <obo:PATO_0001025> ],
         sio:SIO_000999 ;
@@ -1379,7 +1378,7 @@
 
 :HotPressing a owl:Class ;
     rdfs:label "Hot-Processing (Compression Molding)"@en, "Pressage à chaud (moulage par compression)"@fr, "Procesamiento en caliente (moldeo por compresión)"@es, "Heißpressen (Kompressionsformen)"@de ;
-    rdfs:subClassOf materialsmine:Molding ;
+    rdfs:subClassOf :Molding ;
     skos:definition "Applying heat and pressure."@en,
                     "Application de chaleur et de pression."@fr,
                     "Aplicación de calor y presión."@es,
@@ -1387,7 +1386,7 @@
 
 :Casting a owl:Class ;
     rdfs:label "Casting"@en, "Coulée"@fr, "Fundición"@es, "Gießen"@de ;
-    rdfs:subClassOf materialsmine:Molding ;
+    rdfs:subClassOf :Molding ;
     skos:definition "A process of shaping a composite by pouring it into a mold."@en,
                     "Un processus de mise en forme d’un composite en le versant dans un moule."@fr,
                     "Un proceso de dar forma a un compuesto vertiéndolo en un molde."@es,
@@ -1395,7 +1394,7 @@
 
 :InjectionMolding a owl:Class ;
     rdfs:label "Injection Molding"@en, "Moulage par injection"@fr, "Moldeo por inyección"@es, "Spritzgießen"@de ;
-    rdfs:subClassOf materialsmine:Molding ;
+    rdfs:subClassOf :Molding ;
     skos:definition "A process of shaping a composite by injecting material into a mold."@en,
                     "Un processus de mise en forme d’un composite en injectant du matériau dans un moule."@fr,
                     "Un proceso de dar forma a un compuesto inyectando material en un molde."@es,
@@ -1403,7 +1402,7 @@
 
 :RotationalMolding a owl:Class ;
     rdfs:label "Rotational Molding"@en, "Moulage par rotation"@fr, "Moldeo rotacional"@es, "Rotationsformen"@de ;
-    rdfs:subClassOf materialsmine:Molding ;
+    rdfs:subClassOf :Molding ;
     skos:definition "A process of shaping a composite by rotating a mold while heating."@en,
                     "Un processus de mise en forme d’un composite en faisant tourner un moule tout en chauffant."@fr,
                     "Un proceso de dar forma a un compuesto rotando un molde mientras se calienta."@es,
@@ -1411,7 +1410,7 @@
 
 :VacuumMolding a owl:Class ;
     rdfs:label "Vacuum Molding"@en, "Moulage sous vide"@fr, "Moldeo al vacío"@es, "Vakuumformen"@de ;
-    rdfs:subClassOf materialsmine:Molding ;
+    rdfs:subClassOf :Molding ;
     skos:definition "A process of shaping a composite using a vacuum to draw material into a mold."@en,
                     "Un processus de mise en forme d’un composite en utilisant un vide pour aspirer le matériau dans un moule."@fr,
                     "Un proceso de dar forma a un compuesto usando un vacío para atraer el material hacia un molde."@es,
@@ -1422,7 +1421,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:someValuesFrom <obo:PATO_0000146> ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:RotationalFrequency ],
+            owl:someValuesFrom :RotationalFrequency ],
         sio:SIO_000999 ;
     pico:Duration sio:SIO_000417 ;
     skos:definition "Processes for mixing of multiple substances."@en,
@@ -1444,8 +1443,8 @@
 :MeltMixing a owl:Class ;
     rdfs:label "Melt Mixing"@en, "Mélange par fusion"@fr, "Mezcla por fusión"@es, "Schmelzmischen"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Additive ],
-        materialsmine:Mixing ;
+            owl:someValuesFrom :Additive ],
+        :Mixing ;
     skos:definition "Mixing of polymer and nanoparticles in molten state."@en,
                     "Mélange de polymères et de nanoparticules à l’état fondu."@fr,
                     "Mezcla de polímeros y nanopartículas en estado fundido."@es,
@@ -1454,8 +1453,8 @@
 :BallMilling a owl:Class ;
     rdfs:label "Ball Milling"@en, "Broyage à billes"@fr, "Molienda de bolas"@es, "Kugelmühlen"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Additive ],
-        materialsmine:Mixing ;
+            owl:someValuesFrom :Additive ],
+        :Mixing ;
     skos:definition "Grinding process with rotating cylindrical shells and balls."@en,
                     "Processus de broyage avec des coques cylindriques rotatives et des billes."@fr,
                     "Proceso de molienda con carcasas cilíndricas rotativas y bolas."@es,
@@ -1464,8 +1463,8 @@
 :Ultra-sonication a owl:Class ;
     rdfs:label "Ultra Sonication"@en, "Ultrasonication"@fr, "Ultrasonido"@es, "Ultraschallbehandlung"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Additive ],
-        materialsmine:Mixing ;
+            owl:someValuesFrom :Additive ],
+        :Mixing ;
     skos:definition """The irradiation of a liquid sample with ultrasonic (>20 kHz) waves resulting in agitation."""@en,
                     """L’irradiation d’un échantillon liquide avec des ondes ultrasoniques (>20 kHz) entraînant une agitation."""@fr,
                     """La irradiación de una muestra líquida con ondas ultrasónicas (>20 kHz) que resulta en agitación."""@es,
@@ -1474,8 +1473,8 @@
 :Stirring a owl:Class ;
     rdfs:label "Stirring"@en, "Agitation"@fr, "Agitación"@es, "Rühren"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Solvent ],
-        materialsmine:Mixing ;
+            owl:someValuesFrom :Solvent ],
+        :Mixing ;
     skos:definition "Manual stirring of liquid solutions."@en,
                     "Agitation manuelle de solutions liquides."@fr,
                     "Agitación manual de soluciones líquidas."@es,
@@ -1484,8 +1483,8 @@
 :MechanicalMixing a owl:Class ;
     rdfs:label "Mechanical Mixing"@en, "Mélange mécanique"@fr, "Mezcla mecánica"@es, "Mechanisches Mischen"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Additive ],
-        materialsmine:Mixing ;
+            owl:someValuesFrom :Additive ],
+        :Mixing ;
     skos:definition "Manual mixing."@en,
                     "Mélange manuel."@fr,
                     "Mezcla manual."@es,
@@ -1494,8 +1493,8 @@
 :HighShearMixing a owl:Class ;
     rdfs:label "High Shear Mixing"@en, "Mélange à haut cisaillement"@fr, "Mezcla de alto cizallamiento"@es, "Hochschermischen"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Additive ],
-        materialsmine:Mixing ;
+            owl:someValuesFrom :Additive ],
+        :Mixing ;
     skos:definition "A stator-rotator setup that disperses substance into continuous phase through high shear."@en,
                     "Une configuration stator-rotor qui disperse une substance dans une phase continue par un cisaillement élevé."@fr,
                     "Una configuración de estator-rotor que dispersa una sustancia en una fase continua mediante un alto cizallamiento."@es,
@@ -1504,8 +1503,8 @@
 :RollMilling a owl:Class ;
     rdfs:label "Roll Milling"@en, "Laminage"@fr, "Laminación"@es, "Walzfräsen"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Additive ],
-        materialsmine:Mixing ;
+            owl:someValuesFrom :Additive ],
+        :Mixing ;
     skos:definition "Grinding process with a roller and flat plate."@en,
                     "Processus de broyage avec un rouleau et une plaque plate."@fr,
                     "Proceso de molienda con un rodillo y una placa plana."@es,
@@ -1514,7 +1513,7 @@
 :Extrusion a owl:Class ;
     rdfs:label "Extrusion"@en, "Extrusion"@fr, "Extrusión"@es, "Extrusion"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Extruder ],
+            owl:someValuesFrom :Extruder ],
         sio:SIO_000999 ;
     skos:definition "Process used to create objects of a fixed cross-sectional profile. A material is pushed through a die of the desired cross-section."@en,
                     "Processus utilisé pour créer des objets avec un profil de section transversale fixe. Un matériau est poussé à travers une filière de la section transversale souhaitée."@fr,
@@ -1524,54 +1523,54 @@
 :Extruder a owl:Class ;
     rdfs:label "Extruder"@en, "Extrudeuse"@fr, "Extrusora"@es, "Extruder"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Throughput ],
+            owl:someValuesFrom :Throughput ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:InnerBarrelDiameter ],
+            owl:someValuesFrom :InnerBarrelDiameter ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ResidenceTime ],
+            owl:someValuesFrom :ResidenceTime ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:DLRatio ],
+            owl:someValuesFrom :DLRatio ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ChannelDepth ],
+            owl:someValuesFrom :ChannelDepth ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ScrewDiameter ],
+            owl:someValuesFrom :ScrewDiameter ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:MeltTemperature ],
+            owl:someValuesFrom :MeltTemperature ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:FlightClearance ],
+            owl:someValuesFrom :FlightClearance ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Dimension ],
+            owl:someValuesFrom :Dimension ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ScrewLead ],
+            owl:someValuesFrom :ScrewLead ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Amperage ],
+            owl:someValuesFrom :Amperage ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ScrewLength ],
+            owl:someValuesFrom :ScrewLength ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:FlightWidth ],
+            owl:someValuesFrom :FlightWidth ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:PressureAtDie ],
+            owl:someValuesFrom :PressureAtDie ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ExtrusionTemperature ],
+            owl:someValuesFrom :ExtrusionTemperature ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ChannelsPerScrew ],
+            owl:someValuesFrom :ChannelsPerScrew ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Voltage ],
+            owl:someValuesFrom :Voltage ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:Torque ],
+            owl:someValuesFrom :Torque ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:ScrewChannelWidth ],
+            owl:someValuesFrom :ScrewChannelWidth ],
         [ a owl:Restriction ;
-            owl:someValuesFrom materialsmine:HeatingZone ],
+            owl:someValuesFrom :HeatingZone ],
         sio:SIO_000956 .
 
 :SingleScrew a owl:Class ;
     rdfs:label "Single Screw Extruder"@en, "Extrudeuse à vis unique"@fr, "Extrusora de tornillo único"@es, "Einschneckenextruder"@de ;
-    rdfs:subClassOf materialsmine:Extruder .
+    rdfs:subClassOf :Extruder .
 
 :TwinScrew a owl:Class ;
     rdfs:label "Twin Screw Extruder"@en, "Extrudeuse à double vis"@fr, "Extrusora de doble tornillo"@es, "Doppelschneckenextruder"@de ;
-    rdfs:subClassOf materialsmine:Extruder .
+    rdfs:subClassOf :Extruder .
 
 :HeatingZone a owl:Class ;
     rdfs:label "Heating Zone"@en, "Zone de chauffage"@fr, "Zona de calentamiento"@es, "Heizzone"@de ;
@@ -1587,7 +1586,7 @@
 
 :RadialClearence a owl:Class ;
     rdfs:label "Radial Clearance"@en, "Jeu radial"@fr, "Holura radial"@es, "Radialspiel"@de ;
-    rdfs:subClassOf materialsmine:Dimension, sio:SIO_000040 .
+    rdfs:subClassOf :Dimension, sio:SIO_000040 .
 
 :Rotation a owl:Class ;
     rdfs:label "Rotation"@en, "Rotation"@fr, "Rotación"@es, "Rotation"@de ;
@@ -1650,7 +1649,7 @@
 
 :CounterRotation a owl:Class ;
     rdfs:label "Counter-Rotation"@en, "Contre-rotation"@fr, "Contra-rotación"@es, "Gegenrotation"@de ;
-    rdfs:subClassOf materialsmine:RotationMode .
+    rdfs:subClassOf :RotationMode .
 
 :ScrewChannelDiameter a owl:Class ;
     rdfs:label "Screw Channel Diameter"@en, "Diamètre du canal de vis"@fr, "Diámetro del canal de tornillo"@es, "Schneckenkanaldurchmesser"@de ;
@@ -1658,7 +1657,7 @@
 
 :CoRotation a owl:Class ;
     rdfs:label "Co-Rotation"@en, "Co-rotation"@fr, "Co-rotación"@es, "Mitrotation"@de ;
-    rdfs:subClassOf materialsmine:RotationMode .
+    rdfs:subClassOf :RotationMode .
 
 :RotationMode a owl:Class ;
     rdfs:label "Rotation Mode"@en, "Mode de rotation"@fr, "Modo de rotación"@es, "Rotationsmodus"@de ;
@@ -1744,7 +1743,7 @@
 
 :Nanocomposite a owl:Class ;
     rdfs:label "Nanocomposite"@en, "Nanocompuesto"@es, "Nanoverbundwerkstoff"@de, "Nanocomposite"@fr ;
-    rdfs:subClassOf materialsmine:Nanomaterial ;
+    rdfs:subClassOf :Nanomaterial ;
     skos:definition "A multiphase solid material where one of the phases has one, two or three dimensions of less than 100 nanometers (nm), or structures having nano-scale repeat distances between the different phases that make up the material. In the broadest sense this definition can include porous media, colloids, gels and copolymers, but is more usually taken to mean the solid combination of a bulk matrix and nano-dimensional phase(s) differing in properties due to dissimilarities in structure and chemistry."@en,
         "Un matériau solide multiphasique dans lequel l'une des phases présente une, deux ou trois dimensions inférieures à 100 nanomètres (nm), ou des structures ayant des distances de répétition à l'échelle nanométrique entre les différentes phases constituant le matériau. Dans son sens le plus large, cette définition peut inclure les milieux poreux, les colloïdes, les gels et les copolymères, mais elle désigne généralement la combinaison solide d'une matrice en vrac et de phase(s) nanométrique(s) ayant des propriétés différentes en raison de dissemblances de structure et de chimie."@fr,
         "Ein mehrphasiges Feststoffmaterial, bei dem eine der Phasen eine, zwei oder drei Dimensionen von weniger als 100 Nanometern (nm) aufweist oder Strukturen mit nanometergroßen Wiederholungsabständen zwischen den unterschiedlichen Phasen, aus denen das Material besteht. Im weitesten Sinne kann diese Definition poröse Medien, Kolloide, Gele und Copolymere umfassen, wird jedoch üblicherweise als feste Kombination einer Bulk-Matrix und nano-dimensionaler Phase(n) verstanden, die sich in ihren Eigenschaften aufgrund struktureller und chemischer Unterschiede unterscheiden."@de,
@@ -1753,7 +1752,7 @@
 
 :PolymerNanocomposite a owl:Class ;
     rdfs:label "Polymer Nanocomposite"@en, "Polymer-Nanokomposit"@de, "Nanocompuesto de polímero"@es, "Nanocomposite polymère"@fr ;
-    rdfs:subClassOf materialsmine:Nanocomposite ;
+    rdfs:subClassOf :Nanocomposite ;
     skos:altLabel "PNC" ;
     prov:wasQuotedFrom "https://en.wikipedia.org/wiki/Polymer_nanocomposite" ;
     skos:definition "Polymer nanocomposites (PNC) consist of a polymer or copolymer having nanoparticles or nanofillers dispersed in the polymer matrix. These may be of different shape (e.g., platelets, fibers, spheroids), but at least one dimension must be in the range of 1–50 nm."@en,
@@ -1763,7 +1762,7 @@
 
 :Particle a owl:Class ;
     rdfs:label "Particle"@en, "Partikel"@de, "Partícula"@es, "Particule"@fr ;
-    rdfs:subClassOf materialsmine:Nanocomposite ;
+    rdfs:subClassOf :Nanocomposite ;
     skos:altLabel "PNC" ;
     skos:definition "particles between 1 and 100 nanometers in size. In nanotechnology, a particle is defined as a small object that behaves as a whole unit with respect to its transport and properties."@en,
         "particules de taille comprise entre 1 et 100 nanomètres. En nanotechnologie, une particule est définie comme un petit objet se comportant comme une unité entière en ce qui concerne son transport et ses propriétés."@fr,
@@ -1807,13 +1806,13 @@
 
 :Thermoplastic a owl:Class ;
     rdfs:label "Thermoplastic"@en, "Polymermischung"@de, "Mezcla de polímeros"@es, "Mélange de polymères"@fr ;
-    rdfs:subClassOf materialsmine:Plastic ;
+    rdfs:subClassOf :Plastic ;
     skos:definition "a plastic material, a polymer, that becomes pliable or moldable above a specific temperature and solidifies upon cooling."@en, "un matériau plastique, un polymère, qui devient souple ou malléable au-dessus d'une certaine température et se solidifie en refroidissant."@fr, "ein Kunststoffmaterial, ein Polymer, das oberhalb einer bestimmten Temperatur formbar wird und beim Abkühlen erstarrt."@de, "un material plástico, un polímero, que se vuelve flexible o moldeable por encima de una temperatura específica y se solidifica al enfriarse."@es ;
     prov:wasQuotedFrom "https://en.wikipedia.org/wiki/Thermoplastic" .
 
 :Thermoset a owl:Class ;
     rdfs:label "Thermoplastic"@en, "Duroplast"@de, "Termoestable"@es, "Thermodurcissable"@fr ;
-    rdfs:subClassOf materialsmine:Plastic ;
+    rdfs:subClassOf :Plastic ;
     skos:definition "a cured thermosetting resin. A thermosetting resin is a prepolymer in a soft solid or viscous liquid state that changes irreversibly into an infusible, insoluble polymer network by curing."@en,
         "une résine thermodurcissable durcie. Une résine thermodurcissable est un prépolymère à l'état solide mou ou liquide visqueux qui se transforme irréversiblement en un réseau polymère infusible et insoluble par durcissement."@fr,
         "ein gehärtetes Duroplast. Ein Duroplast ist ein Prepolymer in einem weichen festen oder viskosen flüssigen Zustand, das sich durch Aushärtung irreversibel in ein unlösliches, nicht schmelzbares Polymernetzwerk umwandelt."@de,
@@ -1822,7 +1821,7 @@
 
 :Elastomer a owl:Class ;
     rdfs:label "Elastomer"@en, "Elastomer"@de, "Elastómero"@es, "Élastomère"@fr ;
-    rdfs:subClassOf materialsmine:Plastic ;
+    rdfs:subClassOf :Plastic ;
     skos:definition "a polymer with viscoelasticity (having both viscosity and elasticity) and very weak inter-molecular forces, generally having low Young's modulus and high failure strain compared with other materials."@en,
         "un polymère avec viscoélasticité (ayant à la fois viscosité et élasticité) et des forces intermoléculaires très faibles, présentant généralement un faible module de Young et une déformation à la rupture élevée par rapport à d'autres matériaux."@fr,
         "ein Polymer mit Viskoelastizität (sowohl Viskosität als auch Elastizität) und sehr schwachen zwischenmolekularen Kräften, das im Allgemeinen einen niedrigen Elastizitätsmodul und eine hohe Bruchdehnung im Vergleich zu anderen Materialien aufweist."@de,
@@ -1840,7 +1839,7 @@
 
 :Isotactic a owl:Class ;
     rdfs:label "Isotactic"@en, "Isotaktischt"@de, "Isotáctico"@es, "Isotactique"@fr ;
-    rdfs:subClassOf materialsmine:Tacticity ;
+    rdfs:subClassOf :Tacticity ;
     skos:definition "Isotactic polymers are composed of isotactic macromolecules (IUPAC definition). In isotactic macromolecules all the substituents are located on the same side of the macromolecular backbone. An isotactic macromolecule consists of 100% meso diads. Polypropylene formed by Ziegler-Natta catalysis is an isotactic polymer. Isotactic polymers are usually semicrystalline and often form a helix configuration."@en,
         "Les polymères isotactiques sont composés de macromolécules isotactiques (définition de l'IUPAC). Dans les macromolécules isotactiques, tous les substituants sont situés du même côté de la chaîne macromoléculaire. Une macromolécule isotactique est constituée à 100 % de diades méso. Le polypropylène formé par catalyse de Ziegler-Natta est un polymère isotactique. Les polymères isotactiques sont généralement semi-cristallins et forment souvent une configuration hélicoïdale."@fr,
         "Isotaktische Polymere bestehen aus isotaktischen Makromolekülen (IUPAC-Definition). Bei isotaktischen Makromolekülen befinden sich alle Substituenten auf derselben Seite des Makromolekül-Rückgrats. Ein isotaktisches Makromolekül besteht zu 100 % aus Meso-Diaden. Polypropylen, das durch Ziegler-Natta-Katalyse hergestellt wird, ist ein isotaktisches Polymer. Isotaktische Polymere sind in der Regel teilkristallin und bilden häufig eine helikale Konfiguration."@de,
@@ -1849,7 +1848,7 @@
 
 :Syndiotactic a owl:Class ;
     rdfs:label "Syndiotactic"@en, "Syndiotaktisch"@de, "Sindiotáctico"@es, "Syndiotactique"@fr ;
-    rdfs:subClassOf materialsmine:Tacticity ;
+    rdfs:subClassOf :Tacticity ;
     skos:definition "In syndiotactic or syntactic macromolecules the substituents have alternate positions along the chain. The macromolecule consists 100% of racemo diads. Syndiotactic polystyrene, made by metallocene catalysis polymerization, is crystalline with a melting point of 161 °C. Gutta percha is also an example for Syndiotactic polymer."@en,
         "Dans les macromolécules syndiotactiques ou syntaxiques, les substituants occupent des positions alternées le long de la chaîne. La macromolécule est constituée à 100 % de diades racémiques. Le polystyrène syndiotactique, obtenu par polymérisation catalysée par des métallocènes, est cristallin avec un point de fusion de 161 °C. La gutta-percha est également un exemple de polymère syndiotactique."@fr,
         "In syndiotaktischen oder syntaktischen Makromolekülen befinden sich die Substituenten abwechselnd entlang der Kette. Das Makromolekül besteht zu 100 % aus Racemo-Diaden. Syndiotaktisches Polystyrol, hergestellt durch Metallocen-katalysierte Polymerisation, ist kristallin und hat einen Schmelzpunkt von 161 °C. Guttapercha ist ebenfalls ein Beispiel für einen syndiotaktischen Polymer."@de,
@@ -1858,7 +1857,7 @@
 
 :Atactic a owl:Class ;
     rdfs:label "Atactic"@en, "Ataktisch"@de, "Atáctico"@es, "Atactique"@fr ;
-    rdfs:subClassOf materialsmine:Tacticity ;
+    rdfs:subClassOf :Tacticity ;
     skos:definition "In atactic macromolecules the substituents are placed randomly along the chain. The percentage of meso diads is between 1 and 99%. With the aid of spectroscopic techniques such as NMR it is possible to pinpoint the composition of a polymer in terms of the percentages for each triad."@en,
         "Dans les macromolécules atactiques, les substituants sont placés de manière aléatoire le long de la chaîne. Le pourcentage de diades méso est compris entre 1 et 99 %. À l'aide de techniques spectroscopiques telles que la RMN, il est possible de déterminer la composition d’un polymère en termes de pourcentages de chaque triade."@fr,
         "In ataktischen Makromolekülen sind die Substituenten zufällig entlang der Kette angeordnet. Der Prozentsatz der Meso-Diaden liegt zwischen 1 und 99 %. Mithilfe spektroskopischer Techniken wie NMR lässt sich die Zusammensetzung eines Polymers anhand der Prozentsätze jeder Triade genau bestimmen."@de,
@@ -1867,7 +1866,7 @@
 
 :Eutactic a owl:Class ;
     rdfs:label "Eutactic"@en, "Eutaktisch"@de, "Eutactique"@fr, "Eutáctico"@es ;
-    rdfs:subClassOf materialsmine:Tacticity ;
+    rdfs:subClassOf :Tacticity ;
     skos:definition "In eutactic macromolecules, substituents may occupy any specific (but potentially complex) sequence of positions along the chain. Isotactic and syndiotactic polymers are instances of the more general class of eutactic polymers, which also includes heterogeneous macromolecules in which the sequence consists of substituents of different kinds (for example, the side-chains in proteins and the bases in nucleic acids)."@en,
         "Dans les macromolécules eutactiques, les substituants peuvent occuper une séquence spécifique (mais potentiellement complexe) de positions le long de la chaîne. Les polymères isotactiques et syndiotactiques sont des exemples de la classe plus générale des polymères eutactiques, qui inclut également les macromolécules hétérogènes dont la séquence est composée de substituants de types différents (par exemple, les chaînes latérales dans les protéines et les bases dans les acides nucléiques)."@fr,
         "In eutaktischen Makromolekülen können Substituenten eine bestimmte (aber potenziell komplexe) Abfolge von Positionen entlang der Kette einnehmen. Isotaktische und syndiotaktische Polymere sind Beispiele für die allgemeinere Klasse der eutaktischen Polymere, zu der auch heterogene Makromoleküle gehören, bei denen die Sequenz aus Substituenten verschiedener Art besteht (zum Beispiel die Seitenketten in Proteinen und die Basen in Nukleinsäuren)."@de,
@@ -1915,7 +1914,7 @@
 
 :Hardener a owl:Class ;
     rdfs:label "Hardener"@en, "Härter"@de, "Endurecedor"@es, "Durcisseur"@fr ;
-    rdfs:subClassOf materialsmine:Additive ;
+    rdfs:subClassOf :Additive ;
     skos:definition "A chemical additive that increases the viscosity of a polymer."@en, "Un additif chimique qui augmente la viscosité d'un polymère."@fr, "Ein chemischer Zusatzstoff, der die Viskosität eines Polymers erhöht."@de, "Un aditivo químico que aumenta la viscosidad de un polímero."@es .
 
 :Additive a owl:Class ;
@@ -1991,7 +1990,7 @@
 
 :MolecularWeight_Mw a owl:Class ;
     rdfs:label "Molecular Weight"@en, "Molekulargewicht (Mw)"@de, "Molekulargewicht (Mw)"@de, "Poids moléculaire (Mw)"@fr ;
-    rdfs:subClassOf materialsmine:MolecularWeight ;
+    rdfs:subClassOf :MolecularWeight ;
     skos:definition "Mw, the weight averaged molecular weight, typically in units g/mol, kg/mol, or kDa, describes the average size of the matrix polymer chains."@en,
         "Mw, el peso molecular promedio ponderado, típicamente en unidades de g/mol, kg/mol o kDa, describe el tamaño promedio de las cadenas poliméricas de la matriz."@es,
         "Mw, das gewichtsmittlere Molekulargewicht, typischerweise in g/mol, kg/mol oder kDa angegeben, beschreibt die durchschnittliche Größe der Polymerketten der Matrix."@de,
@@ -1999,7 +1998,7 @@
 
 :MolecularWeight_Mn a owl:Class ;
     rdfs:label "Molecular Weight"@en, "Molekulargewicht (Mw)"@de, "Peso molecular (Mw)"@es, "Poids moléculaire (Mw)"@fr ;
-    rdfs:subClassOf materialsmine:MolecularWeight ;
+    rdfs:subClassOf :MolecularWeight ;
     skos:altLabel "Number Average Molar Mass" ;
     skos:definition "Mn, the number averaged molecular weight, typically in units g/mol, kg/mol, or kDa, describes the arithmetic mean of the matrix polymer chains."@en,
         "Mn, la masse moléculaire moyenne en nombre, généralement exprimée en g/mol, kg/mol ou kDa, décrit la moyenne arithmétique des chaînes polymères de la matrice."@fr,
@@ -2017,7 +2016,7 @@
 
 :MatrixComponent a owl:Class ;
     rdfs:label "GraftDensity"@en, "Matrixkomponente"@de, "Componente de la matriz"@es, "Composant de matrice"@fr ;
-    rdfs:subClassOf materialsmine:Component .
+    rdfs:subClassOf :Component .
 
 :ChemicalName a owl:Class ;
     rdfs:label "Chemical Name"@en, "Chemischer Name"@de, "Nombre químico"@es, "Nom chimique"@fr ;
@@ -2025,7 +2024,7 @@
 
 :StdChemicalName a owl:Class ;
     rdfs:label "StdChemicalName"@en, "Standard-Chemikalienname"@de, "Nombre químico estándar"@es, "Nom chimique standard"@fr ;
-    rdfs:subClassOf materialsmine:ChemicalName .
+    rdfs:subClassOf :ChemicalName .
 
 :SMILES a owl:Class ;
     rdfs:label "SMILES"@en, "Lächeln"@de, "Sonrisas"@es, "Sourires"@fr ;
@@ -2037,11 +2036,11 @@
 
 :MatrixProcessing a owl:Class ;
     rdfs:label "Matrix Processing"@en, "Matrixverarbeitung"@de, "Procesamiento de matriz"@es, "Traitement de matrice"@fr ;
-    rdfs:subClassOf materialsmine:Processing .
+    rdfs:subClassOf :Processing .
 
 :FillerComponent a owl:Class ;
     rdfs:label "Filler Component"@en, "Füllstoffkomponente"@de, "Componente de relleno"@es, "Composant de charge"@fr ;
-    rdfs:subClassOf materialsmine:Component .
+    rdfs:subClassOf :Component .
 
 :Total a owl:Class ;
     rdfs:label "Total"@en, "Gesamt"@de, "Total"@es, "Total"@fr ;
@@ -2049,15 +2048,15 @@
 
 :FillerComponentComposition a owl:Class ;
     rdfs:label "Filler Component Composition"@en, "Zusammensetzung der Füllstoffkomponente"@de, "Composición del componente de relleno"@es, "Composition du composant de charge"@fr ;
-    rdfs:subClassOf materialsmine:Composition .
+    rdfs:subClassOf :Composition .
 
 :ParticleSurfaceTreatmentComposition a owl:Class ;
     rdfs:label "Particle Surface Treatment Composition"@en, "Zusammensetzung der Partikeloberflächenbehandlung"@de, "Composición del tratamiento de la superficie de partículas"@es, "Composition du traitement de surface des particules"@fr ;
-    rdfs:subClassOf materialsmine:Composition .
+    rdfs:subClassOf :Composition .
 
 :SurfaceChemistryProcessing a owl:Class ;
     rdfs:label "Surface Chemistry Processing", "Oberflächenchemie-Verarbeitung"@de, "Procesamiento de química de superficies"@e, "Traitement de la chimie de surface"@fr ;
-    rdfs:subClassOf materialsmine:Processing .
+    rdfs:subClassOf :Processing .
 
 :FillerProcessing a owl:Class ;
     rdfs:label "Filler Processing"@en, "PubChem-Referenz"@de, "Referencia PubChem"@es, "Référence PubChem"@fr ;
@@ -2065,11 +2064,11 @@
 
 :FillerComposition a owl:Class ;
     rdfs:label "Filler Composition"@en, "Füllstoffverarbeitung"@de, "Procesamiento de relleno"@es, "Traitement du remplissage"@fr ;
-    rdfs:subClassOf materialsmine:Composition .
+    rdfs:subClassOf :Composition .
 
 :FillerComponentInComposite a owl:Class ;
     rdfs:label "Filler Component in Composite"@en, "PubChem-Referenz"@de, "Componente de relleno en compuesto"@es, "Composant de charge dans le composite"@fr ;
-    rdfs:subClassOf materialsmine:FillerComponent .
+    rdfs:subClassOf :FillerComponent .
 
 :MolecularWeight a owl:Class ;
     rdfs:label "Molecular Weight"@en, "Molekulargewicht"@de, "Peso molecular"@es, "Poids moléculaire"@fr ;
@@ -2077,7 +2076,7 @@
 
 :MolecularWeight_zAverage a owl:Class ;
     rdfs:label "Molecular Weight Z Average"@en, "Peso molecular promedio Z"@es, "Z-Molekulargewicht"@de, "Masse moléculaire moyenne Z"@fr ;
-    rdfs:subClassOf materialsmine:MolecularWeight .
+    rdfs:subClassOf :MolecularWeight .
 
 :Interphase a owl:Class ;
     rdfs:label "Interphase"@en, "Interfase"@es, "Interphase"@de, "Interphase"@fr ;
@@ -2109,7 +2108,7 @@
 
 :FiniteElementAnalysis a owl:Class ;
     rdfs:label "Finite Element Analysis"@en, "Análisis por elementos finitos"@es, "Finite-Elemente-Methode"@de, "Analyse par éléments finis"@fr ;
-    rdfs:subClassOf materialsmine:Simulation .
+    rdfs:subClassOf :Simulation .
 
 :DirectCurrent a owl:Class ;
     rdfs:label "Direct Current"@en, "Corriente continua"@es, "Gleichstrom"@de, "Courant continu"@fr ;
@@ -2121,15 +2120,15 @@
 
 :Abaqus a owl:Class ;
     rdfs:label "Abaqus"@en, "Abaqus"@es, "Abaqus"@de, "Abaqus"@fr ;
-    rdfs:subClassOf materialsmine:SoftwareExecution .
+    rdfs:subClassOf :SoftwareExecution .
 
 :Isotropic a owl:Class ;
     rdfs:label "Isotropic"@en, "Isotrópico"@es, "Isotrop"@de, "Isotrope"@fr ;
-    rdfs:subClassOf materialsmine:Orientation .
+    rdfs:subClassOf :Orientation .
 
 :Anisotropic a owl:Class ;
     rdfs:label "Anisotropic"@en, "Anisotrópico"@es, "Anisotrop"@de, "Anisotrope"@fr ;
-    rdfs:subClassOf materialsmine:Orientation .
+    rdfs:subClassOf :Orientation .
 
 :CelluloseNanofibers a owl:Class ;
     rdfs:label "Cellulose nanofibers"@en, "Nanofibrillas de celulosa"@es, "Cellulose-Nanofasern"@de, "Nanofibres de cellulose"@fr ;
@@ -2197,7 +2196,7 @@
 
 :CrosslinkDensityFraction a owl:Class ;
     rdfs:label "CrosslinkDensityFraction"@en, "Fracción de densidad de reticulación"@es, "Vernetzungsdichteanteil"@de, "Fraction de densité de réticulation"@fr ;
-    rdfs:subClassOf materialsmine:Thermoset ;
+    rdfs:subClassOf :Thermoset ;
     skos:definition "Ratio of the number of cross-links formed to the maximum possible cross-links that can be formed in a thermosetting system (NOTE: numeric value restricted to be between 0 and 1)"@en,
         "Rapport du nombre de liaisons croisées formées au nombre maximal de liaisons croisées pouvant être formées dans un système thermodurcissable (REMARQUE : valeur numérique limitée entre 0 et 1)"@fr,
         "Verhältnis der Anzahl gebildeter Vernetzungen zur maximal möglichen Anzahl von Vernetzungen in einem Duroplastsystem (HINWEIS: Numerischer Wert ist auf 0 bis 1 beschränkt)"@de,
@@ -2421,7 +2420,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty prov:generated ;
             owl:someValuesFrom :ViscoelasticProperty ],
-      materialsmine:Rheometery ;
+      :Rheometery ;
     skos:definition "The falling plate rheometer sandwiches liquid between two solid surfaces. The top plate is fixed, and bottom plate falls under the influence of gravity, drawing out a string of the liquid"@en, "Le rhéomètre à plaque tombante enferme le liquide entre deux surfaces solides. La plaque supérieure est fixe, et la plaque inférieure tombe sous l'effet de la gravité, tirant un fil du liquide."@fr, "Das Fallplatten-Rheometer klemmt eine Flüssigkeit zwischen zwei festen Oberflächen ein. Die obere Platte ist fixiert, und die untere fällt durch die Schwerkraft, wodurch ein Faden der Flüssigkeit gezogen wird."@de, "El reómetro de placa descendente coloca el líquido entre dos superficies sólidas. La placa superior está fija y la inferior cae por efecto de la gravedad, estirando un hilo del líquido."@es .
 
 :ConePlateRheometery a owl:Class ;
@@ -2429,7 +2428,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty prov:generated ;
             owl:someValuesFrom :ViscoelasticProperty ],
-        materialsmine:Rheometery ;
+        :Rheometery ;
     skos:definition "The liquid is placed on a horizontal plate and a shallow cone placed into it. The angle between the surface of the cone and the plate is around 1–2 degrees but can vary depending on the types of tests being run. Typically the plate is rotated and the torque on the cone measured."@en, "Le liquide est placé sur une plaque horizontale et un cône peu profond y est inséré. L'angle entre la surface du cône et la plaque est d'environ 1 à 2 degrés, mais peut varier selon le type de test effectué. En général, la plaque est mise en rotation et le couple exercé sur le cône est mesuré."@fr, "Die Flüssigkeit wird auf eine horizontale Platte gegeben und ein flacher Kegel hineingesetzt. Der Winkel zwischen der Oberfläche des Kegels und der Platte beträgt etwa 1–2 Grad, kann jedoch je nach Art des durchgeführten Tests variieren. Typischerweise wird die Platte gedreht und das Drehmoment am Kegel gemessen."@de, "El líquido se coloca sobre una placa horizontal y se introduce un cono poco profundo en él. El ángulo entre la superficie del cono y la placa es de aproximadamente 1–2 grados, aunque puede variar según el tipo de prueba realizada. Normalmente, se hace girar la placa y se mide el par sobre el cono."@es .
 
 :HighPressureCapillaryRheometery a owl:Class ;
@@ -2437,7 +2436,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty prov:generated ;
             owl:someValuesFrom :ViscoelasticProperty ],
-        materialsmine:Rheometery .
+        :Rheometery .
 
 :Magnification a owl:Class ;
     rdfs:label "Magnification"@en, "Magnificación"@es, "Vergrößerung"@de, "Grossissement"@fr ;
@@ -2536,7 +2535,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :r-deg ;
             owl:onProperty sio:SIO_000221 ],
-        materialsmine:OrientationAngle .
+        :OrientationAngle .
 
 :FillerPhaseSurfaceArea a owl:Class ;
     rdfs:label "Surface area of filler phase"@en, "Área superficial de la fase de relleno"@es, "Oberfläche der Füllstoffphase"@de, "Surface de la phase de charge"@fr ;
@@ -2676,7 +2675,7 @@
 
 :SDF a owl:Class ;
     rdfs:label "SDF (Standard Data Format)"@en, "SDF (Formato Estándar de Datos)"@es, "SDF (Standarddatenformat)"@de, "SDF (Format Standard de Données)"@fr ;
-    rdfs:subClassOf materialsmine:Function .
+    rdfs:subClassOf :Function .
 
 :Function a owl:Class ;
     rdfs:label "Function"@en, "Función"@es, "Funktion"@de, "Fonction"@fr ;
@@ -3130,7 +3129,7 @@
 :LinearElastic a owl:Class ;
     rdfs:label "Linear Elastic"@en, "Élastique linéaire"@fr, "Élastique linéaire"@es, "Linear elastisch"@de ;
     skos:definition "Infinitesimal material deformation or deformation within the linear regime"@en, "Déformation infinitésimale du matériau ou déformation dans le régime linéaire"@fr, "Unendlich kleine Materialverformung oder Verformung im linearen Bereich"@de, "Deformación infinitesimal del material o deformación dentro del régimen lineal"@es ;
-    rdfs:subClassOf materialsmine:FractureToughnessProperty .
+    rdfs:subClassOf :FractureToughnessProperty .
 
 :PlasticElastic a owl:Class ;
     rdfs:label "Plastic Elastic"@en, "plastique élastique"@fr, "elástico de plástico"@es, "Kunststoff-Elastik"@de ;
@@ -3138,12 +3137,12 @@
         "Déformation du matériau subissant à la fois une déformation élastique et plastique"@fr,
         "Materialverformung, die sowohl elastische als auch plastische Verformung durchläuft"@de,
         "Deformación del material que experimenta tanto deformación elástica como plástica"@es ;
-    rdfs:subClassOf materialsmine:FractureToughnessProperty .
+    rdfs:subClassOf :FractureToughnessProperty .
 
 :Impact a owl:Class ;
     rdfs:label "Impact"@en, "l'impact"@fr, "impacto"@es, "Auswirkung"@de ; 
     skos:definition "Izod impact resistance of materials"@en, "Résistance à l'impact Izod des matériaux"@fr, "Izod-Schlagzähigkeit von Materialien"@de, "Resistencia al impacto Izod de los materiales"@es ;
-    rdfs:subClassOf materialsmine:FractureToughnessProperty .
+    rdfs:subClassOf :FractureToughnessProperty .
 
 :ImpactToughness a owl:Class ;
     rdfs:label "Impact Toughness"@en, "résistance aux chocs"@fr, "Resistencia al impacto"@es, "Schlagzähigkeit"@de ;
@@ -3190,7 +3189,7 @@
         "Une norme d'essai des matériaux, créée par un organisme de normalisation tel que l'ASTM, définissant des paramètres d'essai tels que la précharge, la charge et la géométrie de la pointe de l'appareil d'essai"@fr,
         "Ein Materialprüfstandard, erstellt von einer Normungsorganisation wie ASTM, der Prüfparameter wie Vorspannung, Belastung und Spitzengeometrie der Prüfapparatur definiert"@de,
         "Una norma de ensayo de materiales, creada por un organismo de normalización como ASTM, que define parámetros de prueba como la precarga, la carga y la geometría de la punta del aparato de ensayo"@es ;
-    rdfs:subClassOf materialsmine:HardnessProperty .
+    rdfs:subClassOf :HardnessProperty .
 
 :HardnessScale a owl:Class ;
     rdfs:label "Hardness Scale"@en, "Valeur de Dureté"@fr, "Escala de Dureza"@es, "Härte Skala"@de ;
@@ -3254,7 +3253,7 @@
 :CompressiveCreepRuptureTime a owl:Class ;
     rdfs:label "Compressive Creep Rupture Time"@en, "Temps de rupture par fluage par compression"@fr, "Tiempo de Resistencia a Cargas de Creep a Compresión"@es, "Druckkriechbruchzeit"@de ;
     skos:definition "Time taken to rupture from applying load during a compressive creep test"@en, "Temps nécessaire à la rupture lors de l'application de la charge pendant un essai de fluage en compression"@fr, "Zeit bis zum Bruch nach Belastungsanwendung während eines Druckkriechversuchs"@de, "Tiempo hasta la ruptura desde la aplicación de la carga durante una prueba de fluencia a compresión"@es ;
-    rdfs:subClassOf materialsmine:CompressiveCreep ;
+    rdfs:subClassOf :CompressiveCreep ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/second-Time> ;
             owl:onProperty sio:SIO_000221 ],
@@ -3333,7 +3332,7 @@
 :FlexuralCreepStrain a owl:Class ;
     rdfs:label "Flexural Creep Strain"@en, "Déformation visqueuse en flexion"@fr, "Biegekruppverformung"@de, "Deformación por fluencia a la flexión"@es ;
     skos:definition "Profile of strain as a function of time during a flexural creep test."@en, "Profil de déformation en fonction du temps lors d’un essai de fluage en flexion."@fr, "Verlaufsprofil der Dehnung als Funktion der Zeit während eines Biegekruppversuchs."@de, "Perfil de deformación en función del tiempo durante una prueba de fluencia a flexión."@es ;
-    rdfs:subClassOf materialsmine:FlexuralCreep .
+    rdfs:subClassOf :FlexuralCreep .
 
 :ElectricalProperty a owl:Class ;
     rdfs:label "Electrical Property"@en, "Propriété électrique"@fr, "Elektrische Eigenschaft"@de, "Propiedad eléctrica"@es ;
@@ -3346,37 +3345,37 @@
         "La composante imaginaire de la permittivité complexe dépendante de la fréquence d’un matériau soumis à un champ électrique oscillant."@fr,
         "Die imaginäre Komponente der frequenzabhängigen komplexen Permittivität eines Materials unter einem oszillierenden elektrischen Feld."@de,
         "La componente imaginaria de la permitividad compleja dependiente de la frecuencia de un material bajo un campo eléctrico oscilante."@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :DielectricRealPermittivity a owl:Class ;
     rdfs:label "Dielectric Real Permittivity"@en, "Permittivité diélectrique réelle"@fr, "Dielektrische reale Permittivität"@de, "Permisividad dieléctrica real"@es ;
     skos:definition "The real component of the frequency-dependent complex permittivity of a material under an oscillating electric field."@en, "La composante réelle de la permittivité complexe dépendante de la fréquence d’un matériau soumis à un champ électrique oscillant."@fr, "Die reale Komponente der frequenzabhängigen komplexen Permittivität eines Materials unter einem oszillierenden elektrischen Feld."@de, "El componente real de la permitividad compleja dependiente de la frecuencia de un material bajo un campo eléctrico oscilante."@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :DielectricLossTangent a owl:Class ;
     rdfs:label "Dielectric Loss Tangent"@en, "Tangente de perte diélectrique"@fr, "Dielektrischer Verlustwinkel"@de, "Tangente de pérdida dieléctrica"@es ;
     skos:definition "The ratio of the imaginary to real components of permittivity, representing the dissipation of electromagnetic energy in the presence of an oscillating electric field."@en, "Le rapport des composantes imaginaire et réelle de la permittivité, représentant la dissipation de l'énergie électromagnétique en présence d'un champ électrique oscillant."@fr, "Das Verhältnis der imaginären zu den reellen Komponenten der Permittivität, das die Dissipation elektromagnetischer Energie im Vorhandensein eines oszillierenden elektrischen Feldes darstellt."@de, "La proporción de los componentes imaginarios a reales de la permitividad, que representa la disipación de energía electromagnética en presencia de un campo eléctrico oscilante."@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :DC_DielectricConstant a owl:Class ;
     rdfs:label "DC Dielectric Constant"@en, "Constante diélectrique en courant continu"@fr, "Gleichstrom-Dielektrizitätskonstante"@de, "Constante dieléctrica de CC"@es ;
     skos:definition "A measure of the electric polarizability of a dielectric material."@en, "Une mesure de la polarizabilité électrique d'un matériau diélectrique."@fr, "Ein Maß für die elektrische Polarisierbarkeit eines dielektrischen Materials."@de, "Una medida de la polarizabilidad eléctrica de un material dieléctrico."@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :AC_DielectricDispersion a owl:Class ;
     rdfs:label "AC Dielectric Dispersion"@en, "Dispersion diélectrique en courant alternatif"@fr, "Wechselstrom-Dielektrische Dispersion"@de, "Dispersión dieléctrica de CA"@es ;
     skos:definition "Frequency dependence of dielectric permittivity under an oscillating electric field"@en, "Dépendance en fréquence de la permittivité diélectrique sous un champ électrique oscillant"@fr, "Frequenzabhängigkeit der dielektrischen Permittivität unter einem oszillierenden elektrischen Feld"@de, "Dependencia de frecuencia de la permitividad dieléctrica bajo un campo eléctrico oscilante"@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :AC_DielectricConstant a owl:Class ;
     rdfs:label "AC Dielectric Constant"@en, "Constante diélectrique AC"@fr, "Wechselstrom-Dielektrizitätskonstante"@de, "Constante dieléctrica de CA"@es ;
     skos:definition "Frequency dependence of dielectric permittivity under an oscillating electric field"@en, "Dépendance en fréquence de la permittivité diélectrique sous un champ électrique oscillant"@fr, "Frequenzabhängigkeit der dielektrischen Permittivität unter einem oszillierenden elektrischen Feld"@de, "Dependencia de frecuencia de la permitividad dieléctrica bajo un campo eléctrico oscilante"@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :Impedance a owl:Class ;
     rdfs:label "Impedance"@en, "Impédance"@fr, "Impedanz"@de, "Impedancia"@es ;
     skos:definition "The effective resistance to an alternating current"@en, "La résistance efficace à un courant alternatif"@fr, "Der effektive Widerstand bei Wechselstrom"@de, "La resistencia eficaz a una corriente alterna"@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :DielectricBreakdownStrength a owl:Class ;
     rdfs:label "Dielectric Breakdown Strength"@en, "Résistance diélectrique à la rupture"@fr, "Dielektrische Durchschlagsfestigkeit"@de, "Resistencia dieléctrica de ruptura"@es ;
@@ -3426,7 +3425,7 @@
 :ElectricPercolationThreshold a owl:Class ;
     rdfs:label "Electric Percolation Threshold"@en, "Seuil de percolation électrique"@fr, "Elektrische Perkolationsschwelle"@de, "Umbral de percolación eléctrica"@es ;
     skos:definition "minimum filler content in the polymer matrix after which there is no significant change in the electrical properties of the composites."@en, "teneur minimale de charge dans la matrice polymère au-delà de laquelle il n'y a plus de changement significatif des propriétés électriques des composites."@fr, "minimaler Füllstoffgehalt in der Polymermatrix, ab dem sich die elektrischen Eigenschaften der Verbundwerkstoffe nicht mehr wesentlich ändern."@de, "contenido mínimo de relleno en la matriz polimérica a partir del cual no hay un cambio significativo en las propiedades eléctricas de los compuestos."@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :EnergyDensity a owl:Class ;
     rdfs:label "Energy Density"@en, "Densité d'énergie"@fr, "Energiedichte"@de, "Densidad de energía"@es ;
@@ -3439,7 +3438,7 @@
 :CurrentDensity a owl:Class ;
     rdfs:label "Current Density"@en, "Densité de courant"@fr, "Stromdichte"@de, "Densidad de corriente"@es ;
     skos:definition "The amount of electric current flowing per unit cross-sectional area of a material"@en, "La quantité de courant électrique circulant par unité de surface de section d’un matériau"@fr, "Die Menge an elektrischem Strom, die pro Flächeneinheit eines Materials fließt"@de, "La cantidad de corriente eléctrica que fluye por unidad de área de sección transversal de un material"@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty ;
+    rdfs:subClassOf :ElectricalProperty ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue  <http://nanomine.org/ns/unit/kv> ;
             owl:onProperty sio:SIO_000221 ],
@@ -3459,7 +3458,7 @@
 :Flammability a owl:Class ;
     rdfs:label "Flammability Index"@en, "Indice d'inflammabilité"@fr, "Entflammbarkeitsindex"@de, "Índice de inflamabilidad"@es ;
     skos:definition "A standard that measures how a plastic material burns and how well it prevents flames."@en, "Une norme qui mesure comment un matériau plastique brûle et son efficacité à empêcher les flammes."@fr, "Ein Standard, der misst, wie ein Kunststoffmaterial brennt und wie gut es Flammen verhindert."@de, "Un estándar que mide cómo quema un material plástico y qué tan bien previene las llamas."@es ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :ShieldingEffectiveness a owl:Class ;
     rdfs:label "Shielding Effectiveness Index"@en, "Indice d'efficacité du blindage"@fr, "Abschirmwirkungsgrad-Index"@de, "Índice de eficacia del blindaje"@es ;
@@ -3477,7 +3476,7 @@
 :Crystallinity a owl:Class ;
     rdfs:label "Crystallinity"@en, "Cristallinité"@fr, "Kristallinität"@de, "Cristalinidad"@es ;
     skos:definition "degree of structural order in a solid."@en, "degré d'ordre structurel dans un solide."@fr, "Grad der strukturellen Ordnung in einem Festkörper."@de, "grado de orden estructural en un sólido."@es ;
-    rdfs:subClassOf materialsmine:Crystallinity .
+    rdfs:subClassOf :Crystallinity .
 
 :DegreeOfCrystallization a owl:Class ;
     rdfs:label "Degree Of Crystallization"@en, "Degré de cristallisation"@fr, "Kristallisationsgrad"@de, "Grado de cristalización"@es ;
@@ -3485,27 +3484,27 @@
         "Pourcentage de la région cristallisée dans un polymère ou matériau. Il décrit l'étendue du processus de cristallisation."@fr,
         "Prozentsatz des kristallisierten Bereichs in einem Polymer oder Material. Er beschreibt das Ausmaß des Kristallisationsprozesses."@de,
         "Porcentaje de la región cristalizada en un polímero o material. Describe el alcance del proceso de cristalización."@es ;
-    rdfs:subClassOf materialsmine:Crystallinity .
+    rdfs:subClassOf :Crystallinity .
 
 :GrowthRateOfCrystal a owl:Class ;
     rdfs:label "Growth Rate Of Crystal"@en, "Taux de croissance du cristal"@fr, "Wachstumsrate des Kristalls"@de, "Tasa de crecimiento del cristal"@es ;
     skos:definition "Rate of the crystallization process."@en, "Taux du processus de cristallisation."@fr, "Rate des Kristallisationsprozesses."@de, "Tasa del proceso de cristalización."@es ;
-    rdfs:subClassOf materialsmine:Crystallinity .
+    rdfs:subClassOf :Crystallinity .
 
 :GrowthRateParameterOfAvramiEquation a owl:Class ;
     rdfs:label "Growth Rate Parameter Of Avrami E quation"@en, "Paramètre du taux de croissance de l'équation d'Avrami"@fr, "Wachstumsratenparameter der Avrami-Gleichung"@de, "Parámetro de tasa de crecimiento de la ecuación de Avrami"@es ;
     skos:definition "Growth Rate Parameter in Avrami Equation"@en, "Paramètre de taux de croissance dans l'équation d'Avrami"@fr, "Wachstumsratenparameter in der Avrami-Gleichung"@de, "Parámetro de tasa de crecimiento en la ecuación de Avrami"@es ;
-    rdfs:subClassOf materialsmine:Crystallinity .
+    rdfs:subClassOf :Crystallinity .
 
  :NucleationParameterOfAvramiEquation a owl:Class ;
     rdfs:label "Nucleation Parameter Of Avrami Equation"@en, "Paramètre de nucléation de l'équation d'Avrami"@fr, "Nukleationsparameter der Avrami-Gleichung"@de, "Parámetro de nucleación de la ecuación de Avrami"@es ;
     skos:definition "Nucleation Parameter in Avrami Equation"@en, "Paramètre de nucléation dans l’équation d’Avrami"@fr, "Keimungsparameter in der Avrami-Gleichung"@de, "Parámetro de nucleación en la ecuación de Avrami"@es ;
-    rdfs:subClassOf materialsmine:Crystallinity .
+    rdfs:subClassOf :Crystallinity .
 
 :HalflifeOfCrystallization a owl:Class ;
     rdfs:label "Halflife Of Crystallization"@en, "Demi-vie de cristallisation"@fr, "Halbwertszeit der Kristallisation"@de, "Vida media de cristalización"@es ;
     skos:definition "The time required for half of a material to form a crystalline structure under some condition."@en, "Le temps nécessaire pour que la moitié d'un matériau forme une structure cristalline sous certaines conditions."@fr, "Die Zeit, die benötigt wird, damit die Hälfte eines Materials unter bestimmten Bedingungen eine kristalline Struktur bildet."@de, "El tiempo necesario para que la mitad de un material forme una estructura cristalina bajo ciertas condiciones."@es ;
-    rdfs:subClassOf materialsmine:Crystallinity .
+    rdfs:subClassOf :Crystallinity .
 
 :CrystallizationTemperature a owl:Class ;
     rdfs:label "Crystallization Temperature"@en, "Température de cristallisation"@fr, "Kristallisationstemperatur"@de, "Temperatura de cristalización"@es ;
@@ -3513,14 +3512,14 @@
         "C’est la température à laquelle une phase solide commence à se former, entraînant un mélange de particules solides et de solution"@fr,
         "Es ist die Temperatur, bei der sich eine feste Phase zu bilden beginnt, was zu einer Mischung aus festen Partikeln und Lösung führt"@de,
         "Es la temperatura a la que comienza a formarse una fase sólida, lo que da lugar a una mezcla de partículas sólidas y solución"@es ;
-    rdfs:subClassOf :materialsmine:ThermalProperty, obo:PATO_0000146 .
+    rdfs:subClassOf ::ThermalProperty, obo:PATO_0000146 .
 
 :HeatOfCrystallization a owl:Class ;
     rdfs:label "Heat of Crystallization"@en, "Chaleur de cristallisation"@fr, "Calor de cristalización"@es, "Kristallisationswärme"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :J ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty ;
+            :ThermalProperty ;
     skos:definition "The amount of heat that must be removed from one gram of a liquid at its freezing point to freeze it with no change in temperature."@en,
                     "La quantité de chaleur qui doit être retirée d’un gramme de liquide à son point de congélation pour le geler sans changement de température."@fr,
                     "La cantidad de calor que debe extraerse de un gramo de líquido en su punto de congelación para congelarlo sin cambio de temperatura."@es,
@@ -3532,7 +3531,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :J ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty ;
+            :ThermalProperty ;
     skos:definition "Change in enthalpy with energy dissipation."@en,
                     "Changement d’enthalpie avec dissipation d’énergie."@fr,
                     "Cambio en la entalpía con disipación de energía."@es,
@@ -3545,7 +3544,7 @@
                     "Flux de chaleur par rapport à la température issu d’une expérience de calorimétrie à balayage différentiel."@fr,
                     "Flujo de calor frente a la temperatura de un experimento de calorimetría de barrido diferencial."@es,
                     "Wärmefluss im Verhältnis zur Temperatur aus einem Experiment der differentiellen Scanning-Kalorimetrie."@de ;
-    rdfs:subClassOf materialsmine:ThermalProperty .
+    rdfs:subClassOf :ThermalProperty .
 
 :ThermalDecompositionTemperature a owl:Class ;
     rdfs:label "Thermal Decomposition Temperature"@en, "Température de décomposition thermique"@fr, "Temperatura de descomposición térmica"@es, "Thermische Zersetzungstemperatur"@de ;
@@ -3556,7 +3555,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/kelvin> ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty, obo:PATO_0000146 ;
+            :ThermalProperty, obo:PATO_0000146 ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> .
 
 :GlassTransitionTemperature a owl:Class ;
@@ -3568,7 +3567,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/kelvin> ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty, obo:PATO_0000146 ;
+            :ThermalProperty, obo:PATO_0000146 ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> .
 
 :LCPhaseTransitionTemperature a owl:Class ;
@@ -3580,7 +3579,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/kelvin> ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty, obo:PATO_0000146 ;
+            :ThermalProperty, obo:PATO_0000146 ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> .
 
 :MeltingTemperature a owl:Class ;
@@ -3592,7 +3591,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/kelvin> ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty, obo:PATO_0000146 ;
+            :ThermalProperty, obo:PATO_0000146 ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> .
 
 :SpecificHeatCapacityCp a owl:Class ;
@@ -3604,7 +3603,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :j-gk ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty ;
+            :ThermalProperty ;
     :hasPreferredUnit <http://materialsmine.org/ns/unit/j-gk> .
 
 :SpecificHeatCapacityCv a owl:Class ;
@@ -3616,7 +3615,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :j-gk ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty ;
+            :ThermalProperty ;
     :hasPreferredUnit <http://materialsmine.org/ns/unit/j-gk> .
 
 :ThermalConductivity a owl:Class ;
@@ -3628,7 +3627,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin> ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty ;
+            :ThermalProperty ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin> .
 
 :ThermalDiffusivity a owl:Class ;
@@ -3640,7 +3639,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :m-2-s ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty .
+            :ThermalProperty .
 
 :BrittleTemperature a owl:Class ;
     rdfs:label "Brittle Temperature"@en, "Température de fragilité"@fr, "Temperatura de fragilidad"@es, "Sprödigkeitstemperatur"@de ;
@@ -3651,7 +3650,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/kelvin> ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:ThermalProperty, obo:PATO_0000146 ;
+            :ThermalProperty, obo:PATO_0000146 ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> .
 
 :VolumetricProperty a owl:Class ;
@@ -3668,7 +3667,7 @@
                     "La perte de masse d’un matériau dans certaines conditions (par exemple, une augmentation de la température lors d’une analyse thermogravimétrique)."@fr,
                     "La pérdida de masa de un material bajo alguna condición (por ejemplo, aumento de temperatura durante el análisis termogravimétrico)."@es,
                     "Der Masseverlust eines Materials unter bestimmten Bedingungen (z. B. steigende Temperatur während der thermogravimetrischen Analyse)."@de ;
-    rdfs:subClassOf materialsmine:VolumetricProperty .
+    rdfs:subClassOf :VolumetricProperty .
 
 :InterphaseThickness a owl:Class ;
     rdfs:label "Interphase Thickness"@en, "Épaisseur de l’interphase"@fr, "Espesor de la interfase"@es, "Interphasendicke"@de ;
@@ -3679,7 +3678,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/nanometre> ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:VolumetricProperty ;
+            :VolumetricProperty ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/nanometre> .
 
 :Density a owl:Class ;
@@ -3691,7 +3690,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre> ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:VolumetricProperty ;
+            :VolumetricProperty ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre> .
 
 :LinearExpansionCoefficient a owl:Class ;
@@ -3703,7 +3702,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :m-k ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:VolumetricProperty .
+            :VolumetricProperty .
 
 :VolumeExpansionCoefficient a owl:Class ;
     rdfs:label "Volume Expansion Coefficient"@en, "Coefficient de dilatation volumique"@fr, "Coeficiente de expansión volumétrica"@es, "Volumenausdehnungskoeffizient"@de ;
@@ -3714,7 +3713,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :m-3-k ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:VolumetricProperty .
+            :VolumetricProperty .
 
 :SurfaceTension a owl:Class ;
     rdfs:label "Surface Tension"@en, "Tension de surface"@fr, "Tensión superficial"@es, "Oberflächenspannung"@de ;
@@ -3725,7 +3724,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :N ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:VolumetricProperty .
+            :VolumetricProperty .
 
 :InterfacialTension a owl:Class ;
     rdfs:label "Interfacial Tension"@en, "Tension interfaciale"@fr, "Tensión interfacial"@es, "Grenzflächenspannung"@de ;
@@ -3736,7 +3735,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :N ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:VolumetricProperty .
+            :VolumetricProperty .
 
 :WaterAbsorption a owl:Class ;
     rdfs:label "Water Absorption"@en, "Absorption d’eau"@fr, "Absorción de agua"@es, "Wasseraufnahme"@de ;
@@ -3744,7 +3743,7 @@
                     "La quantité de gain de poids (%) subie par un polymère après immersion dans l’eau pendant une durée spécifique dans un environnement contrôlé."@fr,
                     "La cantidad de aumento de peso (%) que experimenta un polímero después de la inmersión en agua durante un tiempo específico en un entorno controlado."@es,
                     "Die Menge an Gewichtszunahme (%), die ein Polymer nach dem Eintauchen in Wasser für eine bestimmte Zeit unter kontrollierten Bedingungen erfährt."@de ;
-    rdfs:subClassOf materialsmine:VolumetricProperty .
+    rdfs:subClassOf :VolumetricProperty .
 
 :Spectroscopy a owl:Class ;
     rdfs:label "Spectroscopy"@en, "Spectroscopie"@fr, "Espectroscopia"@es, "Spektroskopie"@de ;
@@ -3760,7 +3759,7 @@
                     "Lorsqu’un matériau est soumis à une force, il produit une contrainte, qui entraîne ensuite une déformation du matériau."@fr,
                     "Cuando un material se somete a una fuerza, produce un esfuerzo, que luego causa una deformación del material."@es,
                     "Wenn ein Material mit einer Kraft belastet wird, erzeugt es eine Spannung, die dann eine Verformung des Materials verursacht."@de ;
-    rdfs:subClassOf materialsmine:MechanicalProperty .
+    rdfs:subClassOf :MechanicalProperty .
 
 :Strain a owl:Class ;
     rdfs:label "Strain"@en, "Déformation"@fr, "Deformación"@es, "Dehnung"@de ;
@@ -3768,7 +3767,7 @@
                     "La déformation technique est définie comme la quantité de déformation dans la direction de la force appliquée divisée par la longueur initiale du matériau."@fr,
                     "La deformación técnica se define como la cantidad de deformación en la dirección de la fuerza aplicada dividida por la longitud inicial del material."@es,
                     "Die technische Dehnung ist definiert als die Menge der Verformung in Richtung der aufgebrachten Kraft, geteilt durch die ursprüngliche Länge des Materials."@de ;
-    rdfs:subClassOf materialsmine:MechanicalProperty .
+    rdfs:subClassOf :MechanicalProperty .
 
 :DMAMode a owl:Class ;
     rdfs:label "Dynamic Mechanical Analysis"@en, "Analyse mécanique dynamique"@fr, "Análisis mecánico dinámico"@es, "Dynamisch-mechanische Analyse"@de ;
@@ -3776,7 +3775,7 @@
                     "Le type de condition (par exemple, balayage de température ou balayage de fréquence) sous laquelle la réponse mécanique dynamique d’un matériau est mesurée."@fr,
                     "El tipo de condición (por ejemplo, barrido de temperatura o barrido de frecuencia) bajo la cual se mide la respuesta mecánica dinámica de un material."@es,
                     "Die Art der Bedingung (z. B. Temperaturdurchlauf oder Frequenzdurchlauf), unter der die dynamische mechanische Antwort eines Materials gemessen wird."@de ;
-    rdfs:subClassOf materialsmine:DynamicProperties, obo:ID_0000061 .
+    rdfs:subClassOf :DynamicProperties, obo:ID_0000061 .
 
 :TemperatureSweep a owl:Class ;
     rdfs:label "Temperature Sweep"@en, "Balayage de température"@fr, "Barrido de temperatura"@es, "Temperaturdurchlauf"@de ;
@@ -3784,7 +3783,7 @@
                     "Une variation continue de la température dans une plage prédéfinie."@fr,
                     "Una variación continua de la temperatura dentro de un rango predefinido."@es,
                     "Eine kontinuierliche Variation der Temperatur innerhalb eines vordefinierten Bereichs."@de ;
-    rdfs:subClassOf materialsmine:DMA_Mode .
+    rdfs:subClassOf :DMA_Mode .
 
 :RheologicalProperty a owl:Class ;
     rdfs:label "Rheological Property"@en, "Propriété rhéologique"@fr, "Propiedad reológica"@es, "Rheologische Eigenschaft"@de ;
@@ -3800,7 +3799,7 @@
                     "Le rapport de l’amplitude de la contrainte de cisaillement à l’amplitude de la déformation d’un matériau sous une contrainte de cisaillement oscillante."@fr,
                     "La relación de la amplitud de la tensión de cizallamiento a la amplitud de la deformación de un material bajo tensión de cizallamiento oscilante."@es,
                     "Das Verhältnis der Amplitude der Scherspannung zur Amplitude der Dehnung eines Materials unter oszillierender Scherspannung."@de ;
-    rdfs:subClassOf materialsmine:RheologicalProperty .
+    rdfs:subClassOf :RheologicalProperty .
 
 :RheometerMode a owl:Class ;
     rdfs:label "Rheometer Mode"@en, "Mode de rhéomètre"@fr, "Modo de reómetro"@es, "Rheometer-Modus"@de ;
@@ -3808,7 +3807,7 @@
                     "Le type de condition (par exemple, balayage de température ou balayage de fréquence) sous laquelle la réponse rhéologique d’un matériau est mesurée."@fr,
                     "El tipo de condición (por ejemplo, barrido de temperatura o barrido de frecuencia) bajo la cual se mide la respuesta reológica de un material."@es,
                     "Die Art der Bedingung (z. B. Temperaturdurchlauf oder Frequenzdurchlauf), unter der die rheologische Antwort eines Materials gemessen wird."@de ;
-    rdfs:subClassOf materialsmine:RheologicalComplexModulus, materialsmine:RheologicalViscosity .
+    rdfs:subClassOf :RheologicalComplexModulus, :RheologicalViscosity .
 
 :RheologicalStorageModulus a owl:Class ;
     rdfs:label "Rheological Storage Modulus"@en, "Module de stockage rhéologique"@fr, "Módulo de almacenamiento reológico"@es, "Rheologischer Speichermodul"@de ;
@@ -3816,7 +3815,7 @@
                     "L’énergie de déformation stockée dans un matériau lorsqu’il est soumis à un cisaillement ; la composante élastique du module complexe."@fr,
                     "La energía de deformación almacenada dentro de un material cuando se somete a cizallamiento; el componente elástico del módulo complejo."@es,
                     "Die Verformungsenergie, die in einem Material bei Scherkraft gespeichert wird; die elastische Komponente des komplexen Moduls."@de ;
-    rdfs:subClassOf materialsmine:RheologicalComplexModulus .
+    rdfs:subClassOf :RheologicalComplexModulus .
 
 :RheologicalLossModulus a owl:Class ;
     rdfs:label "Rheological Loss Modulus"@en, "Module de perte rhéologique"@fr, "Módulo de pérdida reológica"@es, "Rheologischer Verlustmodul"@de ;
@@ -3824,7 +3823,7 @@
                     "L’énergie de déformation dissipée dans un matériau lorsqu’il est soumis à un cisaillement ; la composante visqueuse du module complexe."@fr,
                     "La energía de deformación disipada dentro de un material cuando se somete a cizallamiento; el componente viscoso del módulo complejo."@es,
                     "Die Verformungsenergie, die in einem Material bei Scherkraft dissipiert wird; die viskose Komponente des komplexen Moduls."@de ;
-    rdfs:subClassOf materialsmine:RheologicalComplexModulus .
+    rdfs:subClassOf :RheologicalComplexModulus .
 
 :RheologicalLossTangent a owl:Class ;
     rdfs:label "Rheological Loss Tangent"@en, "Tangente de perte rhéologique"@fr, "Tangente de pérdida reológica"@es, "Rheologischer Verlustfaktor"@de ;
@@ -3832,7 +3831,7 @@
                     "Le facteur d’amortissement, ou le rapport des modules de stockage et de perte ; pour les matériaux idéalement élastiques, le facteur d’amortissement est zéro ; pour les matériaux idéalement visqueux, le facteur d’amortissement est infini."@fr,
                     "El factor de amortiguamiento, o la relación entre los módulos de almacenamiento y de pérdida; para materiales idealmente elásticos, el factor de amortiguamiento es cero; para materiales idealmente viscosos, el factor de amortiguamiento es infinito."@es,
                     "Der Dämpfungsfaktor oder das Verhältnis von Speicher- zu Verlustmodul; für ideal elastische Materialien ist der Dämpfungsfaktor null; für ideal viskose Materialien ist der Dämpfungsfaktor unendlich."@de ;
-    rdfs:subClassOf materialsmine:RheologicalComplexModulus .
+    rdfs:subClassOf :RheologicalComplexModulus .
 
 :RheologicalMasterCurve a owl:Class ;
     rdfs:label "Rheological Master Curve"@en, "Courbe maîtresse rhéologique"@fr, "Curva maestra reológica"@es, "Rheologische Masterkurve"@de ;
@@ -3840,7 +3839,7 @@
                     "La superposition de données rhéologiques prises à différentes températures dans une plage de fréquences donnée, où les courbes sont décalées horizontalement pour former une courbe maîtresse continue couvrant une plage de fréquences beaucoup plus large qui serait autrement expérimentalement intraitable ou irréalisable."@fr,
                     "La superposición de datos reológicos tomados a diferentes temperaturas en un rango de frecuencias dado, donde las curvas se desplazan horizontalmente para formar una curva maestra continua que abarca un rango de frecuencias mucho mayor que de otro modo sería experimentalmente intratable o inviable."@es,
                     "Die Überlagerung von rheologischen Daten, die bei unterschiedlichen Temperaturen in einem gegebenen Frequenzbereich aufgenommen wurden, wobei die Kurven horizontal verschoben werden, um eine kontinuierliche Masterkurve zu bilden, die einen viel größeren Frequenzbereich abdeckt, der sonst experimentell schwer handhabbar oder nicht durchführbar wäre."@de ;
-    rdfs:subClassOf materialsmine:RheologicalComplexModulus .
+    rdfs:subClassOf :RheologicalComplexModulus .
 
 :RheologicalViscosity a owl:Class ;
     rdfs:label "Rheological Viscosity"@en, "Viscosité rhéologique"@fr, "Viscosidad reológica"@es, "Rheologische Viskosität"@de ;
@@ -3848,7 +3847,7 @@
                     "La résistance d’un fluide à l’écoulement."@fr,
                     "La resistencia de un fluido al flujo."@es,
                     "Der Widerstand eines Fluids gegen das Fließen."@de ;
-    rdfs:subClassOf materialsmine:RheologicalProperty .
+    rdfs:subClassOf :RheologicalProperty .
 
 :DynamicViscosity a owl:Class ;
     rdfs:label "Dynamic Viscosity"@en, "Viscosité dynamique"@fr, "Viscosidad dinámica"@es, "Dynamische Viskosität"@de ;
@@ -3856,7 +3855,7 @@
                     "Une mesure de la résistance d’un fluide à l’écoulement."@fr,
                     "Una medida de la resistencia de un fluido al flujo."@es,
                     "Ein Maß für den Widerstand eines Fluids gegen das Fließen."@de ;
-    rdfs:subClassOf materialsmine:RheologicalViscosity .
+    rdfs:subClassOf :RheologicalViscosity .
 
 :MeltViscosity a owl:Class ;
     rdfs:label "Melt Viscosity"@en, "Viscosité de fusion"@fr, "Viscosidad de fusión"@es, "Schmelzviskosität"@de ;
@@ -3864,7 +3863,7 @@
                     "La viscosité d’un polymère à l’état de fusion (liquide)."@fr,
                     "La viscosidad de un polímero en su estado de fusión (líquido)."@es,
                     "Die Viskosität eines Polymers im geschmolzenen (flüssigen) Zustand."@de ;
-    rdfs:subClassOf materialsmine:RheologicalViscosity .
+    rdfs:subClassOf :RheologicalViscosity .
 
 :WeibullPlot a owl:Class ;
     rdfs:label "Weibull Plot"@en, "Diagramme de Weibull"@fr, "Gráfico de Weibull"@es, "Weibull-Diagramm"@de ;
@@ -3872,7 +3871,7 @@
                     "Un graphique de la probabilité d’échec par rapport au champ électrique, généralement avec l’axe des ordonnées de probabilité mis à l’échelle selon la distribution de Weibull comme ln(-ln(1-p))."@fr,
                     "Un gráfico de la probabilidad de falla frente al campo eléctrico, típicamente con el eje y de probabilidad escalado según la distribución de Weibull como ln(-ln(1-p))."@es,
                     "Ein Diagramm der Ausfallwahrscheinlichkeit gegenüber dem elektrischen Feld, typischerweise mit der Wahrscheinlichkeits-y-Achse skaliert nach der Weibull-Verteilung als ln(-ln(1-p))."@de ;
-    rdfs:subClassOf materialsmine:DielectricBreakdownStrength .
+    rdfs:subClassOf :DielectricBreakdownStrength .
 
 :BreakdownStrength a owl:Class ;
     rdfs:label "Breakdown Strength"@en, "Résistance à la rupture"@fr, "Resistencia a la rotura"@es, "Durchbruchsstärke"@de ;
@@ -3880,7 +3879,7 @@
                     "Le champ électrique auquel la probabilité d’échec est ln(-ln(1-p)) = 0, ou approximativement p = 0,632."@fr,
                     "El campo eléctrico en el que la probabilidad de falla es ln(-ln(1-p)) = 0, o aproximadamente p = 0,632."@es,
                     "Das elektrische Feld, bei dem die Ausfallwahrscheinlichkeit ln(-ln(1-p)) = 0 ist, oder ungefähr p = 0,632."@de ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :ProbabilityOfFailure a owl:Class ;
     rdfs:label "Probability of Failure"@en, "Probabilité d’échec"@fr, "Probabilidad de falla"@es, "Ausfallwahrscheinlichkeit"@de ;
@@ -3888,7 +3887,7 @@
                     "À mesure que le champ électrique s’intensifie, la probabilité d’échec est la probabilité qu’un canal de rupture se forme à travers l’échantillon testé."@fr,
                     "A medida que se intensifica el campo eléctrico, la probabilidad de falla es la probabilidad de que se forme un canal de ruptura a través del espécimen de prueba."@es,
                     "Mit zunehmender Intensität des elektrischen Feldes ist die Ausfallwahrscheinlichkeit die Wahrscheinlichkeit, dass ein Durchbruchkanal durch die Testprobe entsteht."@de ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :TensileStrength a owl:Class ;
     rdfs:label "Tensile Strength"@en, "Résistance à la traction"@fr, "Resistencia a la tracción"@es, "Zugfestigkeit"@de ;
@@ -3896,7 +3895,7 @@
                     "La contrainte technique maximale subie par un échantillon testé lors d’un essai de traction, au point où le matériau commence à échouer de manière catastrophique."@fr,
                     "El esfuerzo técnico máximo experimentado por un espécimen de prueba durante un ensayo de tracción, en el punto en que el material comienza a fallar catastróficamente."@es,
                     "Die maximale technische Spannung, die eine Testprobe während eines Zugtests erfährt, an dem Punkt, an dem das Material katastrophal zu versagen beginnt."@de ;
-    rdfs:subClassOf materialsmine:TensileProperty ;
+    rdfs:subClassOf :TensileProperty ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/megapascal> .
 
 :StressRelaxation a owl:Class ;
@@ -3913,7 +3912,7 @@
                     "La déformation à laquelle le matériau se fracture (par exemple, lors d’un essai de traction)."@fr,
                     "La deformación en la que el material se fractura (por ejemplo, durante un ensayo de tracción)."@es,
                     "Die Dehnung, bei der das Material bricht (z. B. während eines Zugtests)."@de ;
-    rdfs:subClassOf materialsmine:Strain .
+    rdfs:subClassOf :Strain .
 
 :PreCrackingProcess a owl:Class ;
     rdfs:label "PreCracking Process"@en, "Processus de pré-fissuration"@fr, "Proceso de pre-ruptura"@es, "Vor-Rissbildungsprozess"@de ;
@@ -3929,7 +3928,7 @@
                     "L’énergie nécessaire pour créer une nouvelle surface dans le matériau, mesurée par l’énergie absorbée par le matériau pendant la fracture."@fr,
                     "La energía necesaria para crear una nueva superficie en el material, medida por la energía absorbida por el material durante la fractura."@es,
                     "Die Energie, die benötigt wird, um eine neue Oberfläche im Material zu erzeugen, gemessen durch die Energie, die das Material während des Bruchs absorbiert."@de ;
-    rdfs:subClassOf materialsmine:MechanicalProperty .
+    rdfs:subClassOf :MechanicalProperty .
 
 :KFactor a owl:Class ;
     rdfs:label "K Factor"@en, "Facteur K"@fr, "Factor K"@es, "K-Faktor"@de ;
@@ -3961,7 +3960,7 @@
                     "Une variation continue de la fréquence dans une plage prédéfinie pour mesurer la réponse d’un matériau."@fr,
                     "Una variación continua de la frecuencia dentro de un rango predefinido para medir la respuesta de un material."@es,
                     "Eine kontinuierliche Variation der Frequenz innerhalb eines vordefinierten Bereichs, um die Reaktion eines Materials zu messen."@de ;
-    rdfs:subClassOf materialsmine:MeasurementMethod .
+    rdfs:subClassOf :MeasurementMethod .
 
 :StrainSweep a owl:Class ;
     rdfs:label "Strain Sweep"@en, "Balayage de déformation"@fr, "Barrido de deformación"@es, "Dehnungsdurchlauf"@de ;
@@ -3969,7 +3968,7 @@
                     "Une variation continue de la déformation (amplitude) dans une plage prédéfinie."@fr,
                     "Una variación continua de la deformación (amplitud) dentro de un rango predefinido."@es,
                     "Eine kontinuierliche Variation der Dehnung (Amplitude) innerhalb eines vordefinierten Bereichs."@de ;
-    rdfs:subClassOf materialsmine:MeasurementMethod .
+    rdfs:subClassOf :MeasurementMethod .
 
 :DynamicPropertyProfile a owl:Class ;
     rdfs:label "Dynamic Property Profile"@en, "Profil de propriété dynamique"@fr, "Perfil de propiedad dinámica"@es, "Dynamisches Eigenschaftsprofil"@de ;
@@ -3977,7 +3976,7 @@
                     "Un profil décrivant une mesure de propriété dynamique (par exemple, dans l’analyse mécanique dynamique)."@fr,
                     "Un perfil que describe una medición de propiedad dinámica (por ejemplo, en el análisis mecánico dinámico)."@es,
                     "Ein Profil, das eine Messung dynamischer Eigenschaften beschreibt (z. B. in der dynamisch-mechanischen Analyse)."@de ;
-    rdfs:subClassOf materialsmine:Profile .
+    rdfs:subClassOf :Profile .
 
 :MasterCurve a owl:Class ;
     rdfs:label "Master Curve"@en, "Courbe maîtresse"@fr, "Curva maestra"@es, "Masterkurve"@de ;
@@ -4018,7 +4017,7 @@
                     "La magnitude maximale du déplacement forcé sous des conditions de chargement oscillatoire."@fr,
                     "La magnitud máxima del desplazamiento forzado bajo condiciones de carga oscilatoria."@es,
                     "Die maximale Größe der erzwungenen Verschiebung unter oszillierenden Belastungsbedingungen."@de ;
-    rdfs:subClassOf materialsmine:Condition .
+    rdfs:subClassOf :Condition .
 
 :Condition a owl:Class ;
     rdfs:label "Condition"@en, "Condition"@fr, "Condición"@es, "Bedingung"@de ;
@@ -4026,7 +4025,7 @@
                     "Un état ou une circonstance sous laquelle un matériau est testé ou traité."@fr,
                     "Un estado o circunstancia bajo la cual se prueba o procesa un material."@es,
                     "Ein Zustand oder eine Bedingung, unter der ein Material getestet oder verarbeitet wird."@de ;
-    rdfs:subClassOf materialsmine:CompressionProperty .
+    rdfs:subClassOf :CompressionProperty .
 
 :StrainRate a owl:Class ;
     rdfs:label "Strain Rate"@en, "Taux de déformation"@fr, "Tasa de deformación"@es, "Dehnungsrate"@de ;
@@ -4034,12 +4033,12 @@
                     "Le taux auquel un matériau se déforme sous une force appliquée."@fr,
                     "La tasa a la que un material se deforma bajo una fuerza aplicada."@es,
                     "Die Rate, mit der ein Material unter einer aufgebrachten Kraft verformt wird."@de ;
-    rdfs:subClassOf materialsmine:Condition ;
+    rdfs:subClassOf :Condition ;
     :hasPreferredUnit <http://materialsmine.org/ns/unit/1-s> .
 
 :WeibullParameter a owl:Class ;
     rdfs:label "Weibull Parameter"@en, "Paramètre de Weibull"@fr, "Parámetro de Weibull"@es, "Weibull-Parameter"@de ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :PhysicalProperty a owl:Class ;
     rdfs:label "Physical Property"@en, "Propriété physique"@fr, "Propiedad física"@es, "Physikalische Eigenschaft"@de ;
@@ -4058,7 +4057,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :j-m-2 ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:PhysicalProperty ;
+            :PhysicalProperty ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerSquareMetre> .
 
 :WorkOfSpreading a owl:Class ;
@@ -4070,7 +4069,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :j-m-2 ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:PhysicalProperty ;
+            :PhysicalProperty ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerSquareMetre> .
 
 :WettingAngle a owl:Class ;
@@ -4082,7 +4081,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :degrees ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:PhysicalProperty ;
+            :PhysicalProperty ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/degree> .
 
 :DegreeOfWetting a owl:Class ;
@@ -4091,7 +4090,7 @@
                     "Cosinus de l’angle de mouillage."@fr,
                     "Coseno del ángulo de mojado."@es,
                     "Kosinus des Benetzungswinkels."@de ;
-    rdfs:subClassOf materialsmine:WettingAngle ;
+    rdfs:subClassOf :WettingAngle ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/Ratio> .
 
 :SurfaceEnergy a owl:Class ;
@@ -4103,7 +4102,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :j-m-2 ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:PhysicalProperty ;
+            :PhysicalProperty ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerSquareMetre> .
 
 :DispersiveSurfaceEnergy a owl:Class ;
@@ -4115,7 +4114,7 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :j-m-2 ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:SurfaceEnergy ;
+            :SurfaceEnergy ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerSquareMetre> .
 
 :PolarSurfaceEnergy a owl:Class ;
@@ -4127,16 +4126,16 @@
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue :j-m-2 ;
             owl:onProperty sio:SIO_000221 ],
-            materialsmine:SurfaceEnergy ;
+            :SurfaceEnergy ;
     :hasPreferredUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerSquareMetre> .
 
 :AlternatingCurrent a owl:Class ;
     rdfs:label "Alternating Current"@en, "Courant alternatif"@fr, "Corriente alterna"@es, "Wechselstrom"@de ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :DirectCurrent a owl:Class ;
     rdfs:label "Direct Current"@en, "Courant continu"@fr, "Corriente continua"@es, "Gleichstrom"@de ;
-    rdfs:subClassOf materialsmine:ElectricalProperty .
+    rdfs:subClassOf :ElectricalProperty .
 
 :VolumetricShrinkage a owl:Class ;
     rdfs:label "Volumetric Shrinkage"@en, "Retrait volumétrique"@fr, "Contracción volumétrica"@es, "Volumetrische Schrumpfung"@de ;
@@ -4144,7 +4143,7 @@
                     "La quantité de réduction en volume (%) subie par un thermodurcissable en raison de la réticulation entre le(s) monomère(s) et le(s) agent(s) de durcissement."@fr,
                     "La cantidad de reducción en volumen (%) experimentada en un termoestable debido a la reticulación entre el(los) monómero(s) y el(los) agente(s) de curado."@es,
                     "Die Menge der Volumenreduktion (%), die in einem Duroplasten aufgrund der Vernetzung zwischen dem(n) Monomer(en) und dem(n) Härtungsmittel(n) auftritt."@de ;
-    rdfs:subClassOf materialsmine:VolumetricProperty .
+    rdfs:subClassOf :VolumetricProperty .
 
 
 

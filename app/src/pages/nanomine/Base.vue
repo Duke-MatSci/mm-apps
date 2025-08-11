@@ -1,26 +1,25 @@
 <template>
-  <MdApp md-waterfall md-mode="fixed">
-    <template #md-app-toolbar>
-      <PageHeader :toggler="toggleMenuVisibility" />
-    </template>
+  <div md-waterfall md-mode="fixed">
+    <!-- Header Toolbar -->
+    <MdAppToolbar id="header" :toggler="toggleMenuVisibility" />
 
-    <template #md-app-content>
-      <md-app-content class="u--padding-zero u--layout-flex u--layout-flex-column">
-        <HeroHeader />
-        <router-view />
-        <PageFooter id="footer" />
-      </md-app-content>
-    </template>
-
-    <md-app-drawer :md-active="menuVisible" @update:md-active="handleDrawerUpdate">
+    <!-- Navigation Drawer -->
+    <md-drawer :md-active="menuVisible" @update:md-active="handleDrawerUpdate">
       <Drawer id="leftdrawer" />
-    </md-app-drawer>
-  </MdApp>
+    </md-drawer>
+
+    <!-- Main Content -->
+    <div class="app-content u--padding-zero u--layout-flex u--layout-flex-column">
+      <HeroHeader />
+      <router-view />
+      <PageFooter id="footer" />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import PageHeader from '@/components/nanomine/PageHeader.vue';
+import MdAppToolbar from '@/components/nanomine/PageHeader.vue';
 import HeroHeader from '@/components/nanomine/HeroHeader.vue';
 import PageFooter from '@/components/nanomine/PageFooter.vue';
 import Drawer from '@/components/Drawer.vue';

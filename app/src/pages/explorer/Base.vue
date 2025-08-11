@@ -1,32 +1,30 @@
 <template>
-  <MdApp md-waterfall md-mode="fixed">
-    <template #md-app-toolbar="{ toolbarClasses, toolbarStyles }">
-      <div class="viz-u-postion__rel">
-        <div
-          class="md-toolbar md-app-toolbar md-theme-default md-elevation-4 md-large md-dense md-primary"
-          :class="toolbarClasses"
-          :style="[toolbarStyles, transition, !showTop && hideHeaderView]"
-          id="reset_bg"
-        >
-          <ExpHeader :showTop="showTop" :toggler="toggleMenuVisibility" />
+  <div class="md-app md-app-side-drawer md-layout-row md-waterfall md-fixed md-theme-default">
+    <!-- Navigation Drawer -->
+    <md-drawer :md-active="menuVisible" @update:md-active="handleDrawerUpdate">
+      <Drawer id="leftdrawer" />
+    </md-drawer>
+
+    <!-- Main Content -->
+    <main
+      class="md-app-container md-flex md-layout-column md-theme-default md-scrollbar"
+      style="padding-left: 0px"
+    >
+      <!-- Header Toolbar -->
+      <MdAppToolbar :showTop="showTop" :toggler="toggleMenuVisibility" />
+      <div class="md-app-scroller md-layout-column md-flex md-theme-default md-scrollbar">
+        <div class="u--padding-zero u_height--max">
+          <router-view />
         </div>
       </div>
-    </template>
-    <template #md-app-content>
-      <md-app-content class="u--padding-zero">
-        <router-view />
-      </md-app-content>
-    </template>
-    <md-app-drawer :md-active="menuVisible" @update:md-active="handleDrawerUpdate">
-      <Drawers id="leftdrawer" />
-    </md-app-drawer>
-  </MdApp>
+    </main>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue';
-import Drawers from '@/components/Drawer.vue';
-import ExpHeader from '@/components/explorer/Header.vue';
+import Drawer from '@/components/Drawer.vue';
+import MdAppToolbar from '@/components/explorer/Header.vue';
 
 // Component name for debugging
 defineOptions({
@@ -41,10 +39,6 @@ const showTop = ref(true);
 const getBody = computed(() => {
   return document.querySelector('.md-app.md-fixed .md-app-scroller');
 });
-
-const hideHeaderView = computed(() => ({ top: `-${74}px` }));
-
-const transition = computed(() => ({ transition: `all ${0.2}s linear` }));
 
 // Methods
 const toggleMenuVisibility = (): void => {

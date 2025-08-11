@@ -1,12 +1,12 @@
 <template>
   <div class="explorer_page_header metadata">
     <md-card style="padding: 2rem; margin: 2rem; z-index: 10">
-      <form class="form" @submit.prevent="submitSearch()" autocomplete="off">
+      <form class="form" @submit.prevent="() => submitSearch()" autocomplete="off">
         <div class="search_box_form">
           <div class="form__group search_box_form-item-1">
             <input
               type="text"
-              ref="searchInput"
+              ref="search_input"
               class="form__input form__input--adjust"
               placeholder="Search"
               name="search"
@@ -63,32 +63,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useStore } from 'vuex';
+import { useExplorerSearch } from '@/composables/useExplorerSearch';
 
 const store = useStore();
-const searchInput = ref<HTMLInputElement>();
+const { searchWord, submitSearch, setResultsTab } = useExplorerSearch();
+
+const search_input = ref<HTMLInputElement | null>(null);
 
 // Computed properties
-const searchWord = computed({
-  get() {
-    return store.getters['explorer/getSearchKeyword'];
-  },
-  async set(payload: string) {
-    await store.commit('explorer/setSearchKeyword', payload);
-  },
-});
-
-const searchEnabled = computed(() => store.getters['explorer/getSearching']);
-
-const suggestions = computed(() => store.getters['explorer/results/getSuggestions']);
-
-const enableAutosuggest = computed(() => store.getters['explorer/getAutosuggest']);
-
 const resultsTab = computed(() => store.getters['explorer/getResultsTab']);
-
 const passTotal = computed(() => store.getters['explorer/results/getTotalGroupings']);
-
 const getTotal = computed(() => store.getters['explorer/results/getTotal']);
 
 const imageTotal = computed(() => {
@@ -96,24 +82,6 @@ const imageTotal = computed(() => {
 });
 
 // Methods
-const setResultsTab = (tab: string) => store.commit('explorer/setResultsTab', tab);
-const setSearching = () => store.commit('explorer/setSearching');
-const setSearchKeyword = (keyword: string) => store.commit('explorer/setSearchKeyword', keyword);
-const setAutosuggest = (suggestions: string[]) =>
-  store.commit('explorer/results/setAutosuggest', suggestions);
-
-const submitSearch = (payload?: string) => {
-  let keyPhrase: string;
-  if (typeof payload === 'string') {
-    keyPhrase = payload;
-  } else {
-    keyPhrase = searchWord.value;
-  }
-  setSearching();
-  setSearchKeyword(keyPhrase);
-  store.dispatch('explorer/results/searchKeyword', keyPhrase);
-};
-
 const setResultsTabs = (payload: string) => {
   return setResultsTab(payload);
 };
