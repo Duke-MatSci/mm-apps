@@ -2319,7 +2319,7 @@
     skos:definition "Measurement of infrared spectrum of absorption or emission of a solid, liquid or gas"@en,
         "Mesure du spectre infrarouge d'absorption ou d'émission d'un solide, liquide ou gaz"@fr,
         "Messung des Infrarotspektrums der Absorption oder Emission eines Feststoffs, einer Flüssigkeit oder eines Gases"@de,
-        "Medición del espectro infrarrojo de absorción o emisión de un sólido, líquido o gas"@es 
+        "Medición del espectro infrarrojo de absorción o emisión de un sólido, líquido o gas"@es ;
     skos:exactMatch OBO:CHMO_0000636 .
 
 :XRayDiffractionAndScattering a owl:Class ;
@@ -2491,12 +2491,18 @@
 :PeakPosition a owl:Class ;
     rdfs:label "Peak Position"@en, "Posición máxima"@es, "Spitzenposition"@de, "Position maximale"@fr ;
     rdfs:subClassOf sio:SIO_000144 ;
-    skos:definition "The Q value, in reciprocal space, corresponding to the maximum intensity of the first peak observed in 1D graph"@en, "La valeur Q, dans l’espace réciproque, correspondant à l’intensité maximale du premier pic observé dans le graphique 1D"@fr, "Der Q-Wert im reziproken Raum, der der maximalen Intensität des ersten Peaks im 1D-Diagramm entspricht"@de, "El valor Q, en el espacio recíproco, correspondiente a la intensidad máxima del primer pico observado en el gráfico 1D"@es .
+    skos:definition "the location corresponding to the maximum intensity of an identified peak observed in 1D graph"@en,
+        "L'emplacement correspondant à l'intensité maximale d'un pic identifié observé dans un graphique en 1D"@fr,
+        "La ubicación correspondiente a la intensidad máxima de un pico identificado observado en un gráfico 1D"@es,
+        "Die Position, die der maximalen Intensität eines identifizierten Peaks entspricht, der in einem 1D-Diagramm beobachtet wird"@de .
 
 :FullWidthHalfMax a owl:Class ;
     rdfs:label "Full-Width Half-Max"@en, "Ancho total a mitad de máximo"@es, "Halbwertsbreite"@de, "Largeur à mi-hauteur"@fr ;
     rdfs:subClassOf sio:SIO_000144 ;
-    skos:definition "The numerical value associated with full width half maximum of the first peak observed in 1D graph"@en, "La valeur numérique associée à la largeur à mi-hauteur du premier pic observé dans un graphique 1D"@fr, "Der Zahlenwert, der mit der Halbwertsbreite des ersten Peaks im 1D-Diagramm verbunden ist"@de, "El valor numérico asociado con la anchura a media altura del primer pico observado en un gráfico 1D"@es .
+    skos:definition "The numerical value associated with full width half maximum of an identified peak observed in 1D graph"@en,
+        "La valeur numérique associée à la largeur à mi-hauteur d'un pic identifié observé dans un graphique en 1D"@fr,
+        "El valor numérico asociado a la anchura a media altura de un pico identificado observado en un gráfico 1D"@es,
+        "Der numerische Wert, der mit der Halbwertsbreite eines identifizierten Peaks verknüpft ist, der in einem 1D-Diagramm beobachtet wird"@de .
 
 :VolumeFraction a owl:Class ;
     rdfs:label "VolumeFraction"@en, "Fracción volumétrica"@es, "Volumenanteil"@de, "Fraction volumique"@fr ;
