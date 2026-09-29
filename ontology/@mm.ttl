@@ -2320,7 +2320,7 @@
         "Mesure du spectre infrarouge d'absorption ou d'émission d'un solide, liquide ou gaz"@fr,
         "Messung des Infrarotspektrums der Absorption oder Emission eines Feststoffs, einer Flüssigkeit oder eines Gases"@de,
         "Medición del espectro infrarrojo de absorción o emisión de un sólido, líquido o gas"@es ;
-    skos:exactMatch OBO:CHMO_0000636 .
+    skos:exactMatch obo:CHMO_0000636 .
 
 :XRayDiffractionAndScattering a owl:Class ;
     rdfs:label "X-Ray Diffraction and Scattering"@en, "Difracción y dispersión de rayos X"@es, "Röntgenbeugung und -streuung"@de, "Diffraction et diffusion des rayons X"@fr ;
